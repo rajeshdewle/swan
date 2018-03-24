@@ -19,6 +19,18 @@ if ( ! function_exists('camel_setup') ) :
             'menu-social' => __( 'Social Menu', 'camel' ),
             'menu-footer' => __( 'Footer Menu', 'camel' ),
         ) );
+
+        /**
+         * Add support for core custom logo.
+         *
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support( 'custom-logo', array(
+            'height'      => 100,
+            'width'       => 400,
+            'flex-height' => true,
+            'flex-width'  => true,
+        ) );
     }
 endif; // camel_setup
 add_action( 'after_setup_theme', 'camel_setup' );
