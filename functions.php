@@ -21,9 +21,9 @@ if ( ! function_exists('camel_setup') ) :
         ) );
 
         /**
-         * Add support for core custom logo.
+         * Add support to enable the use of a custom logo.
          *
-         * @link https://codex.wordpress.org/Theme_Logo
+         * @link https://developer.wordpress.org/themes/functionality/custom-logo/
          */
         add_theme_support( 'custom-logo', array(
             'height'      => 100,
