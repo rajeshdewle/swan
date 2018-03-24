@@ -1,10 +1,12 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * camel framework functions and definitions
+ * -----------------------------------------------------------------------------
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package camel_framework
+ * @package Camel_Framework
  */
 
 if ( ! function_exists('camel_setup') ) :
@@ -33,14 +35,15 @@ if ( ! function_exists('camel_setup') ) :
         ) );
     }
 endif; // camel_setup
+
 add_action( 'after_setup_theme', 'camel_setup' );
+
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-
 function camel_widgets_init() {
     register_sidebar( array(
         'name'          => __( 'Left Sidebar', 'theme_name' ),
@@ -60,10 +63,5 @@ function camel_widgets_init() {
         'after_title'   => '</h3>',
     ) );
 }
-add_action( 'widgets_init', 'camel_widgets_init' );
 
-// Set up the WordPress core camel custom background feature.
-add_theme_support( 'custom-background', apply_filters( 'camel_custom_background_args', array(
-    'default-color' => 'ffffff',
-    'default-image' => '',
-) ) );
+add_action( 'widgets_init', 'camel_widgets_init' );
