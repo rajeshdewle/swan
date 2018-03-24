@@ -61,3 +61,9 @@ function camel_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'camel_widgets_init' );
+
+// Set up the WordPress core camel custom background feature.
+add_theme_support( 'custom-background', apply_filters( 'camel_custom_background_args', array(
+    'default-color' => 'ffffff',
+    'default-image' => '',
+) ) );
