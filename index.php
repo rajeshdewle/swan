@@ -13,3 +13,6 @@
  *
  * @package Camel_Framework
  */
+
+ get_header();
+ ?>
