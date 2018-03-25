@@ -128,7 +128,7 @@ function camel_widgets_init() {
         'before_title'  => '<h1 class="widget-title">',
         'after_title'   => '</h1>',
     ) );
- 
+
     register_sidebar( array(
         'name'          => __( 'Right Sidebar', 'theme_name' ),
         'id'            => 'sidebar-2',
@@ -150,6 +150,7 @@ add_action( 'widgets_init', 'camel_widgets_init' );
 function camel_scripts() {
     wp_enqueue_style( 'camel-style', get_stylesheet_uri() );
     wp_enqueue_script( 'camel-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
