@@ -157,7 +157,5 @@ function camel_scripts() {
 
 add_action('wp_enqueue_scripts', 'camel_scripts');
 
-// Camel Helpers
-function camel_template_parts_path() {
-    return 'include/template-parts';
-}
+// Initialize camel core
+require get_template_directory() . '/core/camel.php';

@@ -14,8 +14,9 @@
 <nav>
     <?php
         wp_nav_menu( array(
-                'theme_location' => 'menu-top',
-                'menu_id'        => 'top-menu',
+            'theme_location' => 'menu-top',
+            'menu_id'        => 'top-menu',
+            'menu_class'     => 'list-unstyled list-inline'
         ) );
     ?>
 </nav><!-- #site-navigation -->

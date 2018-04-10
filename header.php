@@ -32,13 +32,13 @@
                 <div class="row">
                     <?php if (has_nav_menu('menu-top')) : ?>
                         <div class="col-6 top-menu">
-                            <?php get_template_part(camel_template_parts_path() . '/navigation/navigation', 'top'); ?>
+                            <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
                         </div>
                     <?php endif; ?>
 
                     <?php if (has_nav_menu('menu-social')) : ?>
                         <div class="col-6 social-menu text-right">
-                            <?php get_template_part(camel_template_parts_path() . '/navigation/navigation', 'social'); ?>
+                            <?php get_template_part('template-parts/navigation/navigation', 'social'); ?>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -67,7 +67,7 @@
 
             <?php if (has_nav_menu('menu-main')) : ?>
                 <div class="main-menu">
-                    <?php get_template_part(camel_template_parts_path() . '/navigation/navigation', 'main'); ?>
+                    <?php get_template_part('template-parts/navigation/navigation', 'main'); ?>
                 </div><!-- .navigation-main -->
             <?php endif; ?>
 

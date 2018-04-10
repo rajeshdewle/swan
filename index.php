@@ -34,7 +34,7 @@
                              * If you want to override this in a child theme, then include a file
                              * called content-___.php (where ___ is the Post Type name) and that will be used instead.
                              */
-                            get_template_part(camel_template_parts_path() . '/post/content', get_post_type());
+                            get_template_part('template-parts/post/content', get_post_type());
                         ?>
                     <?php endwhile; ?>
                 </div>
@@ -43,7 +43,7 @@
 
             <?php else : ?>
 
-                <?php  get_template_part(camel_template_parts_path() . '/post/content', 'none'); ?>
+                <?php  get_template_part('template-parts/post/content', 'none'); ?>
 
             <?php endif; ?>
         </main>
