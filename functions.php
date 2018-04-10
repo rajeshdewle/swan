@@ -160,3 +160,9 @@ function camel_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'camel_scripts');
+
+//excerpt function
+function custom_excerpt_length($length) {
+	return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
