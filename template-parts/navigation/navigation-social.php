@@ -13,9 +13,11 @@
 ?>
 <nav>
     <?php
-        wp_nav_menu( array(
-                'theme_location' => 'menu-social',
-                'menu_id'        => 'social-menu',
+        camel_nav_menu( array(
+            'theme_location' => 'menu-social',
+            'menu_id'        => 'social-menu',
+            'menu_class'     => 'list-unstyled list-inline',
+            'list_class'     => 'list-inline-item',
         ) );
     ?>
 </nav><!-- #site-navigation -->
