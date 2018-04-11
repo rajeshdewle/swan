@@ -41,22 +41,18 @@
                             <?php get_template_part('template-parts/navigation/navigation', 'social'); ?>
                         </div>
                     <?php endif; ?>
-                </div>
+                </div><!-- .row -->
             <?php endif; ?>
 
-            <div>
-                <?php the_custom_logo(); ?>
-
-                <?php if (is_front_page() && is_home()) : ?>
+            <div class="site-branding">
+                <?php if ( has_custom_logo()) : ?>
+                    <?php the_custom_logo(); ?>
+                <?php else : ?>
                     <h1>
                         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
                     </h1>
-                <?php else : ?>
-                    <p>
-                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                    </p>
                 <?php endif; ?>
-
+                
                 <?php $bloginfo = get_bloginfo('description', 'display'); ?>
 
                 <?php if ($bloginfo || is_customize_preview()) : ?>
@@ -64,14 +60,12 @@
                 <?php endif; ?>
             </div><!-- .site-branding -->
 
-
             <?php if (has_nav_menu('menu-main')) : ?>
                 <div class="main-menu">
                     <?php get_template_part('template-parts/navigation/navigation', 'main'); ?>
                 </div><!-- .navigation-main -->
             <?php endif; ?>
-
         </header><!-- #masthead -->
-    </div>
+    </div><!-- .container -->
 
     <div id="content" class="container">
