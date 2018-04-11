@@ -1,10 +1,8 @@
 <?php
 /**
  * -----------------------------------------------------------------------------
- * Displays main navigation
+ * Displays social navigation
  * -----------------------------------------------------------------------------
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/functionality/navigation-menus/
  *
@@ -18,6 +16,7 @@
             'menu_id'        => 'social-menu',
             'menu_class'     => 'list-unstyled list-inline',
             'list_class'     => 'list-inline-item',
+            'depth'          => 1
         ) );
     ?>
 </nav><!-- #site-navigation -->

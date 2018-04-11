@@ -1,10 +1,8 @@
 <?php
 /**
  * -----------------------------------------------------------------------------
- * Displays main navigation
+ * Displays top navigation
  * -----------------------------------------------------------------------------
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/functionality/navigation-menus/
  *
@@ -16,7 +14,7 @@
         camel_nav_menu( array(
             'theme_location' => 'menu-top',
             'menu_id'        => 'top-menu',
-            'depth'          => 0,
+            'depth'          => 1,
             'menu_class'     => 'list-unstyled list-inline',
             'list_class'     => 'list-inline-item',
 
