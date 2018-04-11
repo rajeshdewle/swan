@@ -7,6 +7,18 @@
  * @package Camel_Framework
  */
 
+/**
+ * Camel nav menu
+ *
+ * @param  array  $args
+ * @return WP_Nav_Menu
+ */
+function camel_nav_menu($args = array()) {
+    $args['walker'] = new Camel_Navwalker();
+
+    return wp_nav_menu($args);
+}
+
 if ( ! function_exists( 'camel_posted_on' ) ) :
     /**
      * Prints HTML with meta information for the current post-date/time.

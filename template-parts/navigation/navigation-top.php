@@ -13,10 +13,13 @@
 ?>
 <nav>
     <?php
-        wp_nav_menu( array(
+        camel_nav_menu( array(
             'theme_location' => 'menu-top',
             'menu_id'        => 'top-menu',
-            'menu_class'     => 'list-unstyled list-inline'
+            'depth'          => 0,
+            'menu_class'     => 'list-unstyled list-inline',
+            'list_class'     => 'list-inline-item',
+
         ) );
     ?>
 </nav><!-- #site-navigation -->
