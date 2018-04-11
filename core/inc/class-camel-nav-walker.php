@@ -29,7 +29,7 @@ if ( ! class_exists( 'Camel_Navwalker' ) ) {
 
             // Apply list classes to 'li' element
             $argsArray = (array) $args;
-            $item->classes[] = array_key_exists('list_class', $argsArray) ? $argsArray['list_class'] : '';
+            $item->classes[] = ! empty($argsArray['list_class']) ? $argsArray['list_class'] : '';
 
             $classes = empty( $item->classes ) ? array() : (array) $item->classes;
             $classes[] = 'menu-item-' . $item->ID;
