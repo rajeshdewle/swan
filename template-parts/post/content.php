@@ -10,8 +10,12 @@
 ?>
 
 <?php if (! is_singular()) : ?>
+    <?php if (is_active_sidebar('sidebar-right')): ?>
+        <div class="col-4 pb-4">
+    <?php else :?>
+        <div class="col-3">
+    <?php endif ?>
 
-    <div class="col-4 pb-4">
         <div class="card">
             <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail(); // TODO : later we will make custom template tag ?>
@@ -28,7 +32,6 @@
 
 <?php else : ?>
 
-<div class="col-12">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="entry-header">
             <?php
