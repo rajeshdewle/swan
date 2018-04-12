@@ -11,11 +11,12 @@
  * @package Camel_Framework
  */
 
-?>
-    </div>
+?>      
+
+    </div><!-- .container -->
 
     <footer id="colophon" class="site-footer">
-        <?php if(has_nav_menu('menu-footer')) :  ?>
+        <?php if (has_nav_menu('menu-footer')) :  ?>
             <div class="footer-menu">
                 <div class="container">
                     <?php get_template_part('template-parts/navigation/navigation', 'footer'); ?>

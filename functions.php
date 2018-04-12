@@ -121,21 +121,21 @@ add_action('after_setup_theme', 'camel_content_width', 0);
  */
 function camel_widgets_init() {
     register_sidebar(array(
-        'name'          => __('Left Sidebar', 'theme_name'),
-        'id'            => 'sidebar-1',
+        'name'          => __('Left Sidebar', 'camel'),
+        'id'            => 'sidebar-left',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
-        'before_title'  => '<h1 class="widget-title">',
-        'after_title'   => '</h1>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>',
     ));
 
     register_sidebar(array(
-        'name'          => __('Right Sidebar', 'theme_name'),
-        'id'            => 'sidebar-2',
-        'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li></ul>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
+        'name'          => __('Right Sidebar', 'camel'),
+        'id'            => 'sidebar-right',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>',
     ));
 }
 
