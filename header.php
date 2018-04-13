@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 
-<div>
+<div id="page">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'camel'); ?></a>
 
     <div class="container">

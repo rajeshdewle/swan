@@ -11,10 +11,14 @@
 
 get_header();
 ?>
+<div class="row">
+<?php if (is_active_sidebar('sidebar-right')): ?>
+    <div class="col-9">
+<?php else: ?>
+    <div class="col-12">
+<?php endif ?>
 
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main">
-
+    <main id="main" class="site-main">
         <?php
         while ( have_posts() ) :
             the_post();
@@ -30,10 +34,10 @@ get_header();
 
         endwhile; // End of the loop.
         ?>
-
-        </main><!-- #main -->
-    </div><!-- #primary -->
+    </main><!-- #main -->
 
 <?php
-get_sidebar();
+get_sidebar(); ?>
+</div><!-- .row -->
+    <?php
 get_footer();

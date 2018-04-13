@@ -78,6 +78,4 @@
         </footer><!-- .entry-footer -->
     </article><!-- #post-<?php the_ID(); ?> -->
 
-</div>
-
 <?php endif; ?>
