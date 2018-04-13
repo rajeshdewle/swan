@@ -11,11 +11,16 @@
 
 get_header();
 ?>
+<div class="row">
+<?php if (is_active_sidebar('sidebar-right')): ?>
+    <div class="col-9">
+<?php else: ?>
+    <div class="col-12">
+<?php endif ?>
 
-    <section id="primary" class="content-area">
         <main id="main" class="site-main">
-
-        <?php if ( have_posts() ) : ?>
+        <?php
+        if ( have_posts() ) : ?>
 
             <header class="page-header">
                 <h1 class="page-title">
@@ -26,6 +31,7 @@ get_header();
                 </h1>
             </header><!-- .page-header -->
 
+            <div class="row">
             <?php
             /* Start the Loop */
             while ( have_posts() ) :
@@ -36,7 +42,7 @@ get_header();
                  * If you want to overload this in a child theme then include a file
                  * called content-search.php and that will be used instead.
                  */
-                get_template_part( 'template-parts/content', 'search' );
+                get_template_part('template-parts/post/content', get_post_type());
 
             endwhile;
 
@@ -48,10 +54,10 @@ get_header();
 
         endif;
         ?>
-
+            </div><!-- .row -->
         </main><!-- #main -->
-    </section><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+
+<?php get_sidebar(); ?>
+</div><!-- .row -->
+<?php get_footer(); ?>
