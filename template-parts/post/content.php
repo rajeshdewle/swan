@@ -10,6 +10,7 @@
 ?>
 
 <?php if (! is_singular()) : ?>
+
     <?php if (is_active_sidebar('sidebar-right')): ?>
         <div class="col-4 pb-4">
     <?php else :?>
@@ -27,15 +28,15 @@
                 <p class="card-text"><?php the_excerpt() ?></p>
                 <a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn-primary">Read More</a>
             </div>
-        </div>
-    </div>
+        </div><!-- .card -->
+
+    </div> <!-- if sidebar col-4 else col-3 -->
 
 <?php else : ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="entry-header">
             <?php
-
             the_title('<h1 class="entry-title">', '</h1>');
 
             if ('post' === get_post_type()) :
@@ -77,7 +78,5 @@
             <?php camel_entry_footer(); ?>
         </footer><!-- .entry-footer -->
     </article><!-- #post-<?php the_ID(); ?> -->
-
-</div>
 
 <?php endif; ?>
