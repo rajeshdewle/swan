@@ -19,10 +19,10 @@ get_header();
         <main id="main" class="site-main">
 
         <div class="media pb-4">
-            <?php echo get_avatar( get_the_author_meta('ID'), 60); ?>
+            <div class="mr-3"><?php echo get_avatar( get_the_author_meta('ID'), 60); ?></div>
                 <div class="media-body">
-                    <?php the_archive_title( '<h5 class="mt-0 ml-3">', '</h5>' ); ?>
-                    <?php the_archive_description( '<span class="archive-description ml-3">', '</span>' ); ?>
+                    <?php the_archive_title( '<h5 class="mt-0">', '</h5>' ); ?>
+                    <?php the_archive_description(); ?>
                 </div>
         </div>
         
