@@ -11,26 +11,30 @@
 
 <?php if (! is_singular()) : ?>
 
-    <?php if (is_active_sidebar('sidebar-right')): ?>
-        <div class="col-4 pb-4">
-    <?php else :?>
+    <?php if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) : ?>
+        <div class="col-4">
+    <?php elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ): ?>
+        <div class="col-4">
+    <?php elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) : ?>
+        <div class="col-6">
+    <?php else : ?>
         <div class="col-3">
     <?php endif ?>
 
-        <div class="card">
-            <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail(); // TODO : later we will make custom template tag ?>
-            <?php endif; ?>
-            <div class="card-body">
-                <h5 class="card-title">
-                    <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark"><?php echo the_title(); ?></a>
-                </h5>
-                <p class="card-text"><?php the_excerpt() ?></p>
-                <a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn-primary">Read More</a>
-            </div>
-        </div><!-- .card -->
+            <div class="card mb-4">
+                <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail(); // TODO : later we will make custom template tag ?>
+                <?php endif; ?>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark"><?php echo the_title(); ?></a>
+                    </h5>
+                    <p class="card-text"><?php the_excerpt() ?></p>
+                    <a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn-primary">Read More</a>
+                </div>
+            </div><!-- .card -->
 
-    </div> <!-- if sidebar col-4 else col-3 -->
+        </div> <!-- depends on sidebar -->
 
 <?php else : ?>
 
