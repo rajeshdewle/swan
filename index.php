@@ -14,7 +14,7 @@
  * @package Camel_Framework
  */
 
- get_header();
+get_header();
 ?>
 <div class="row">
 
@@ -29,7 +29,6 @@
 <?php else : ?>
     <div class="col-12">
 <?php endif ?>
-
 
         <main id="main">
             <?php if (have_posts()) : ?>

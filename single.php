@@ -43,6 +43,6 @@ get_header();
             ?>
         </main><!-- #main -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('right'); ?>
 </div><!-- .row -->
 <?php get_footer(); ?>
