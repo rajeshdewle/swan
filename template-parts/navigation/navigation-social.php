@@ -9,7 +9,7 @@
  * @package Camel_Framework
  */
 ?>
-<nav>
+<nav class="p-2">
     <?php
         camel_nav_menu( array(
             'theme_location' => 'menu-social',

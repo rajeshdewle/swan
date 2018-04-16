@@ -27,7 +27,7 @@
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'camel'); ?></a>
 
     <div class="container">
-        <header>
+        <header class="mb-4">
             <?php if (has_nav_menu('menu-top') || has_nav_menu('menu-social')) : ?>
                 <div class="row">
                     <?php if (has_nav_menu('menu-top')) : ?>
@@ -44,7 +44,7 @@
                 </div><!-- .row -->
             <?php endif; ?>
 
-            <div class="site-branding">
+            <div class="site-branding p-2">
                 <?php if ( has_custom_logo()) : ?>
                     <?php the_custom_logo(); ?>
                 <?php else : ?>
@@ -52,7 +52,7 @@
                         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
                     </h1>
                 <?php endif; ?>
-                
+
                 <?php $bloginfo = get_bloginfo('description', 'display'); ?>
 
                 <?php if ($bloginfo || is_customize_preview()) : ?>
@@ -69,4 +69,4 @@
     </div><!-- .container -->
 
     <div id="content" class="container">
-        
+

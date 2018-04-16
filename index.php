@@ -18,17 +18,7 @@ get_header();
 ?>
 <div class="row">
 
-<?php get_sidebar('left'); ?>
-
-<?php if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) : ?>
-    <div class="col-9">
-<?php elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ): ?>
-    <div class="col-9">
-<?php elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) : ?>
-    <div class="col-6">
-<?php else : ?>
-    <div class="col-12">
-<?php endif ?>
+    <?php get_sidebar('left'); ?>
 
         <main id="main">
             <?php if (have_posts()) : ?>
@@ -61,6 +51,8 @@ get_header();
             <?php endif; ?>
         </main>
 
-<?php get_sidebar('right'); ?>
+    <?php get_sidebar('right'); ?>
+
 </div><!-- .row -->
+
 <?php get_footer(); ?>

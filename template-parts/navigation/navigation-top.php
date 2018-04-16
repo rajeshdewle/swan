@@ -9,7 +9,7 @@
  * @package Camel_Framework
  */
 ?>
-<nav>
+<nav class="p-2">
     <?php
         camel_nav_menu( array(
             'theme_location' => 'menu-top',
@@ -17,7 +17,6 @@
             'depth'          => 1,
             'menu_class'     => 'list-unstyled list-inline',
             'list_class'     => 'list-inline-item',
-
         ) );
     ?>
 </nav><!-- #site-navigation -->

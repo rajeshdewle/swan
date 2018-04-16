@@ -4,6 +4,48 @@ if ( ! class_exists( 'Camel_Navwalker' ) ) {
     class Camel_Navwalker extends Walker_Nav_Menu {
 
         /**
+         * Starts the list before the elements are added.
+         *
+         * @since 3.0.0
+         *
+         * @see Walker::start_lvl()
+         *
+         * @param string   $output Used to append additional content (passed by reference).
+         * @param int      $depth  Depth of menu item. Used for padding.
+         * @param stdClass $args   An object of wp_nav_menu() arguments.
+         */
+        public function start_lvl( &$output, $depth = 0, $args = array() ) {
+            if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+                $t = '';
+                $n = '';
+            } else {
+                $t = "\t";
+                $n = "\n";
+            }
+            $indent = str_repeat( $t, $depth );
+
+            // Default class.
+            $argsArray = (array) $args;
+            $subMenuClass = ! empty($argsArray['submenu_class']) ? $argsArray['submenu_class'] : '';
+            $classes = array( 'sub-menu' );
+            $classes[] = $subMenuClass;
+
+            /**
+             * Filters the CSS class(es) applied to a menu list element.
+             *
+             * @since 4.8.0
+             *
+             * @param array    $classes The CSS classes that are applied to the menu `<ul>` element.
+             * @param stdClass $args    An object of `wp_nav_menu()` arguments.
+             * @param int      $depth   Depth of menu item. Used for padding.
+             */
+            $class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
+            $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+            $output .= "{$n}{$indent}<ul$class_names aria-labelledby=\"sub-menu\">{$n}";
+        }
+
+        /**
          * Starts the element output.
          *
          * @since 3.0.0
@@ -34,6 +76,7 @@ if ( ! class_exists( 'Camel_Navwalker' ) ) {
             $classes = empty( $item->classes ) ? array() : (array) $item->classes;
             $classes[] = 'menu-item-' . $item->ID;
 
+
             /**
              * Filters the arguments for a single nav menu item.
              *
@@ -44,6 +87,16 @@ if ( ! class_exists( 'Camel_Navwalker' ) ) {
              * @param int      $depth Depth of menu item. Used for padding.
              */
             $args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+
+
+            // Add .dropdown or .active classes where they are needed.
+            if ( $this->has_children ) {
+                $classes[] = 'dropdown';
+            }
+
+            if ( in_array( 'current-menu-item', $classes, true ) || in_array( 'current-menu-parent', $classes, true ) ) {
+                $classes[] = 'active';
+            }
 
             /**
              * Filters the CSS class(es) applied to a menu item's list item element.
@@ -75,12 +128,24 @@ if ( ! class_exists( 'Camel_Navwalker' ) ) {
 
             $output .= $indent . '<li' . $id . $class_names .'>';
 
+            $link_classes = array();
+            $link_classes[] = ! empty( $argsArray['link_class'] ) ? $argsArray['link_class']  : '';
+            $link_classes[] = ($this->has_children) ? 'dropdown-toggle' : '';
+
             $atts = array();
-            $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
-            $atts['target'] = ! empty( $item->target )     ? $item->target     : '';
-            $atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
-            $atts['href']   = ! empty( $item->url )        ? $item->url        : '';
-            $atts['class']   = ! empty( $argsArray['link_class'] )        ?  $argsArray['link_class']   : '';
+            $atts['title']  = ! empty( $item->attr_title )  ? $item->attr_title : '';
+            $atts['target'] = ! empty( $item->target )      ? $item->target     : '';
+            $atts['rel']    = ! empty( $item->xfn )         ? $item->xfn        : '';
+            $atts['href']   = ! empty( $item->url )         ? $item->url        : '';
+            $atts['class']  = ! empty( $link_classes )       ?  implode(' ', $link_classes)     : '';
+
+
+            if ($this->has_children) {
+                $atts['id'] = 'menu-item-dropdown-' . $item->ID;
+                $atts['data-toggle'] = 'dropdown';
+                $atts['aria-haspopup'] = 'true';
+                $atts['aria-expanded'] = 'false';
+            }
 
             /**
              * Filters the HTML attributes applied to a menu item's anchor element.
