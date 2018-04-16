@@ -28,7 +28,6 @@ get_header();
                 </h1>
             </header><!-- .page-header -->
 
-            <div class="row">
             <?php
             /* Start the Loop */
             while ( have_posts() ) :
@@ -51,10 +50,9 @@ get_header();
 
         endif;
         ?>
-            </div><!-- .row -->
         </main><!-- #main -->
 
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('right'); ?>
 </div><!-- .row -->
 <?php get_footer(); ?>
