@@ -22,13 +22,13 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area my-4">
 
     <?php
     // You can start editing here -- including this comment!
     if ( have_comments() ) :
         ?>
-        <h2 class="comments-title">
+        <h2 class="comments-title mb-4">
             <?php
             $camel_comment_count = get_comments_number();
             if ( '1' === $camel_comment_count ) {
@@ -50,14 +50,16 @@ if ( post_password_required() ) {
 
         <?php the_comments_navigation(); ?>
 
-        <ol class="comment-list">
+        <div class="comment-list">
             <?php
             wp_list_comments( array(
-                'style'      => 'ol',
+                'style'      => 'div',
                 'short_ping' => true,
+                'avatar_size' => 64,
+                'walker'     => new Camel_CommentWalker()
             ) );
             ?>
-        </ol><!-- .comment-list -->
+        </div><!-- .comment-list -->
 
         <?php
         the_comments_navigation();
