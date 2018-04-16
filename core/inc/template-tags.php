@@ -137,7 +137,7 @@ if ( ! function_exists( 'camel_post_thumbnail' ) ) :
             ?>
 
             <div class="post-thumbnail">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail('post-thumbnail', array( 'class' => 'w-100 h-100 mb-4' )); ?>
             </div><!-- .post-thumbnail -->
 
         <?php else : ?>

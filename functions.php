@@ -123,7 +123,7 @@ function camel_widgets_init() {
     register_sidebar(array(
         'name'          => __('Left Sidebar', 'camel'),
         'id'            => 'sidebar-left',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s mb-4">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h5 class="widget-title">',
         'after_title'   => '</h5>',
@@ -132,7 +132,7 @@ function camel_widgets_init() {
     register_sidebar(array(
         'name'          => __('Right Sidebar', 'camel'),
         'id'            => 'sidebar-right',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s mb-4">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h5 class="widget-title">',
         'after_title'   => '</h5>',
