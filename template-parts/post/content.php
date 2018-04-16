@@ -23,7 +23,7 @@
 
             <div class="card mb-4">
                 <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail(); // TODO : later we will make custom template tag ?>
+                    <?php the_post_thumbnail('thumbnail', array('class' => 'card-img-top h-100')); // TODO : later we will make custom template tag ?>
                 <?php endif; ?>
                 <div class="card-body">
                     <h5 class="card-title">
