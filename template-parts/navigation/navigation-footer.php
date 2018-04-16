@@ -9,7 +9,7 @@
  * @package Camel_Framework
  */
 ?>
-<nav id="site-navigation" class="main-navigation p-2">
+<nav id="site-navigation" class="main-navigation p-2 navbar navbar-expand-lg navbar-light">
     <button class="menu-toggle d-none d-sm-block d-md-none" aria-controls="primary-menu" aria-expanded="false">
         <?php esc_html_e( 'Footer Menu', 'camel' ); ?>
     </button>
@@ -17,8 +17,11 @@
     <?php
         camel_nav_menu( array(
             'theme_location' => 'menu-footer',
+            'container_class' => 'w-100',
             'menu_id'        => 'main-menu',
-            'menu_class'     => 'd-flex justify-content-between list-unstyled',
+            'menu_class'     => 'navbar-nav justify-content-center',
+            'list_class'      => 'nav-item',
+            'link_class'      => 'nav-link p-4',
             'depth'          => 1
         ) );
     ?>

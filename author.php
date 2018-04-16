@@ -5,17 +5,15 @@
  * -----------------------------------------------------------------------------
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- * 
+ *
  * @package Camel_Framework
  */
 get_header();
 ?>
 <div class="row">
-<?php if (is_active_sidebar('sidebar-right')): ?>
-    <div class="col-9">
-<?php else: ?>
-    <div class="col-12">
-<?php endif ?>
+
+    <?php get_sidebar('left'); ?>
+
         <main id="main" class="site-main">
 
         <div class="media pb-4">
@@ -25,7 +23,7 @@ get_header();
                     <?php the_archive_description(); ?>
                 </div>
         </div>
-        
+
             <div class="row">
                 <?php while (have_posts()) :  the_post(); ?>
                     <?php
