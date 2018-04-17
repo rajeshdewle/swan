@@ -95,6 +95,19 @@ if (! function_exists('camel_setup')) :
             'flex-height' => true,
             'flex-width'  => true,
         ));
+
+        /**
+         * Add custom header image support
+         *
+         * @link https://developer.wordpress.org/themes/functionality/custom-headers/
+         */
+        add_theme_support('custom-header', array(
+            'default-text-color' => '000',
+            'width'              => 1000,
+            'height'             => 250,
+            'flex-width'         => true,
+            'flex-height'        => true,
+        ));
     }
 endif; // camel_setup
 

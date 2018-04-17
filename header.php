@@ -26,8 +26,8 @@
 <div id="page">
     <a class="skip-link sr-only" href="#content"><?php esc_html_e('Skip to content', 'camel-framework'); ?></a>
 
-    <div class="container">
-        <header class="mb-4">
+    <header class="header mb-4" style="background-image: url(<?php header_image(); ?>);">
+        <div class="container">
             <?php if (has_nav_menu('menu-top') || has_nav_menu('menu-social')) : ?>
                 <div class="top-navigation border-bottom">
                     <div class="row">
@@ -65,8 +65,8 @@
             <?php if (has_nav_menu('menu-main')) : ?>
                 <?php get_template_part('template-parts/navigation/navigation', 'main'); ?>
             <?php endif; ?>
-        </header><!-- #masthead -->
-    </div><!-- .container -->
+        </div><!-- .container -->
+    </header><!-- #masthead -->
 
     <div id="content" class="container">
 
