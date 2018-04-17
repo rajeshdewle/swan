@@ -178,3 +178,115 @@ if (! function_exists('camel_comment_form')) {
         return comment_form($args);
     }
 }
+
+
+if (! function_exists('camel_posts_pagination')) {
+    function camel_posts_pagination() {
+        if ( is_singular() ) {
+            return;
+        }
+
+        global $wp_query;
+
+        /** Stop execution if there's only 1 page */
+        if ( $wp_query->max_num_pages <= 1 ) {
+            return;
+        }
+
+        $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+        $max   = intval( $wp_query->max_num_pages );
+
+        /** Add current page to the array */
+        if ( $paged >= 1 ) {
+            $links[] = $paged;
+        }
+
+        /** Add the pages around the current page to the array */
+        if ( $paged >= 3 ) {
+            $links[] = $paged - 1;
+            $links[] = $paged - 2;
+        }
+
+        if ( ( $paged + 2 ) <= $max ) {
+            $links[] = $paged + 2;
+            $links[] = $paged + 1;
+        } ?>
+
+        <nav class="my-4">
+            <ul class="pagination justify-content-center">
+
+                <?php $previous_link_class = (! get_previous_posts_link()) ? 'disabled': ''; ?>
+
+                <li class="page-item <?php echo $previous_link_class ?>">
+                    <?php if (get_previous_posts_link()) : ?>
+                        <?php echo get_previous_posts_link('« Previous') ?>
+                    <?php else : ?>
+                        <a class="page-link" href="#" tabindex="-1">« Previous</a>
+                    <?php endif; ?>
+                </li>
+
+                <!-- Link to first page, plus ellipses if necessary -->
+                <?php if ( ! in_array( 1, $links ) ) : ?>
+                    <?php
+                        $classes = array();
+                        $classes[] = 1 == $paged ? 'active' : '';
+                        $classes[] = 'page-item';
+                    ?>
+
+                    <li class="<?php echo implode(' ', $classes); ?>">
+                        <a href="<?php echo esc_url( get_pagenum_link( 1 ) ); ?>" class="page-link">1</a>
+                    </li>
+
+                    <?php if ( ! in_array( 2, $links ) ) : ?>
+                        <li class="page-item">…</li>
+                    <?php endif; ?>
+                <?php endif; ?>
+
+                <!-- Link to current page, plus 2 pages in either direction if necessary -->
+                <?php sort( $links ); ?>
+                <?php foreach ( (array) $links as $link ) : ?>
+                    <?php
+                        $classes = array();
+                        $classes[] = ($paged == $link) ? 'active' : '';
+                        $classes[] = 'page-item';
+                    ?>
+
+                    <li class="<?php echo implode(' ', $classes); ?>">
+                        <a href="<?php echo esc_url( get_pagenum_link( $link ) ); ?>" class="page-link"><?php echo $link; ?></a>
+                    </li>
+                <?php endforeach; ?>
+
+                <!-- Link to last page, plus ellipses if necessary -->
+                <?php if ( ! in_array( $max, $links ) ) : ?>
+                    <?php if ( ! in_array( $max - 1, $links ) ) : ?>
+                        <li class="page-item">…</li>
+                    <?php endif; ?>
+
+                    <?php
+                        $classes = array();
+                        $classes[] = ($paged == $max) ? 'active' : '';
+                        $classes[] = 'page-item';
+                    ?>
+
+                    <li class="<?php echo implode(' ', $classes); ?>">
+                        <a href="<?php echo esc_url( get_pagenum_link( $max ) ); ?>" class="page-link"><?php echo $max; ?></a>
+                    </li>
+                <?php endif; ?>
+
+                <!-- Next Post Link -->
+                <?php $next_link_class = (! get_next_posts_link()) ? 'disabled': ''; ?>
+
+                <li class="page-item <?php echo $next_link_class; ?>">
+                    <?php if (get_next_posts_link()) : ?>
+                        <?php echo get_next_posts_link('Next »'); ?>
+                    <?php else : ?>
+                        <a class="page-link" href="#" tabindex="-1">Next »</a>
+                    <?php endif; ?>
+                </li>
+
+            </ul>
+        </nav>
+
+        <?php
+    }
+}
