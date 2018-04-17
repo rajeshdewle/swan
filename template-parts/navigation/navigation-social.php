@@ -9,14 +9,14 @@
  * @package Camel_Framework
  */
 ?>
-<nav class="p-2">
+<nav class="menu-social">
     <?php
         camel_nav_menu( array(
             'theme_location' => 'menu-social',
             'menu_id'        => 'social-menu',
-            'menu_class'     => 'list-unstyled list-inline',
-            'list_class'     => 'list-inline-item',
-            'depth'          => 1
+            'menu_class'     => 'nav justify-content-end',
+            'list_class'     => 'nav-item my-2 ml-3',
+            'link_class'     => 'nav-link p-0',
         ) );
     ?>
 </nav><!-- #site-navigation -->

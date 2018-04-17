@@ -24,27 +24,29 @@
 <body <?php body_class(); ?>>
 
 <div id="page">
-    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'camel'); ?></a>
+    <a class="skip-link sr-only" href="#content"><?php esc_html_e('Skip to content', 'camel'); ?></a>
 
     <div class="container">
         <header class="mb-4">
             <?php if (has_nav_menu('menu-top') || has_nav_menu('menu-social')) : ?>
-                <div class="row">
-                    <?php if (has_nav_menu('menu-top')) : ?>
-                        <div class="col-6 top-menu">
-                            <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
-                        </div>
-                    <?php endif; ?>
+                <div class="top-navigation border-bottom">
+                    <div class="row">
+                        <?php if (has_nav_menu('menu-top')) : ?>
+                            <div class="col-6">
+                                <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
+                            </div>
+                        <?php endif; ?>
 
-                    <?php if (has_nav_menu('menu-social')) : ?>
-                        <div class="col-6 social-menu text-right">
-                            <?php get_template_part('template-parts/navigation/navigation', 'social'); ?>
-                        </div>
-                    <?php endif; ?>
-                </div><!-- .row -->
+                        <?php if (has_nav_menu('menu-social')) : ?>
+                            <div class="col-6">
+                                <?php get_template_part('template-parts/navigation/navigation', 'social'); ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
             <?php endif; ?>
 
-            <div class="site-branding p-2">
+            <div class="site-branding my-4">
                 <?php if ( has_custom_logo()) : ?>
                     <?php the_custom_logo(); ?>
                 <?php else : ?>
@@ -61,9 +63,7 @@
             </div><!-- .site-branding -->
 
             <?php if (has_nav_menu('menu-main')) : ?>
-                <div class="main-menu">
-                    <?php get_template_part('template-parts/navigation/navigation', 'main'); ?>
-                </div><!-- .navigation-main -->
+                <?php get_template_part('template-parts/navigation/navigation', 'main'); ?>
             <?php endif; ?>
         </header><!-- #masthead -->
     </div><!-- .container -->

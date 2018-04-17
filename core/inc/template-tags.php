@@ -72,14 +72,14 @@ if ( ! function_exists( 'camel_entry_footer' ) ) :
             $categories_list = get_the_category_list( esc_html__( ', ', 'camel' ) );
             if ( $categories_list ) {
                 /* translators: 1: list of categories. */
-                printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'camel' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+                printf( '<div class="cat-links mb-4">' . esc_html__( 'Posted in %1$s', 'camel' ) . '</div>', $categories_list ); // WPCS: XSS OK.
             }
 
             /* translators: used between list items, there is a space after the comma */
-            $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'camel' ) );
+            $tags_list = get_the_tag_list( '<span><span class="badge badge-primary badge-pill mr-1">', '</span><span class="badge badge-primary badge-pill mr-1">', '</span></span>' );
             if ( $tags_list ) {
                 /* translators: 1: list of tags. */
-                printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'camel' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+                printf( '<div class="tags-links mb-4">' . esc_html__( 'Tagged %1$s', 'camel' ) . '</div>', $tags_list ); // WPCS: XSS OK.
             }
         }
 
@@ -137,7 +137,7 @@ if ( ! function_exists( 'camel_post_thumbnail' ) ) :
             ?>
 
             <div class="post-thumbnail">
-                <?php the_post_thumbnail('post-thumbnail', array( 'class' => 'w-100 h-100 mb-4' )); ?>
+                <?php the_post_thumbnail('post-thumbnail', array( 'class' => 'w-100 h-100 mb-2' )); ?>
             </div><!-- .post-thumbnail -->
 
         <?php else : ?>
@@ -158,7 +158,7 @@ endif;
 
 if (! function_exists('camel_comment_form')) {
     function camel_comment_form() {
-        $commenter = wp_get_current_commenter();    
+        $commenter = wp_get_current_commenter();
         $req      = get_option( 'require_name_email' );
         $aria_req = ( $req ? " aria-required='true'" : '' );
         $html5    = current_theme_supports( 'html5', 'comment-form' ) ? 1 : 0;
@@ -172,7 +172,7 @@ if (! function_exists('camel_comment_form')) {
                 'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email', 'camel' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                     '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
                 'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website', 'camel' ) . '</label> ' .
-                    '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'        
+                    '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'
             )
         );
         return comment_form($args);

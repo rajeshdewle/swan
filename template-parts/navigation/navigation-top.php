@@ -9,14 +9,15 @@
  * @package Camel_Framework
  */
 ?>
-<nav class="p-2">
+<nav class="menu-top">
     <?php
         camel_nav_menu( array(
             'theme_location' => 'menu-top',
             'menu_id'        => 'top-menu',
             'depth'          => 1,
-            'menu_class'     => 'list-unstyled list-inline',
-            'list_class'     => 'list-inline-item',
+            'menu_class'     => 'nav',
+            'list_class'     => 'nav-item mr-3 my-2',
+            'link_class'     => 'nav-link p-0',
         ) );
     ?>
 </nav><!-- #site-navigation -->
