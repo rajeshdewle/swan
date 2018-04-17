@@ -20,8 +20,8 @@
             'container_class' => 'w-100',
             'menu_id'        => 'main-menu',
             'menu_class'     => 'navbar-nav justify-content-center',
-            'list_class'      => 'nav-item',
-            'link_class'      => 'nav-link p-4',
+            'list_class'      => 'nav-item mx-2',
+            'link_class'      => 'nav-link',
             'depth'          => 1
         ) );
     ?>
