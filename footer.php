@@ -24,7 +24,7 @@
                 </div>
             <?php endif; ?>
 
-            <div class="copyright text-center mb-4">
+            <div class="copyright text-center pb-3">
                 <a href="<?php echo esc_url(__('https://wordpress.org/', 'camel')); ?>">
                     <?php printf(esc_html__('Proudly powered by %s', 'camel'), 'WordPress'); ?>
                 </a>

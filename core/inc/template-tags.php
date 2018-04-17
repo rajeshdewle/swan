@@ -324,15 +324,19 @@ if (! function_exists('camel_post_navigation')) {
         if ( $previous || $next ) {
             //$navigation = _navigation_markup( $previous . $next, 'post-navigation', $args['screen_reader_text'] );
 
-            if ( empty( $args['screen_reader_text'] ) ) {
+            $links = $previous . $next;
+            $class = 'posts-navigation';
+            $screen_reader_text = $args['screen_reader_text'];
+
+            if ( empty( $screen_reader_text ) ) {
                 $screen_reader_text = __( 'Posts navigation' );
             }
 
             $template = '
-                <nav class="navigation %1$s" role="navigation">
-                    <h2 class="sr-only">%2$s</h2>
-                    <div class="nav-links">%3$s</div>
-                </nav>';
+            <nav class="navigation %1$s my-4" role="navigation">
+                <h2 class="sr-only">%2$s</h2>
+                <div class="nav-links d-flex justify-content-between">%3$s</div>
+            </nav>';
 
             /**
              * Filters the navigation markup template.
