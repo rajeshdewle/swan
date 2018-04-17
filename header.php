@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>>
 
 <div id="page">
-    <a class="skip-link sr-only" href="#content"><?php esc_html_e('Skip to content', 'camel'); ?></a>
+    <a class="skip-link sr-only" href="#content"><?php esc_html_e('Skip to content', 'camel-framework'); ?></a>
 
     <div class="container">
         <header class="mb-4">

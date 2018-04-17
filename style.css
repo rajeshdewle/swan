@@ -7,8 +7,8 @@ Description: The CamelThemes Core Framework
 Version: 1.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
-Text Domain: camel
-Tags: framework
+Text Domain: camel-framework
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 */
 
 
@@ -24,3 +24,13 @@ figure {
     max-width: 100%;
     height: auto;
 }
+
+
+.wp-caption {}
+.wp-caption-text {}
+.screen-reader-text {}
+.bypostauthor {}
+.alignright {}
+.alignleft {}
+.aligncenter {}
+.gallery-caption {}

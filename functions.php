@@ -18,9 +18,9 @@ if (! function_exists('camel_setup')) :
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
          * If you're building a theme based on camel, use a find and replace
-         * to change 'camel' to the name of your theme in all the template files.
+         * to change 'camel-framework' to the name of your theme in all the template files.
          */
-        load_theme_textdomain('camel', get_template_directory() . '/languages');
+        load_theme_textdomain('camel-framework', get_template_directory() . '/languages');
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
@@ -42,10 +42,10 @@ if (! function_exists('camel_setup')) :
 
         // Register Nav Menus for Top, Social, Main & Footer
         register_nav_menus(array(
-            'menu-top'      => __('Top Menu', 'camel'),
-            'menu-main'     => __('Main Menu', 'camel'),
-            'menu-social'   => __('Social Menu', 'camel'),
-            'menu-footer'   => __('Footer Menu', 'camel'),
+            'menu-top'      => __('Top Menu', 'camel-framework'),
+            'menu-main'     => __('Main Menu', 'camel-framework'),
+            'menu-social'   => __('Social Menu', 'camel-framework'),
+            'menu-footer'   => __('Footer Menu', 'camel-framework'),
         ));
 
         /**
@@ -121,7 +121,7 @@ add_action('after_setup_theme', 'camel_content_width', 0);
  */
 function camel_widgets_init() {
     register_sidebar(array(
-        'name'          => __('Left Sidebar', 'camel'),
+        'name'          => __('Left Sidebar', 'camel-framework'),
         'id'            => 'sidebar-left',
         'before_widget' => '<aside id="%1$s" class="widget %2$s mb-4">',
         'after_widget'  => '</aside>',
@@ -130,7 +130,7 @@ function camel_widgets_init() {
     ));
 
     register_sidebar(array(
-        'name'          => __('Right Sidebar', 'camel'),
+        'name'          => __('Right Sidebar', 'camel-framework'),
         'id'            => 'sidebar-right',
         'before_widget' => '<aside id="%1$s" class="widget %2$s mb-4">',
         'after_widget'  => '</aside>',

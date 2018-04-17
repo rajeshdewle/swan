@@ -32,7 +32,7 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
                             <h5 class="mr-2">
                                 <?php
                                     /* translators: %s: comment author link */
-                                    printf( __( '%s <span class="says">says:</span>' ),
+                                    printf( __( '%s <span class="says">says:</span>', 'camel-framework' ),
                                         sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) )
                                     ); ?>
                             </h5><!-- .comment-author -->
@@ -40,7 +40,7 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
                                 <time datetime="<?php comment_time( 'c' ); ?>">
                                     <?php
                                         /* translators: 1: comment date, 2: comment time */
-                                        printf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time() ); ?>
+                                        printf( __( '%1$s at %2$s', 'camel-framework' ), get_comment_date( '', $comment ), get_comment_time() ); ?>
                                 </time>
                             </a>
                         </div>
@@ -49,10 +49,10 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
                             <?php comment_text(); ?>
                         </div>
                         <div class="mt-1 d-flex">
-                            <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link mr-2">', '</span>' ); ?>
+                            <?php edit_comment_link( __( 'Edit', 'camel-framework' ), '<span class="edit-link mr-2">', '</span>' ); ?>
 
                             <?php if ( '0' == $comment->comment_approved ) : ?>
-                                <p class="mr-2"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
+                                <p class="mr-2"><?php _e( 'Your comment is awaiting moderation.', 'camel-framework' ); ?></p>
                             <?php endif; ?>
                              <?php
                                 comment_reply_link( array_merge( $args, array(

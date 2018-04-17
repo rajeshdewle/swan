@@ -25,11 +25,11 @@
             <?php endif; ?>
 
             <div class="copyright text-center pb-3">
-                <a href="<?php echo esc_url(__('https://wordpress.org/', 'camel')); ?>">
-                    <?php printf(esc_html__('Proudly powered by %s', 'camel'), 'WordPress'); ?>
+                <a href="<?php echo esc_url(__('https://wordpress.org/', 'camel-framework')); ?>">
+                    <?php printf(esc_html__('Proudly powered by %s', 'camel-framework'), 'WordPress'); ?>
                 </a>
                 <span class="sep"> | </span>
-                <?php printf(esc_html__('Theme: %1$s by %2$s.', 'camel'), 'camel', '<a href="https://camelthemes.com">CamelThemes</a>'); ?>
+                <?php printf(esc_html__('Theme: %1$s by %2$s.', 'camel-framework'), 'camel-framework', '<a href="#">CamelThemes</a>'); ?>
             </div><!-- .copyright -->
 
         </div><!-- .container -->

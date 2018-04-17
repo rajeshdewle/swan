@@ -11,7 +11,7 @@
 ?>
 <nav class="menu-footer navbar navbar-expand-lg navbar-light">
     <button class="menu-toggle d-none d-sm-block d-md-none" aria-controls="primary-menu" aria-expanded="false">
-        <?php esc_html_e( 'Footer Menu', 'camel' ); ?>
+        <?php esc_html_e( 'Footer Menu', 'camel-framework' ); ?>
     </button>
 
     <?php

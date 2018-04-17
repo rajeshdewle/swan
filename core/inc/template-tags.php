@@ -38,7 +38,7 @@ if ( ! function_exists( 'camel_posted_on' ) ) :
 
         $posted_on = sprintf(
             /* translators: %s: post date. */
-            esc_html_x( 'Posted on %s', 'post date', 'camel' ),
+            esc_html_x( 'Posted on %s', 'post date', 'camel-framework' ),
             '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
         );
 
@@ -53,7 +53,7 @@ if ( ! function_exists( 'camel_posted_by' ) ) :
     function camel_posted_by() {
         $byline = sprintf(
             /* translators: %s: post author. */
-            esc_html_x( 'by %s', 'post author', 'camel' ),
+            esc_html_x( 'by %s', 'post author', 'camel-framework' ),
             '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
         );
 
@@ -69,17 +69,17 @@ if ( ! function_exists( 'camel_entry_footer' ) ) :
         // Hide category and tag text for pages.
         if ( 'post' === get_post_type() ) {
             /* translators: used between list items, there is a space after the comma */
-            $categories_list = get_the_category_list( esc_html__( ', ', 'camel' ) );
+            $categories_list = get_the_category_list( esc_html__( ', ', 'camel-framework' ) );
             if ( $categories_list ) {
                 /* translators: 1: list of categories. */
-                printf( '<div class="cat-links my-3">' . esc_html__( 'Posted in %1$s', 'camel' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+                printf( '<div class="cat-links my-3">' . esc_html__( 'Posted in %1$s', 'camel-framework' ) . '</div>', $categories_list ); // WPCS: XSS OK.
             }
 
             /* translators: used between list items, there is a space after the comma */
             $tags_list = get_the_tag_list( '<span><span class="badge badge-primary badge-pill mr-1">', '</span><span class="badge badge-primary badge-pill mr-1">', '</span></span>' );
             if ( $tags_list ) {
                 /* translators: 1: list of tags. */
-                printf( '<div class="tags-links mb-3">' . esc_html__( 'Tagged %1$s', 'camel' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+                printf( '<div class="tags-links mb-3">' . esc_html__( 'Tagged %1$s', 'camel-framework' ) . '</div>', $tags_list ); // WPCS: XSS OK.
             }
         }
 
@@ -89,7 +89,7 @@ if ( ! function_exists( 'camel_entry_footer' ) ) :
                 sprintf(
                     wp_kses(
                         /* translators: %s: post title */
-                        __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'camel' ),
+                        __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'camel-framework' ),
                         array(
                             'span' => array(
                                 'class' => array(),
@@ -106,7 +106,7 @@ if ( ! function_exists( 'camel_entry_footer' ) ) :
             sprintf(
                 wp_kses(
                     /* translators: %s: Name of current post. Only visible to screen readers */
-                    __( 'Edit <span class="screen-reader-text">%s</span>', 'camel' ),
+                    __( 'Edit <span class="screen-reader-text">%s</span>', 'camel-framework' ),
                     array(
                         'span' => array(
                             'class' => array(),
@@ -165,13 +165,13 @@ if (! function_exists('camel_comment_form')) {
 
         $args = array(
             'class_submit' => 'btn btn-primary',
-            'comment_field' => '<div class="form-group"><label for="comment">' . __( 'Comment', 'camel' ) . '</label><textarea id="comment" name="comment" cols="45" rows="5" class="form-control" aria-required="true"></textarea></div>',
+            'comment_field' => '<div class="form-group"><label for="comment">' . __( 'Comment', 'camel-framework' ) . '</label><textarea id="comment" name="comment" cols="45" rows="5" class="form-control" aria-required="true"></textarea></div>',
             'fields' => array(
-                'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name', 'camel' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name', 'camel-framework' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                     '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-                'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email', 'camel' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email', 'camel-framework' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                     '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
-                'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website', 'camel' ) . '</label> ' .
+                'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website', 'camel-framework' ) . '</label> ' .
                     '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'
             )
         );
@@ -219,9 +219,9 @@ if (! function_exists('camel_posts_pagination')) {
 
                 <li class="page-item <?php echo $previous_link_class ?>">
                     <?php if (get_previous_posts_link()) : ?>
-                        <?php echo get_previous_posts_link('« Previous') ?>
+                        <?php echo get_previous_posts_link('Previous') ?>
                     <?php else : ?>
-                        <a class="page-link" href="#" tabindex="-1">« Previous</a>
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
                     <?php endif; ?>
                 </li>
 
@@ -238,7 +238,7 @@ if (! function_exists('camel_posts_pagination')) {
                     </li>
 
                     <?php if ( ! in_array( 2, $links ) ) : ?>
-                        <li class="page-item">…</li>
+                        <li class="page-item">...</li>
                     <?php endif; ?>
                 <?php endif; ?>
 
@@ -259,7 +259,7 @@ if (! function_exists('camel_posts_pagination')) {
                 <!-- Link to last page, plus ellipses if necessary -->
                 <?php if ( ! in_array( $last_page, $links ) ) : ?>
                     <?php if ( ! in_array( $last_page - 1, $links ) ) : ?>
-                        <li class="page-item">…</li>
+                        <li class="page-item">...</li>
                     <?php endif; ?>
 
                     <?php
@@ -278,9 +278,9 @@ if (! function_exists('camel_posts_pagination')) {
 
                 <li class="page-item <?php echo $next_link_class; ?>">
                     <?php if (get_next_posts_link()) : ?>
-                        <?php echo get_next_posts_link('Next »'); ?>
+                        <?php echo get_next_posts_link('Next'); ?>
                     <?php else : ?>
-                        <a class="page-link" href="#" tabindex="-1">Next »</a>
+                        <a class="page-link" href="#" tabindex="-1">Next</a>
                     <?php endif; ?>
                 </li>
 
@@ -299,7 +299,7 @@ if (! function_exists('camel_post_navigation')) {
             'in_same_term'       => false,
             'excluded_terms'     => '',
             'taxonomy'           => 'category',
-            'screen_reader_text' => __( 'Post navigation' ),
+            'screen_reader_text' => __( 'Posts navigation', 'camel-framework' ),
         ) );
 
         $navigation = '';
@@ -328,7 +328,7 @@ if (! function_exists('camel_post_navigation')) {
             $screen_reader_text = $args['screen_reader_text'];
 
             if ( empty( $screen_reader_text ) ) {
-                $screen_reader_text = __( 'Posts navigation' );
+                $screen_reader_text = __( 'Posts navigation', 'camel-framework');
             }
 
             $template = '
