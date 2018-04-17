@@ -45,7 +45,7 @@ get_header();
                     <?php endwhile; ?>
                 </div><!-- .row -->
 
-                <?php the_posts_navigation(); ?>
+                <?php camel_posts_pagination(); ?>
 
             <?php else : ?>
 

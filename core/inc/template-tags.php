@@ -72,14 +72,14 @@ if ( ! function_exists( 'camel_entry_footer' ) ) :
             $categories_list = get_the_category_list( esc_html__( ', ', 'camel' ) );
             if ( $categories_list ) {
                 /* translators: 1: list of categories. */
-                printf( '<div class="cat-links mb-4">' . esc_html__( 'Posted in %1$s', 'camel' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+                printf( '<div class="cat-links my-3">' . esc_html__( 'Posted in %1$s', 'camel' ) . '</div>', $categories_list ); // WPCS: XSS OK.
             }
 
             /* translators: used between list items, there is a space after the comma */
             $tags_list = get_the_tag_list( '<span><span class="badge badge-primary badge-pill mr-1">', '</span><span class="badge badge-primary badge-pill mr-1">', '</span></span>' );
             if ( $tags_list ) {
                 /* translators: 1: list of tags. */
-                printf( '<div class="tags-links mb-4">' . esc_html__( 'Tagged %1$s', 'camel' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+                printf( '<div class="tags-links mb-3">' . esc_html__( 'Tagged %1$s', 'camel' ) . '</div>', $tags_list ); // WPCS: XSS OK.
             }
         }
 

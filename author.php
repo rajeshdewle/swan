@@ -16,26 +16,37 @@ get_header();
 
         <main id="main" class="site-main">
 
-        <div class="media pb-4">
-            <div class="mr-3"><?php echo get_avatar( get_the_author_meta('ID'), 60); ?></div>
-                <div class="media-body">
-                    <?php the_archive_title( '<h5 class="mt-0">', '</h5>' ); ?>
-                    <?php the_archive_description(); ?>
-                </div>
-        </div>
+            <?php if (have_posts()) : ?>
 
-            <div class="row">
-                <?php while (have_posts()) :  the_post(); ?>
-                    <?php
-                        /*
-                        * Include the Post-Type-specific template for the content.
-                        * If you want to override this in a child theme, then include a file
-                        * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                        */
-                        get_template_part('template-parts/post/content', get_post_type());
-                    ?>
-                <?php endwhile; ?>
-            </div> <!-- .row -->
+                <div class="media pb-4">
+                    <div class="mr-3"><?php echo get_avatar( get_the_author_meta('ID'), 60); ?></div>
+                        <div class="media-body">
+                            <?php the_archive_title( '<h5 class="mt-0">', '</h5>' ); ?>
+                            <?php the_archive_description(); ?>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <?php while (have_posts()) :  the_post(); ?>
+                        <?php
+                            /*
+                            * Include the Post-Type-specific template for the content.
+                            * If you want to override this in a child theme, then include a file
+                            * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                            */
+                            get_template_part('template-parts/post/content', get_post_type());
+                        ?>
+                    <?php endwhile; ?>
+                </div> <!-- .row -->
+
+                <?php camel_posts_pagination(); ?>
+
+            <?php else : ?>
+
+                <?php  get_template_part('template-parts/post/content', 'none'); ?>
+
+            <?php endif; ?>
+
         </main><!--- #main -->
 
 <?php get_sidebar(); ?>
