@@ -29,3 +29,9 @@ Tags: framework
 .tags-links a {
     color: #fff;
 }
+
+img,
+figure {
+    max-width: 100%;
+    height: auto;
+}

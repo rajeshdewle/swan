@@ -322,7 +322,6 @@ if (! function_exists('camel_post_navigation')) {
 
         // Only add markup if there's somewhere to navigate to.
         if ( $previous || $next ) {
-            //$navigation = _navigation_markup( $previous . $next, 'post-navigation', $args['screen_reader_text'] );
 
             $links = $previous . $next;
             $class = 'posts-navigation';
@@ -338,24 +337,6 @@ if (! function_exists('camel_post_navigation')) {
                 <div class="nav-links d-flex justify-content-between">%3$s</div>
             </nav>';
 
-            /**
-             * Filters the navigation markup template.
-             *
-             * Note: The filtered template HTML must contain specifiers for the navigation
-             * class (%1$s), the screen-reader-text value (%2$s), and placement of the
-             * navigation links (%3$s):
-             *
-             *     <nav class="navigation %1$s" role="navigation">
-             *         <h2 class="screen-reader-text">%2$s</h2>
-             *         <div class="nav-links">%3$s</div>
-             *     </nav>
-             *
-             * @since 4.4.0
-             *
-             * @param string $template The default template.
-             * @param string $class    The class passed by the calling function.
-             * @return string Navigation template.
-             */
             $template = apply_filters( 'navigation_markup_template', $template, $class );
 
             $navigation = sprintf( $template, sanitize_html_class( $class ), esc_html( $screen_reader_text ), $links );
