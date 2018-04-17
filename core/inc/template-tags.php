@@ -193,23 +193,23 @@ if (! function_exists('camel_posts_pagination')) {
             return;
         }
 
-        $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-        $max   = intval( $wp_query->max_num_pages );
+        $current_page = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+        $last_page   = intval( $wp_query->max_num_pages );
 
         /** Add current page to the array */
-        if ( $paged >= 1 ) {
-            $links[] = $paged;
+        if ( $current_page >= 1 ) {
+            $links[] = $current_page;
         }
 
         /** Add the pages around the current page to the array */
-        if ( $paged >= 3 ) {
-            $links[] = $paged - 1;
-            $links[] = $paged - 2;
+        if ( $current_page >= 3 ) {
+            $links[] = $current_page - 1;
+            $links[] = $current_page - 2;
         }
 
-        if ( ( $paged + 2 ) <= $max ) {
-            $links[] = $paged + 2;
-            $links[] = $paged + 1;
+        if ( ( $current_page + 2 ) <= $last_page ) {
+            $links[] = $current_page + 2;
+            $links[] = $current_page + 1;
         } ?>
 
         <nav class="my-4">
@@ -229,7 +229,7 @@ if (! function_exists('camel_posts_pagination')) {
                 <?php if ( ! in_array( 1, $links ) ) : ?>
                     <?php
                         $classes = array();
-                        $classes[] = 1 == $paged ? 'active' : '';
+                        $classes[] = 1 == $current_page ? 'active' : '';
                         $classes[] = 'page-item';
                     ?>
 
@@ -244,32 +244,32 @@ if (! function_exists('camel_posts_pagination')) {
 
                 <!-- Link to current page, plus 2 pages in either direction if necessary -->
                 <?php sort( $links ); ?>
-                <?php foreach ( (array) $links as $link ) : ?>
+                <?php foreach ( (array) $links as $page_number ) : ?>
                     <?php
                         $classes = array();
-                        $classes[] = ($paged == $link) ? 'active' : '';
+                        $classes[] = ($current_page == $page_number) ? 'active' : '';
                         $classes[] = 'page-item';
                     ?>
 
                     <li class="<?php echo implode(' ', $classes); ?>">
-                        <a href="<?php echo esc_url( get_pagenum_link( $link ) ); ?>" class="page-link"><?php echo $link; ?></a>
+                        <a href="<?php echo esc_url( get_pagenum_link( $page_number ) ); ?>" class="page-link"><?php echo $page_number; ?></a>
                     </li>
                 <?php endforeach; ?>
 
                 <!-- Link to last page, plus ellipses if necessary -->
-                <?php if ( ! in_array( $max, $links ) ) : ?>
-                    <?php if ( ! in_array( $max - 1, $links ) ) : ?>
+                <?php if ( ! in_array( $last_page, $links ) ) : ?>
+                    <?php if ( ! in_array( $last_page - 1, $links ) ) : ?>
                         <li class="page-item">…</li>
                     <?php endif; ?>
 
                     <?php
                         $classes = array();
-                        $classes[] = ($paged == $max) ? 'active' : '';
+                        $classes[] = ($current_page == $last_page) ? 'active' : '';
                         $classes[] = 'page-item';
                     ?>
 
                     <li class="<?php echo implode(' ', $classes); ?>">
-                        <a href="<?php echo esc_url( get_pagenum_link( $max ) ); ?>" class="page-link"><?php echo $max; ?></a>
+                        <a href="<?php echo esc_url( get_pagenum_link( $last_page ) ); ?>" class="page-link"><?php echo $last_page; ?></a>
                     </li>
                 <?php endif; ?>
 
