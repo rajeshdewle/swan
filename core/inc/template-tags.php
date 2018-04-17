@@ -24,25 +24,40 @@ if ( ! function_exists( 'camel_posted_on' ) ) :
      * Prints HTML with meta information for the current post-date/time.
      */
     function camel_posted_on() {
-        $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-        if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-        }
+        $post_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-        $time_string = sprintf( $time_string,
+        $post_time_string = sprintf( $post_time_string,
             esc_attr( get_the_date( DATE_W3C ) ),
-            esc_html( get_the_date() ),
-            esc_attr( get_the_modified_date( DATE_W3C ) ),
-            esc_html( get_the_modified_date() )
+            esc_html( get_the_date() )
         );
 
         $posted_on = sprintf(
             /* translators: %s: post date. */
-            esc_html_x( 'Posted on %s', 'post date', 'camel-framework' ),
-            '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+            '<span class="mr-2">' . esc_html_x( 'Posted on %s', 'post date', 'camel-framework' ) . '</span>',
+            '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $post_time_string . '</a>'
         );
 
-        echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+        if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+            $update_time_string = '<time class="updated" datetime="%1$s">%2$s</time>';
+
+            $update_time_string = sprintf( $update_time_string,
+                esc_attr( get_the_modified_date( DATE_W3C ) ),
+                esc_html( get_the_modified_date() )
+            );
+
+            $updated_on = sprintf(
+                /* translators: %s: updated date. */
+                '<span class="mr-2">' . esc_html_x( 'Updated on %s', 'update date', 'camel-framework' ) . '</span>',
+                '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $update_time_string . '</a>'
+            );
+        }
+
+        if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+            echo '<span class="posted-on">' . $posted_on . $updated_on . '</span>'; // WPCS: XSS OK.
+        } else {
+            echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+        }
+
     }
 endif;
 
