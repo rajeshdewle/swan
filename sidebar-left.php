@@ -19,9 +19,9 @@
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) : ?>
-    <div class="col-sm-9">
+    <div class="col-md-8">
 <?php elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ): ?>
-    <div class="col-sm-9">
+    <div class="col-md-8">
 <?php elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) : ?>
     <div class="col-sm-6">
 <?php else : ?>
