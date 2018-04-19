@@ -15,7 +15,7 @@
             'theme_location' => 'menu-top',
             'menu_id'        => 'top-menu',
             'depth'          => 1,
-            'menu_class'     => 'nav justify-content-center justify-content-sm-start',
+            'menu_class'     => 'nav justify-content-center justify-content-md-start',
             'list_class'     => 'nav-item mr-3 my-2',
             'link_class'     => 'nav-link p-0',
         ) );

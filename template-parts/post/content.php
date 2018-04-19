@@ -12,11 +12,11 @@
 <?php if (! is_singular()) : ?>
 
     <?php if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) : ?>
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
     <?php elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ): ?>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
     <?php elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) : ?>
-        <div class="col-sm-6">
+        <div class="col-lg-6 col-12">
     <?php else : ?>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <?php endif ?>
