@@ -10,18 +10,14 @@
  */
 ?>
 <nav class="menu-footer navbar navbar-expand-lg navbar-light">
-    <button class="menu-toggle d-none d-sm-block d-md-none" aria-controls="primary-menu" aria-expanded="false">
-        <?php esc_html_e( 'Footer Menu', 'camel-framework' ); ?>
-    </button>
-
     <?php
         camel_nav_menu( array(
             'theme_location' => 'menu-footer',
             'container_class' => 'w-100',
             'menu_id'        => 'main-menu',
-            'menu_class'     => 'navbar-nav justify-content-center',
-            'list_class'      => 'nav-item mx-2',
-            'link_class'      => 'nav-link',
+            'menu_class'     => 'nav justify-content-center',
+            'list_class'      => 'nav-item mx-2 my-1',
+            'link_class'      => 'nav-link p-0',
             'depth'          => 1
         ) );
     ?>
