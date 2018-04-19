@@ -32,13 +32,13 @@
                 <div class="top-navigation border-bottom">
                     <div class="row">
                         <?php if (has_nav_menu('menu-top')) : ?>
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                                 <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
                             </div>
                         <?php endif; ?>
 
                         <?php if (has_nav_menu('menu-social')) : ?>
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                                 <?php get_template_part('template-parts/navigation/navigation', 'social'); ?>
                             </div>
                         <?php endif; ?>
