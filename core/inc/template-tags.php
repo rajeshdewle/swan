@@ -232,11 +232,11 @@ if (! function_exists('camel_posts_pagination')) {
 
                 <?php $previous_link_class = (! get_previous_posts_link()) ? 'disabled': ''; ?>
 
-                <li class="page-item <?php echo $previous_link_class ?>">
+                <li class="page-item mr-auto <?php echo $previous_link_class ?>">
                     <?php if (get_previous_posts_link()) : ?>
                         <?php echo get_previous_posts_link('Previous') ?>
                     <?php else : ?>
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        <a class="page-link rounded" href="#" tabindex="-1">Previous</a>
                     <?php endif; ?>
                 </li>
 
@@ -245,15 +245,15 @@ if (! function_exists('camel_posts_pagination')) {
                     <?php
                         $classes = array();
                         $classes[] = 1 == $current_page ? 'active' : '';
-                        $classes[] = 'page-item';
+                        $classes[] = 'page-item mx-1';
                     ?>
 
                     <li class="<?php echo implode(' ', $classes); ?>">
-                        <a href="<?php echo esc_url( get_pagenum_link( 1 ) ); ?>" class="page-link">1</a>
+                        <a href="<?php echo esc_url( get_pagenum_link( 1 ) ); ?>" class="page-link rounded">1</a>
                     </li>
 
                     <?php if ( ! in_array( 2, $links ) ) : ?>
-                        <li class="page-item">...</li>
+                        <li class="page-item mx-1">...</li>
                     <?php endif; ?>
                 <?php endif; ?>
 
@@ -263,39 +263,39 @@ if (! function_exists('camel_posts_pagination')) {
                     <?php
                         $classes = array();
                         $classes[] = ($current_page == $page_number) ? 'active' : '';
-                        $classes[] = 'page-item';
+                        $classes[] = 'page-item mx-1';
                     ?>
 
                     <li class="<?php echo implode(' ', $classes); ?>">
-                        <a href="<?php echo esc_url( get_pagenum_link( $page_number ) ); ?>" class="page-link"><?php echo $page_number; ?></a>
+                        <a href="<?php echo esc_url( get_pagenum_link( $page_number ) ); ?>" class="page-link rounded"><?php echo $page_number; ?></a>
                     </li>
                 <?php endforeach; ?>
 
                 <!-- Link to last page, plus ellipses if necessary -->
                 <?php if ( ! in_array( $last_page, $links ) ) : ?>
                     <?php if ( ! in_array( $last_page - 1, $links ) ) : ?>
-                        <li class="page-item">...</li>
+                        <li class="page-item mx-1">...</li>
                     <?php endif; ?>
 
                     <?php
                         $classes = array();
                         $classes[] = ($current_page == $last_page) ? 'active' : '';
-                        $classes[] = 'page-item';
+                        $classes[] = 'page-item mx-1';
                     ?>
 
                     <li class="<?php echo implode(' ', $classes); ?>">
-                        <a href="<?php echo esc_url( get_pagenum_link( $last_page ) ); ?>" class="page-link"><?php echo $last_page; ?></a>
+                        <a href="<?php echo esc_url( get_pagenum_link( $last_page ) ); ?>" class="page-link rounded"><?php echo $last_page; ?></a>
                     </li>
                 <?php endif; ?>
 
                 <!-- Next Post Link -->
                 <?php $next_link_class = (! get_next_posts_link()) ? 'disabled': ''; ?>
 
-                <li class="page-item <?php echo $next_link_class; ?>">
+                <li class="page-item ml-auto <?php echo $next_link_class; ?>">
                     <?php if (get_next_posts_link()) : ?>
                         <?php echo get_next_posts_link('Next'); ?>
                     <?php else : ?>
-                        <a class="page-link" href="#" tabindex="-1">Next</a>
+                        <a class="page-link rounded" href="#" tabindex="-1">Next</a>
                     <?php endif; ?>
                 </li>
 
