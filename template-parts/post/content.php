@@ -12,13 +12,13 @@
 <?php if (! is_singular()) : ?>
 
     <?php if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) : ?>
-        <div class="col-4">
+        <div class="col-sm-4">
     <?php elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ): ?>
-        <div class="col-4">
+        <div class="col-md-6">
     <?php elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) : ?>
-        <div class="col-6">
+        <div class="col-sm-6">
     <?php else : ?>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <?php endif ?>
 
             <div class="card mb-4">
