@@ -26,13 +26,12 @@ get_header();
                     <div class="d-flex justify-content-center my-4">
                         <?php get_search_form(); ?>
                     </div>
-
                 </div><!-- .page-content -->
             </section><!-- .error-404 -->
 
         </main><!-- #main -->
     </div><!-- .col-12 -->
-</div>
+</div><!-- .row -->
 
 <?php
 get_footer();

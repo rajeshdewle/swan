@@ -25,8 +25,8 @@ get_header();
                         <div class="media-body">
                             <?php the_archive_title( '<h5 class="mt-0">', '</h5>' ); ?>
                             <?php the_archive_description(); ?>
-                        </div>
-                </div>
+                        </div><!-- .media-body -->
+                </div><!-- .media -->
 
                 <div class="row">
                     <?php while (have_posts()) :  the_post(); ?>
