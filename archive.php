@@ -19,7 +19,9 @@ get_header();
 ?>
 <div class="row">
 
-    <?php get_sidebar('left'); ?>
+    <?php get_sidebar(); ?>
+
+    <div class="<?php camel_sidebar_classes(); ?>">
 
         <main id="main">
             <?php if (have_posts()) : ?>
@@ -53,8 +55,8 @@ get_header();
 
             <?php endif; ?>
         </main>
-
-    <?php get_sidebar('right'); ?>
+    </div>
+    <?php get_sidebar(); ?>
 
 </div><!-- .row -->
 
