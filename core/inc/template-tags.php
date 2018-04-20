@@ -360,3 +360,16 @@ if (! function_exists('camel_post_navigation')) {
         echo $navigation;
     }
 }
+
+
+function camel_sidebar_classes() {
+    if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) {
+        echo 'order-2 col-md-8 col-lg-9';
+    } elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) {
+        echo 'order-2 col-md-8 col-lg-9';
+    } elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) {
+        echo 'order-2 col-sm-4 col-lg-6';
+    } else {
+        echo 'order-2 col-sm-12';
+    }
+}
