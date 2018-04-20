@@ -107,11 +107,28 @@ if (! function_exists('camel_setup')) :
             'height'             => 250,
             'flex-width'         => true,
             'flex-height'        => true,
+            'wp-head-callback'           => 'camel_header_style',
         ));
     }
 endif; // camel_setup
 
 add_action('after_setup_theme', 'camel_setup');
+
+if (! function_exists('camel_header_style')) {
+
+    function camel_header_style() {
+        if (! display_header_text()) : ?>
+            <style>
+                .site-title,
+                .site-description {
+                    position: absolute;
+                    clip: rect(1px, 1px, 1px, 1px);
+                }
+            </style>
+        <?php endif;
+    }
+    
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
