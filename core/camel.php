@@ -9,4 +9,8 @@ require_once get_template_directory() . '/core/inc/class-camel-comment-walker.ph
 // Template tags
 require_once get_template_directory() . '/core/inc/template-tags.php';
 
+// Customizer
+require_once get_template_directory() . '/core/inc/customizer.php';
+
+
 
