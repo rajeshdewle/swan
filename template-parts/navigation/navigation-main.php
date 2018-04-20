@@ -9,11 +9,12 @@
  * @package Camel_Framework
  */
 ?>
-<nav class="menu-main navbar navbar-expand-lg navbar-light bg-light">
+<div class="bg-light">
     <div class="container">        
-        <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#menu-main" aria-controls="main-main" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="menu-main navbar navbar-expand-lg navbar-light pl-0 pr-0">
+            <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#menu-main" aria-controls="main-main" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
         <?php
             camel_nav_menu( array(
@@ -26,5 +27,6 @@
                 'submenu_class'   => 'dropdown-menu'
             ) );
         ?>
-    </div>
+    </div> <!-- .container -->
 </nav><!-- #site-navigation -->
+</div> <!-- .bg-light -->

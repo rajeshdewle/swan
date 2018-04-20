@@ -368,7 +368,7 @@ function camel_sidebar_classes() {
     } elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) {
         echo 'order-2 col-md-8 col-lg-9';
     } elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) {
-        echo 'order-md-2 col-sm-4 col-lg-6';
+        echo 'order-sm-2 order-md-2 col-sm-4 col-lg-6';
     } else {
         echo 'order-2 col-sm-12';
     }
