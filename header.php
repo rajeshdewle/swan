@@ -46,9 +46,9 @@
                                 <?php get_template_part('template-parts/navigation/navigation', 'social'); ?>
                             </div>
                         <?php endif; ?>
-                    </div>
-                </div>
-            </div>
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .top-navigation -->
         <?php endif; ?>
 
         <div class="site-branding my-4 d-flex justify-content-center justify-content-md-start">
@@ -65,8 +65,8 @@
                     <?php if ( $bloginfo || is_customize_preview()) : ?>
                         <p class="site-description mt-1"><?php echo $bloginfo; ?></p>
                     <?php endif; ?>
-                </div>
-            </div>
+                </div><!-- .text-center -->
+            </div><!-- .container -->
         </div><!-- .site-branding -->
     
 

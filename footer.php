@@ -21,7 +21,7 @@
             <?php if (has_nav_menu('menu-footer')) :  ?>
                 <div class="footer-menu my-4">
                     <?php get_template_part('template-parts/navigation/navigation', 'footer'); ?>
-                </div>
+                </div><!-- .footer-menu -->
             <?php endif; ?>
 
             <div class="copyright text-center pb-3">
