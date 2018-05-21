@@ -1,8 +1,9 @@
 <?php
 /**
  * -----------------------------------------------------------------------------
- * Template part for displaying post content of aside
+ * Template part for displaying aside posts
  * -----------------------------------------------------------------------------
+ * 
  * Typically styled without a title. Similar to a Facebook note update.
  *
  * @link https://developer.wordpress.org/themes/functionality/post-formats/
@@ -27,7 +28,6 @@
                     <?php the_post_thumbnail('thumbnail', array('class' => 'card-img-top h-100')); // TODO : later we will make custom template tag ?>
                 <?php endif; ?>
                 <div class="card-body">
-               
                     <p class="card-text"><?php the_excerpt() ?></p>
                     <a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn-primary">Read More</a>
                 </div>
