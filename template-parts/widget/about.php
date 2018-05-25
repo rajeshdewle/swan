@@ -121,6 +121,8 @@ class About_Us_Widget extends WP_Widget {
 
     ?>
 
+    
+
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>" class="title">
                 <?php _e('Title:', 'camel_About_Us_Widget'); ?>
@@ -132,6 +134,11 @@ class About_Us_Widget extends WP_Widget {
         <!-- Upload Image-->
         <p>    
             <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image:' ); ?></label>
+
+            <div id="upload_logo_preview" style="min-height: 100px;">
+                <img style="max-width:100%;" src="<?php echo esc_url( $image ); ?>" />
+            </div>
+
             <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" value="<?php echo esc_url( $image ); ?>" />
              <button class="upload_image_button button button-primary">Upload Image</button>
         </p>
