@@ -28,7 +28,7 @@ class About_Us_Widget extends WP_Widget {
     {
         wp_enqueue_script( 'media-upload' );
         wp_enqueue_media();
-        wp_enqueue_script('our_admin', get_template_directory_uri() . '/assets/js/admin.js', array('jquery'));
+        wp_enqueue_script('admin', get_template_directory_uri() . '/assets/js/admin.js', array('jquery'));
     }
 
     // Display Widget on Front-page
@@ -101,7 +101,7 @@ class About_Us_Widget extends WP_Widget {
         if ($instance){
 			$title = esc_attr($instance['title']);
 
-			//Mmage
+			//Image
 			$image = esc_attr($instance['image']);
 
 			//Textarea
@@ -132,7 +132,7 @@ class About_Us_Widget extends WP_Widget {
         <!-- Upload Image-->
         <p>    
             <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image:' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" type="text" value="<?php echo esc_url( $image ); ?>" />
+            <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" value="<?php echo esc_url( $image ); ?>" />
              <button class="upload_image_button button button-primary">Upload Image</button>
         </p>
 
