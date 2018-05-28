@@ -135,12 +135,10 @@ class About_Us_Widget extends WP_Widget {
         <p>    
             <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image:' ); ?></label>
 
-            <div id="upload_logo_preview" style="min-height: 100px;">
-                <img style="max-width:100%;" src="<?php echo esc_url( $image ); ?>" />
-            </div>
+            <img style="max-width:100%;display:block;margin:1rem 0;" src="<?php echo esc_url( $image ); ?>" />
 
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" value="<?php echo esc_url( $image ); ?>" />
-             <button class="upload_image_button button button-primary">Upload Image</button>
+            <input type="hidden" class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" value="<?php echo esc_url( $image ); ?>" />
+            <input type="submit" class="upload_image_button button" name="<?php echo $this->get_field_name( 'uploader_button' ); ?>" id="<?php echo $this->get_field_id( 'uploader_button' ); ?>" value="<?php _e( 'Select an Image', 'image-widget' ); ?>"); return false;" />
         </p>
 
         <!-- About textbox -->

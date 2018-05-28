@@ -23,8 +23,17 @@ jQuery(document).ready(function ($) {
   
           var attachment = file_frame.state().get('selection').first().toJSON();
   
-          $button.siblings('input').val(attachment.url).change();        
-  
+          $button.siblings('input').val(attachment.url).change(); 
+
+        //   var image = document.getElementById('camel-about-image');
+        //   image.src = attachment.url;
+          console.log($button.siblings());
+
+          $button.siblings('img').attr('src', attachment.url).change(); 
+          
+          
+          //$("#image").val(attachment).change();
+
        });
   
        // Finally, open the modal
