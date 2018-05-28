@@ -32,6 +32,9 @@ figure {
     height: auto;
 }
 
+embed, iframe, object {
+    max-width: 100%;
+}
 
 .wp-caption {}
 .wp-caption-text {}
