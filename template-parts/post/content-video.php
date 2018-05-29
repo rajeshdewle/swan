@@ -3,7 +3,7 @@
  * -----------------------------------------------------------------------------
  * Template part for displaying video posts
  * -----------------------------------------------------------------------------
- * 
+ *
  * A single video. The first <video /> tag or object/embed in the post content could be considered the video.
  * Alternatively, if the post consists only of a URL, that will be the video URL.
  * May also contain the video as an attachment to the post,
@@ -61,7 +61,7 @@
 
         <?php camel_post_thumbnail(); ?>
 
-        <div class="entry-content">
+        <div class="entry-content clearfix">
             <?php
             the_content(sprintf(
                 wp_kses(

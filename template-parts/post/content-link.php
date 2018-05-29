@@ -3,7 +3,7 @@
  * -----------------------------------------------------------------------------
  * Template part for displaying link posts
  * -----------------------------------------------------------------------------
- * 
+ *
  * A link to another site.
  * Themes may wish to use the first <a href=””> tag in the post content as the external link for that post.
  * An alternative approach could be if the post consists only of a URL,
@@ -61,7 +61,7 @@
 
         <?php camel_post_thumbnail(); ?>
 
-        <div class="entry-content">
+        <div class="entry-content clearfix">
             <?php
             the_content(sprintf(
                 wp_kses(

@@ -3,7 +3,7 @@
  * -----------------------------------------------------------------------------
  * Template part for displaying quote posts
  * -----------------------------------------------------------------------------
- * 
+ *
  * A quotation. Probably will contain a blockquote holding the quote content.
  * Alternatively, the quote may be just the content, with the source/author being the title.
  *
@@ -59,7 +59,7 @@
 
         <?php camel_post_thumbnail(); ?>
 
-        <div class="entry-content">
+        <div class="entry-content clearfix">
             <?php
             the_content(sprintf(
                 wp_kses(

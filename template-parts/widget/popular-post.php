@@ -5,14 +5,14 @@
  */
 
 // The popular post widget class
-class popular_post_widget extends WP_Widget {
+class Camel_Popular_Posts_Widget extends WP_Widget {
      /**
      * Register widget with WordPress.
      */
     public function __construct() {
         parent::__construct(
-            'popular_post', // Widget ID
-            'Popular Post', // Widget Name
+            'camel_popular_posts', // Widget ID
+            'Camel Popular Posts', // Widget Name
             array( 'description' => __( 'A popular post widget to display popular post by comments.', 'camel-framework' ), ) // Widget Descriptions
         );
     }
@@ -27,11 +27,11 @@ class popular_post_widget extends WP_Widget {
     	$title = apply_filters( 'widget_title', $instance['title'] );
 		$number = $instance['number'];
         $query = new WP_Query( array( 'showposts' => $number, 'orderby' => 'comment_count', 'order' => 'DESC', 'ignore_sticky_posts' => 1 ) );
-        
+
         echo $before_widget;
 
 		if ( $title )
-			echo $before_title . $title . $after_title;	?>	
+			echo $before_title . $title . $after_title;	?>
 			<ul>
             <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 			    <li>
@@ -39,7 +39,7 @@ class popular_post_widget extends WP_Widget {
                 </li>
 			<?php endwhile; endif;?>
 			</ul>
-            
+
 	    <?php echo $after_widget;
     }
 
@@ -48,7 +48,7 @@ class popular_post_widget extends WP_Widget {
      * @param array $instance Previously saved values from database.
      */
     function form( $instance ) {
-		$defaults = array( 'title' => __('Popular Post', 'camel-framewok'), 'number' => __('5', 'camel-framewok') );
+		$defaults = array( 'title' => __('Popular Posts', 'camel-framewok'), 'number' => __('5', 'camel-framewok') );
 		$instance = wp_parse_args( $instance, $defaults ); ?>
         <p>
 		    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'camel-framewok'); ?></label>
@@ -72,9 +72,9 @@ class popular_post_widget extends WP_Widget {
 	    //The strip_tags() function strips a string from HTML, XML, and PHP tags.
 	    $instance['title'] = strip_tags( $new_instance['title'] );
         $instance['number'] = strip_tags( $new_instance['number'] );
-        
+
 	    return $instance;
 	}
 }
 // function to register popular post widget
-add_action( 'widgets_init', function() { register_widget( 'popular_post_widget' ); } );
+add_action( 'widgets_init', function() { register_widget( 'camel_popular_posts_widget' ); } );

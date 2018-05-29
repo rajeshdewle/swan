@@ -3,7 +3,7 @@
  * -----------------------------------------------------------------------------
  * Template part for displaying status posts
  * -----------------------------------------------------------------------------
- * 
+ *
  * A short status update, similar to a Twitter status update
  *
  * @link https://developer.wordpress.org/themes/functionality/post-formats/
@@ -58,7 +58,7 @@
 
         <?php camel_post_thumbnail(); ?>
 
-        <div class="entry-content">
+        <div class="entry-content clearfix">
             <?php
             the_content(sprintf(
                 wp_kses(

@@ -3,7 +3,7 @@
  * -----------------------------------------------------------------------------
  * Template part for displaying chat posts
  * -----------------------------------------------------------------------------
- * 
+ *
  * A chat transcript.
  *
  * @link https://developer.wordpress.org/themes/functionality/post-formats/
@@ -58,7 +58,7 @@
 
         <?php camel_post_thumbnail(); ?>
 
-        <div class="entry-content">
+        <div class="entry-content clearfix">
             <?php
             the_content(sprintf(
                 wp_kses(

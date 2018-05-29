@@ -3,7 +3,7 @@
  * -----------------------------------------------------------------------------
  * Template part for displaying image posts
  * -----------------------------------------------------------------------------
- * 
+ *
  * A single image. The first <img /> tag in the post could be considered the image.
  * Alternatively, if the post consists only of a URL,
  * that will be the image URL and the title of the post (post_title) will be the title attribute for the image.
@@ -60,7 +60,7 @@
 
         <?php camel_post_thumbnail(); ?>
 
-        <div class="entry-content">
+        <div class="entry-content clearfix">
             <?php
             the_content(sprintf(
                 wp_kses(
