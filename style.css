@@ -36,6 +36,10 @@ embed, iframe, object {
     max-width: 100%;
 }
 
+.entry-title {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
 .wp-caption {}
 .wp-caption-text {}
 .screen-reader-text {}
@@ -59,4 +63,5 @@ embed, iframe, object {
     margin-right: auto;
 }
 .gallery-caption {}
+
 

@@ -23,7 +23,7 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
                 <?php if ( 0 != $args['avatar_size'] ) : ?>
                     <?php echo get_avatar( $comment, $args['avatar_size'], null, null, array( 'class' => 'mr-3 rounded' ) ); ?>
                 <?php endif; ?>
-                <div class="media-body">
+                <div class="media-body table-responsive">
 
                 <article id="div-comment-<?php comment_ID(); ?>">
 
