@@ -78,6 +78,14 @@
             ?>
         </div><!-- .entry-content -->
 
+         <div class="media pb-4 bg-light p-3 rounded">
+            <div class="mr-3"><?php echo get_avatar( get_the_author_meta( 'ID' ), $size = '70', $default = '<path_to_url>', '', array('class' => 'rounded border', ) ); ?></div>
+                <div class="media-body">
+                <h5><?php the_author_posts_link(); ?></h5>
+                <p><?php the_author_meta('description'); ?></p>
+            </div><!-- .media-body -->
+        </div><!-- .media -->
+        
         <footer class="entry-footer">
             <?php camel_entry_footer(); ?>
         </footer><!-- .entry-footer -->
