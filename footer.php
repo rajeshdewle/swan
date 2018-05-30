@@ -17,7 +17,7 @@
 
     <footer class="footer bg-light border-top mt-4">
         <div class="container">
-        
+
             <?php if (has_nav_menu('menu-footer')) :  ?>
                 <div class="footer-menu my-4">
                     <?php get_template_part('template-parts/navigation/navigation', 'footer'); ?>
@@ -30,7 +30,7 @@
                 </a>
                 <span class="sep d-sm-inline-block d-none"> | </span>
                     <div class="d-inline-block">
-                    <?php printf(esc_html__('Theme: %1$s by %2$s.', 'camel-framework'), 'camel-framework', '<a href="#">CamelThemes</a>'); ?>
+                        &copy; <?php echo get_theme_mod('camel_copyright_text'); ?>
                     </div>
             </div><!-- .copyright -->
 
