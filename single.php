@@ -13,8 +13,6 @@ get_header();
 ?>
 <div class="row">
 
-    <?php get_sidebar(); ?>
-
      <div class="<?php camel_sidebar_classes(); ?>">
 
         <main id="main">

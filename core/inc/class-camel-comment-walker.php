@@ -97,6 +97,27 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
             }
         }
 
+        /**
+     * Outputs a pingback comment.
+     *
+     * @since 3.6.0
+     *
+     * @see wp_list_comments()
+     *
+     * @param WP_Comment $comment The comment object.
+     * @param int        $depth   Depth of the current comment.
+     * @param array      $args    An array of arguments.
+     */
+    protected function ping( $comment, $depth, $args ) {
+        $tag = ( 'div' == $args['style'] ) ? 'div' : 'li'; ?>
+        <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( '', $comment ); ?>>
+        <div class="media-body table-responsive mb-2">
+            <div class="comment-body">
+                <?php _e( 'Pingback:' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+            </div>
+<?php
+    }
+
 
     }
 }
