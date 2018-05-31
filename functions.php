@@ -435,3 +435,18 @@ function camel_gallery_shortcode( $attr ) {
 
 remove_shortcode('gallery', 'gallery_shortcode');
 add_shortcode('gallery', 'camel_gallery_shortcode');
+
+
+function camel_password_form() {
+    global $post;
+    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $o = '<form class="form-inline" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
+            <div class="form-group">
+                <label class="pass-label" for="' . $label . '">' . __( "Password:" ) . ' </label>
+                <input type="password" class="form-control mx-sm-3" name="post_password" id="' . $label . '" placeholder="Password">
+                <input type="submit" name="Submit" class="btn btn-primary" value="' . esc_attr__( "Submit" ) . '" />
+            </div>
+         </form>';
+    return $o;
+}
+add_filter( 'the_password_form', 'camel_password_form' );
