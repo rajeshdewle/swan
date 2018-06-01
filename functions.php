@@ -450,3 +450,8 @@ function camel_password_form() {
     return $o;
 }
 add_filter( 'the_password_form', 'camel_password_form' );
+
+add_filter( 'the_content', 'camel_add_custom_table_class' );
+function camel_add_custom_table_class( $content ) {
+    return str_replace( '<table>', '<table class="table">', $content );
+}
