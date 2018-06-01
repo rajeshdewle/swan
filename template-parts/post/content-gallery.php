@@ -41,7 +41,7 @@
 <?php else : ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="entry-header mb-2">
+        <header class="entry-header mb-2 border-bottom pb-2">
             <?php
             the_title('<h1 class="entry-title">', '</h1>');
 
