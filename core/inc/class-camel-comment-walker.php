@@ -25,9 +25,9 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
                     ?>
                     <?php echo get_avatar( $comment, $args['avatar_size'], null, null, array( 'class' => $avatarClass ) ); ?>
                 <?php endif; ?>
-                <div class="media-body table-responsive">
+                <div class="table-responsive">
 
-                <article id="div-comment-<?php comment_ID(); ?>" class="d-flex">
+                <article id="div-comment-<?php comment_ID(); ?>" class="media-body <?php echo ($this->has_children) ? 'd-flex d-md-block' : ''; ?>">
                     <?php if ($this->has_children) : ?>
                         <?php if ( 0 != $args['avatar_size'] ) : ?>
                             <?php echo get_avatar( $comment, $args['avatar_size'], null, null, array( 'class' => 'mr-3 rounded d-flex d-md-none' ) ); ?>
@@ -54,7 +54,7 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
                             </a>
                         </div>
 
-                        <div class="mt-1">
+                        <div class="mt-1 w-100">
                             <?php comment_text(); ?>
                         </div>
                         <div class="mt-1 d-flex">
@@ -74,6 +74,7 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
                         </div>
                     </div><!-- .comment-content -->
                 </article><!-- .comment-body -->
+
 
 
             <?php
