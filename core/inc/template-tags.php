@@ -320,7 +320,7 @@ if (! function_exists('camel_post_navigation')) {
         $navigation = '';
 
         $previous = get_previous_post_link(
-            '<div class="nav-previous">%link</div>',
+            '<div class="nav-previous col-sm-6">%link</div>',
             $args['prev_text'],
             $args['in_same_term'],
             $args['excluded_terms'],
@@ -328,7 +328,7 @@ if (! function_exists('camel_post_navigation')) {
         );
 
         $next = get_next_post_link(
-            '<div class="nav-next">%link</div>',
+            '<div class="nav-next col-sm-6 text-right">%link</div>',
             $args['next_text'],
             $args['in_same_term'],
             $args['excluded_terms'],
@@ -349,7 +349,7 @@ if (! function_exists('camel_post_navigation')) {
             $template = '
             <nav class="navigation %1$s my-4" role="navigation">
                 <h2 class="sr-only">%2$s</h2>
-                <div class="nav-links d-flex justify-content-between">%3$s</div>
+                <div class="nav-links row">%3$s</div>
             </nav>';
 
             $template = apply_filters( 'navigation_markup_template', $template, $class );
