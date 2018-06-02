@@ -15,27 +15,34 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
          */
         protected function html5_comment( $comment, $depth, $args ) {
             $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
-            $comment_class[] = $this->has_children ? 'parent' : '';
-            $comment_class[] = 'media';
+            $comment_class[] = $this->has_children ? 'd-md-flex align-items-md-start' : 'media';
             ?>
 
             <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $comment_class, $comment ); ?>>
                 <?php if ( 0 != $args['avatar_size'] ) : ?>
-                    <?php echo get_avatar( $comment, $args['avatar_size'], null, null, array( 'class' => 'mr-3 rounded' ) ); ?>
+                    <?php
+                        $avatarClass = ($this->has_children) ? 'mr-3 rounded d-none d-md-block' : 'mr-3 rounded';
+                    ?>
+                    <?php echo get_avatar( $comment, $args['avatar_size'], null, null, array( 'class' => $avatarClass ) ); ?>
                 <?php endif; ?>
                 <div class="media-body table-responsive">
 
-                <article id="div-comment-<?php comment_ID(); ?>">
+                <article id="div-comment-<?php comment_ID(); ?>" class="d-flex">
+                    <?php if ($this->has_children) : ?>
+                        <?php if ( 0 != $args['avatar_size'] ) : ?>
+                            <?php echo get_avatar( $comment, $args['avatar_size'], null, null, array( 'class' => 'mr-3 rounded d-flex d-md-none' ) ); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
 
                     <div class="mb-4">
-                        <div class="d-flex mt-0">
-                            <h5 class="mr-2">
+                        <div class="d-flex align-items-center mt-0">
+                            <span class="mr-2">
                                 <?php
                                     /* translators: %s: comment author link */
                                     printf( __( '%s <span class="says">says:</span>', 'camel-framework' ),
                                         sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) )
                                     ); ?>
-                            </h5><!-- .comment-author -->
+                            </span><!-- .comment-author -->
                             <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
                                 <time datetime="<?php comment_time( 'c' ); ?>">
                                     <?php
