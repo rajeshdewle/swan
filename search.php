@@ -13,24 +13,22 @@ get_header();
 ?>
 <div class="row">
 
-    <?php get_sidebar(); ?>
-        
-        <div class="<?php camel_sidebar_classes(); ?>">
+    <div class="<?php camel_sidebar_classes(); ?>">
 
         <main id="main" class="site-main">
-        <?php
-        if ( have_posts() ) : ?>
 
-            <header class="page-header mb-4">
-                <h1 class="page-title">
-                    <?php
-                    /* translators: %s: search query. */
-                    printf( esc_html__( 'Search Results for: %s', 'camel-framework' ), '<span>' . get_search_query() . '</span>' );
-                    ?>
-                </h1>
-            </header><!-- .page-header -->
+            <?php if ( have_posts() ) : ?>
 
-            <div class="row">
+                <header class="page-header mb-4">
+                    <h1 class="page-title">
+                        <?php
+                        /* translators: %s: search query. */
+                        printf( esc_html__( 'Search Results for: %s', 'camel-framework' ), '<span>' . get_search_query() . '</span>' );
+                        ?>
+                    </h1>
+                </header><!-- .page-header -->
+
+                <div class="row">
                     <?php while (have_posts()) :  the_post(); ?>
                         <?php
                             /*
@@ -50,9 +48,12 @@ get_header();
                 <?php  get_template_part('template-parts/post/content', 'none'); ?>
 
             <?php endif; ?>
+
         </main><!-- #main -->
+
     </div>
 
-<?php get_sidebar(); ?>
+    <?php get_sidebar(); ?>
+
 </div><!-- .row -->
 <?php get_footer(); ?>

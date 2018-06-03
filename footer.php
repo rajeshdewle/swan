@@ -29,9 +29,9 @@
                     <?php printf(esc_html__('Proudly powered by %s', 'camel-framework'), 'WordPress'); ?>
                 </a>
                 <span class="sep d-sm-inline-block d-none"> | </span>
-                    <div class="d-inline-block">
-                        &copy; <?php echo (get_theme_mod('camel_copyright_text')) ? get_theme_mod('camel_copyright_text') : __('CamelThemes Framework', 'Camel_Framework'); ?>
-                    </div>
+                <div class="d-inline-block">
+                    &copy; <?php echo get_theme_mod('camel_copyright_text'); ?>
+                </div>
             </div><!-- .copyright -->
 
         </div><!-- .container -->

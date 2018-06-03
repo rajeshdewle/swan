@@ -479,24 +479,19 @@ function camel_link_pages( $args = array () ) {
 
     global $page, $numpages, $multipage, $more, $pagenow;
 
-    if ( ! $multipage )
-    {
+    if ( ! $multipage ) {
         return;
     }
 
     $output = $before;
 
-    for ( $i = 1; $i < ( $numpages + 1 ); $i++ )
-    {
+    for ( $i = 1; $i < ( $numpages + 1 ); $i++ ) {
         $j       = str_replace( '%', $i, $pagelink );
         $output .= ' ';
 
-        if ( $i != $page || ( ! $more && 1 == $page ) )
-        {
+        if ( $i != $page || ( ! $more && 1 == $page ) ) {
             $output .= "{$before_link}" . _camel_link_page( $i ) . "{$link_before}{$j}{$link_after}</a></li>{$after_link}";
-        }
-        else
-        {
+        } else {
             $output .= "{$current_before}{$link_before}<li class='page-item mx-1'><a class='page-link rounded'>{$j}</a></li>{$link_after}{$current_after}";
         }
     }
@@ -521,7 +516,6 @@ function _camel_link_page( $i ) {
     }
 
     if ( is_preview() ) {
-
         if ( ( 'draft' !== $post->post_status ) && isset( $_GET['preview_id'], $_GET['preview_nonce'] ) ) {
             $query_args['preview_id'] = wp_unslash( $_GET['preview_id'] );
             $query_args['preview_nonce'] = wp_unslash( $_GET['preview_nonce'] );
