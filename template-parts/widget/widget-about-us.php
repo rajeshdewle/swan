@@ -7,27 +7,17 @@
 class About_Us_Widget extends WP_Widget {
 
     public function __construct() {
+        // Add Widget scripts
+        add_action('admin_enqueue_scripts', array($this, 'scripts'));
 
-    // Add Widget scripts
-    add_action('admin_enqueue_scripts', array($this, 'scripts'));
+        parent::__construct(
+            'about-us-widget', // Widget ID
+            'Camel About Us Widget', // Widget Name
+            array( 'description' => __('About Us widget for displaying user profile in sidebar.', 'camel-framework') ) // Widget description
+        );
+    }
 
-    parent::__construct(
-
-    // Widget ID
-    'about-us-widget',
-
-    /// Widget Name
-    'Camel About Us Widget',
-
-    // Widget description
-    array( 'description' => 'About Us widget for displaying user profile in sidebar.' )
-
-);
-
-}
-
-    public function scripts()
-    {
+    public function scripts() {
         wp_enqueue_script( 'media-upload' );
         wp_enqueue_media();
         wp_enqueue_script('admin', get_template_directory_uri() . '/assets/js/admin.js', array('jquery'));
@@ -39,23 +29,16 @@ class About_Us_Widget extends WP_Widget {
         extract($args);
 
         $image = ! empty( $instance['image'] ) ? $instance['image'] : '';
-
 		$title = apply_filters('widget_title', $instance['title']);
-
 		$image =  $instance['image'];
-
 		$about_textarea =  $instance['about_textarea'];
-
 		$about_url =  $instance['about_url'];
 
-        //Add custom class
 
-		$before_widget = str_replace('class="', 'class="'. 'camel_About_Us_Widget' . ' ', $before_widget);
+		$before_widget = str_replace('class="', 'class="'. 'camel_About_Us_Widget' . ' ', $before_widget); // Add custom class
 
 		echo $before_widget;
-
-		//display widget
-		echo '<div class="widget-text">';
+		echo '<div class="widget-text">'; // display widget
 
 		if ($title) {
 			echo $before_title . $title . $after_title;
@@ -65,7 +48,7 @@ class About_Us_Widget extends WP_Widget {
             echo $args['before_widget'];
         ?>
 
-        <?php if($image): ?>
+        <?php if ($image) : ?>
             <img src="<?php echo esc_url($image); ?>" alt="">
         <?php endif; ?>
 
@@ -99,32 +82,11 @@ class About_Us_Widget extends WP_Widget {
          );
 
         $instance = wp_parse_args( (array) $instance, $defaults );
-
-        if ($instance){
-			$title = esc_attr($instance['title']);
-
-			//Image
-			$image = esc_attr($instance['image']);
-
-			//Textarea
-			$about_textarea = esc_attr($instance['about_textarea']);
-
-			//Link
-			$about_url = esc_attr($instance['about_url']);
-		}
-
-		else
-		{
-			$title = '';
-			$image = '';
-			$about_textarea = '';
-			$about_url = '';
-		}
-
+        $title = ($instance) ? esc_attr($instance['title']) : '';
+		$image = ($instance) ? esc_attr($instance['image']) : '';
+		$about_textarea = ($instance) ? esc_attr($instance['about_textarea']) : '';
+		$about_url = ($instance) ? esc_attr($instance['about_url']) : '';
     ?>
-
-
-
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>" class="title">
                 <?php _e('Title:', 'camel_About_Us_Widget'); ?>
@@ -161,20 +123,16 @@ class About_Us_Widget extends WP_Widget {
                 Learn more url
             </label>
 
-            <input type="text" cols="30" rows="7" id="<?php echo $this->get_field_id('about_url'); ?>"
-            name="<?php echo $this->get_field_name('about_url'); ?>"
-            value="<?php echo $about_url; ?>";
-            >
+            <input type="text" cols="30" rows="7" id="<?php echo $this->get_field_id('about_url'); ?>" name="<?php echo $this->get_field_name('about_url'); ?>" value="<?php echo $about_url; ?>">
         </p>
 
         <hr>
 
     <?php
-}
+    }
 
     // widgt update
-    function update($new_instance, $old_instance)
-    {
+    function update($new_instance, $old_instance) {
         $instance = $old_instance;
         //fields
         $instance['title'] = strip_tags($new_instance['title']);
@@ -187,10 +145,6 @@ class About_Us_Widget extends WP_Widget {
 }
 
     // Hook to register widget in dashboard
-    add_action( 'widgets_init', function() {
+add_action( 'widgets_init', function() { register_widget( 'About_Us_Widget' ); });
 
-        register_widget( 'About_Us_Widget' );
 
-    });
-
-?>

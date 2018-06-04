@@ -13,7 +13,7 @@ require_once get_template_directory() . '/core/inc/template-tags.php';
 require_once get_template_directory() . '/core/inc/customizer.php';
 
 // Widgets
-require_once get_template_directory() . '/template-parts/widget/widget-about.php';
+require_once get_template_directory() . '/template-parts/widget/widget-about-us.php';
 require_once get_template_directory() . '/template-parts/widget/widget-popular-post.php';
 
 
