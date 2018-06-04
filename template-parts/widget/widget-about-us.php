@@ -7,8 +7,7 @@
 class About_Us_Widget extends WP_Widget {
 
     public function __construct() {
-        // Add Widget scripts
-        add_action('admin_enqueue_scripts', array($this, 'scripts'));
+        add_action('admin_enqueue_scripts', array($this, 'scripts')); // Add Widget scripts
 
         parent::__construct(
             'about-us-widget', // Widget ID
@@ -38,6 +37,7 @@ class About_Us_Widget extends WP_Widget {
 		$before_widget = str_replace('class="', 'class="'. 'camel_About_Us_Widget' . ' ', $before_widget); // Add custom class
 
 		echo $before_widget;
+
 		echo '<div class="widget-text">'; // display widget
 
 		if ($title) {
@@ -45,7 +45,9 @@ class About_Us_Widget extends WP_Widget {
 		}
 
         ob_start();
-            echo $args['before_widget'];
+
+        echo $args['before_widget'];
+
         ?>
 
         <?php if ($image) : ?>
@@ -54,6 +56,7 @@ class About_Us_Widget extends WP_Widget {
 
         <?php
         echo $args['after_widget'];
+
         ob_end_flush();
 
 		if ($about_textarea) {
@@ -91,13 +94,14 @@ class About_Us_Widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id('title'); ?>" class="title">
                 <?php _e('Title:', 'camel-framework'); ?>
             </label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
-            name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title;  ?>" />
+            <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title;  ?>" />
         </p>
 
         <!-- Upload Image-->
         <p>
-            <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image:', 'camel-framework' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'image' ); ?>">
+                <?php _e( 'Image:', 'camel-framework' ); ?>
+            </label>
 
             <img style="max-width:100%;display:block;margin:1rem 0;" src="<?php echo esc_url( $image ); ?>" />
 
@@ -108,24 +112,20 @@ class About_Us_Widget extends WP_Widget {
         <!-- About textbox -->
         <p>
             <label for="<?php echo $this->get_field_id('about_textarea'); ?>">
-                About describtion <i>(max 20 words)</i>
+                <?php _e( 'Description:', 'camel-framework' ); ?> <i>(max 20 words)</i>
             </label>
 
-            <textarea cols="30" rows="7" class="widefat" id="<?php echo $this->get_field_id('about_textarea'); ?>"
-            name="<?php echo $this->get_field_name('about_textarea'); ?>"
-            ><?php echo $about_textarea; ?></textarea>
-
+            <textarea cols="30" rows="7" class="widefat" id="<?php echo $this->get_field_id('about_textarea'); ?>" name="<?php echo $this->get_field_name('about_textarea'); ?>"><?php echo $about_textarea; ?></textarea>
         </p>
 
         <!-- About learn more link -->
         <p>
             <label for="<?php echo $this->get_field_id('about_url'); ?>">
-                Learn more url
+                <?php _e( 'Learn more URL:', 'camel-framework' ); ?>
             </label>
 
             <input type="text" cols="30" rows="7" id="<?php echo $this->get_field_id('about_url'); ?>" name="<?php echo $this->get_field_name('about_url'); ?>" value="<?php echo $about_url; ?>">
         </p>
-
         <hr>
 
     <?php
@@ -134,11 +134,13 @@ class About_Us_Widget extends WP_Widget {
     // widgt update
     function update($new_instance, $old_instance) {
         $instance = $old_instance;
-        //fields
+
+        // update fields
         $instance['title'] = strip_tags($new_instance['title']);
         $instance['image'] = strip_tags($new_instance['image']);
         $instance['about_textarea'] = strip_tags($new_instance['about_textarea']);
         $instance['about_url'] = strip_tags($new_instance['about_url']);
+
         return $instance;
     }
 
