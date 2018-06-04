@@ -13,7 +13,7 @@ class Camel_Popular_Posts_Widget extends WP_Widget {
         parent::__construct(
             'camel_popular_posts', // Widget ID
             'Camel Popular Posts', // Widget Name
-            array( 'description' => __( 'A popular post widget to display popular post by comments.', 'camel-framework' ), ) // Widget Descriptions
+            array( 'description' => __( 'A widget to display popular posts by number of comments.', 'camel-framework' ), ) // Widget Descriptions
         );
     }
 
