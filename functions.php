@@ -217,9 +217,6 @@ function posts_link_attributes() {
 // Initialize camel core
 require get_template_directory() . '/core/camel.php';
 
-// Initialize about-us widget
-require get_template_directory() . '/template-parts/widget/about.php';
-
 
 function camel_gallery_shortcode( $attr ) {
     $post = get_post();
