@@ -1,12 +1,13 @@
 <?php
 /**
- * Template part for displaying posts
+ * -----------------------------------------------------------------------------
+ * Template part for displaying aside posts
+ * -----------------------------------------------------------------------------
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://developer.wordpress.org/themes/functionality/post-formats/
  *
  * @package Camel_Framework
  */
-
 ?>
 
 <?php if (! is_singular()) : ?>
