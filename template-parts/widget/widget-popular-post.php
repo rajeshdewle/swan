@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Popular Post Widget
+ * Widget Name: Popular Post Widget
  * Description: A widget to show popular post.
  */
 

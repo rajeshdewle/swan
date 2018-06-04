@@ -1,7 +1,9 @@
 <?php
 /**
-* About Us widget.
-*/
+ * Widget Name: About Us
+ * Description: A widget to show popular post.
+ */
+
 class About_Us_Widget extends WP_Widget {
 
     public function __construct() {
@@ -12,13 +14,13 @@ class About_Us_Widget extends WP_Widget {
     parent::__construct(
 
     // Widget ID
-    'about-us-widget', 
+    'about-us-widget',
 
     /// Widget Name
     'Camel About Us Widget',
 
     // Widget description
-    array( 'description' => 'About Us widget for displaying user profile in sidebar.' ) 
+    array( 'description' => 'About Us widget for displaying user profile in sidebar.' )
 
 );
 
@@ -37,17 +39,17 @@ class About_Us_Widget extends WP_Widget {
         extract($args);
 
         $image = ! empty( $instance['image'] ) ? $instance['image'] : '';
- 
+
 		$title = apply_filters('widget_title', $instance['title']);
 
 		$image =  $instance['image'];
-		
+
 		$about_textarea =  $instance['about_textarea'];
 
 		$about_url =  $instance['about_url'];
 
         //Add custom class
-        	
+
 		$before_widget = str_replace('class="', 'class="'. 'camel_About_Us_Widget' . ' ', $before_widget);
 
 		echo $before_widget;
@@ -62,11 +64,11 @@ class About_Us_Widget extends WP_Widget {
         ob_start();
             echo $args['before_widget'];
         ?>
-        
+
         <?php if($image): ?>
             <img src="<?php echo esc_url($image); ?>" alt="">
         <?php endif; ?>
-        
+
         <?php
         echo $args['after_widget'];
         ob_end_flush();
@@ -78,26 +80,26 @@ class About_Us_Widget extends WP_Widget {
 		if ($about_url) {
 			echo '<a href="'. $about_url .'" class="footer-about-lmore">Learn more</a>';
 		}
-	
+
 		echo "</div>";
 
 		echo $after_widget;
 	}
-        
+
     //Display the options form in the admin-area
     public function form( $instance ) {
 
         $image = ! empty( $instance['image'] ) ? $instance['image'] : '';
 
-        $defaults = array( 
+        $defaults = array(
 			'title' => 'About Us',
 			'image' => site_url().'/wp-content/themes/camel-framework/assets/images/camel-logo.svg',
 			'about_textarea' => 'Camel framework is a beautiful open source WordPress Framework by Camel Team.',
 			'about_url' => '#',
          );
-         
+
         $instance = wp_parse_args( (array) $instance, $defaults );
-        
+
         if ($instance){
 			$title = esc_attr($instance['title']);
 
@@ -121,18 +123,18 @@ class About_Us_Widget extends WP_Widget {
 
     ?>
 
-    
+
 
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>" class="title">
                 <?php _e('Title:', 'camel_About_Us_Widget'); ?>
             </label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" 
+            <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
             name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title;  ?>" />
         </p>
 
         <!-- Upload Image-->
-        <p>    
+        <p>
             <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image:' ); ?></label>
 
             <img style="max-width:100%;display:block;margin:1rem 0;" src="<?php echo esc_url( $image ); ?>" />
@@ -147,7 +149,7 @@ class About_Us_Widget extends WP_Widget {
                 About describtion <i>(max 20 words)</i>
             </label>
 
-            <textarea cols="30" rows="7" class="widefat" id="<?php echo $this->get_field_id('about_textarea'); ?>"  
+            <textarea cols="30" rows="7" class="widefat" id="<?php echo $this->get_field_id('about_textarea'); ?>"
             name="<?php echo $this->get_field_name('about_textarea'); ?>"
             ><?php echo $about_textarea; ?></textarea>
 
@@ -159,14 +161,14 @@ class About_Us_Widget extends WP_Widget {
                 Learn more url
             </label>
 
-            <input type="text" cols="30" rows="7" id="<?php echo $this->get_field_id('about_url'); ?>"  
+            <input type="text" cols="30" rows="7" id="<?php echo $this->get_field_id('about_url'); ?>"
             name="<?php echo $this->get_field_name('about_url'); ?>"
             value="<?php echo $about_url; ?>";
             >
         </p>
 
         <hr>
-    
+
     <?php
 }
 
@@ -181,12 +183,12 @@ class About_Us_Widget extends WP_Widget {
         $instance['about_url'] = strip_tags($new_instance['about_url']);
         return $instance;
     }
-    
+
 }
 
     // Hook to register widget in dashboard
     add_action( 'widgets_init', function() {
-    
+
         register_widget( 'About_Us_Widget' );
 
     });
