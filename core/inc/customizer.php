@@ -29,7 +29,7 @@ function camel_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'copyright_text', array(
-        'label'      => __( 'Copyright Text', 'mytheme' ),
+        'label'      => __( 'Copyright Text', 'camel-framework' ),
         'section'    => 'camel_footer_section',
         'settings'   => 'camel_copyright_text',
     ) ) );

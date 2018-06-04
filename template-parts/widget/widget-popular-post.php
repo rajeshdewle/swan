@@ -48,15 +48,15 @@ class Camel_Popular_Posts_Widget extends WP_Widget {
      * @param array $instance Previously saved values from database.
      */
     function form( $instance ) {
-		$defaults = array( 'title' => __('Popular Posts', 'camel-framewok'), 'number' => __('5', 'camel-framewok') );
+		$defaults = array( 'title' => __('Popular Posts', 'camel-framework'), 'number' => __('5', 'camel-framework') );
 		$instance = wp_parse_args( $instance, $defaults ); ?>
         <p>
-		    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'camel-framewok'); ?></label>
+		    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'camel-framework'); ?></label>
 		    <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		</p>
 
 		<p>
-		    <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e('Number of Post:', 'camel-framewok'); ?></label>
+		    <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e('Number of Post:', 'camel-framework'); ?></label>
 		    <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" value="<?php echo $instance['number']; ?>" style="width:100%;" type="number"/>
         </p><?php
     }

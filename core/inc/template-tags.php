@@ -377,7 +377,7 @@ function camel_sidebar_classes() {
 
 function camel_link_pages( $args = array () ) {
     $defaults = array(
-        'before'      => '<p>' . __('Pages:'),
+        'before'      => '<p>' . __('Pages:', 'camel-framework'),
         'after'       => '</p>',
         'before_link' => '',
         'after_link'  => '',

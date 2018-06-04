@@ -89,7 +89,7 @@ class About_Us_Widget extends WP_Widget {
     ?>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>" class="title">
-                <?php _e('Title:', 'camel_About_Us_Widget'); ?>
+                <?php _e('Title:', 'camel-framework'); ?>
             </label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
             name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title;  ?>" />
@@ -97,12 +97,12 @@ class About_Us_Widget extends WP_Widget {
 
         <!-- Upload Image-->
         <p>
-            <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image:' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image:', 'camel-framework' ); ?></label>
 
             <img style="max-width:100%;display:block;margin:1rem 0;" src="<?php echo esc_url( $image ); ?>" />
 
             <input type="hidden" class="widefat" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" value="<?php echo esc_url( $image ); ?>" />
-            <input type="submit" class="upload_image_button button" name="<?php echo $this->get_field_name( 'uploader_button' ); ?>" id="<?php echo $this->get_field_id( 'uploader_button' ); ?>" value="<?php _e( 'Select an Image', 'image-widget' ); ?>"); return false;" />
+            <input type="submit" class="upload_image_button button" name="<?php echo $this->get_field_name( 'uploader_button' ); ?>" id="<?php echo $this->get_field_id( 'uploader_button' ); ?>" value="<?php _e( 'Select an Image', 'camel-framework' ); ?>"); return false;" />
         </p>
 
         <!-- About textbox -->

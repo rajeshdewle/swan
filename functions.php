@@ -441,9 +441,9 @@ function camel_password_form() {
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<form class="form-inline" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
             <div class="form-group">
-                <label class="pass-label" for="' . $label . '">' . __( "Password:" ) . ' </label>
+                <label class="password" for="' . $label . '">' . __( "Password:", "camel-framework" ) . ' </label>
                 <input type="password" class="form-control mx-sm-3" name="post_password" id="' . $label . '" placeholder="Password">
-                <input type="submit" name="Submit" class="btn btn-primary" value="' . esc_attr__( "Submit" ) . '" />
+                <input type="submit" name="Submit" class="btn btn-primary" value="' . __( "Submit", "camel-framework" ) . '" />
             </div>
          </form>';
     return $o;

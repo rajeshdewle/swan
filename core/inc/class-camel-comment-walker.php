@@ -123,7 +123,7 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
         <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( '', $comment ); ?>>
         <div class="media-body table-responsive mb-2">
             <div class="comment-body">
-                <?php _e( 'Pingback:' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+                <?php _e( 'Pingback:', 'camel-framework' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( __( 'Edit', 'camel-framework' ), '<span class="edit-link">', '</span>' ); ?>
             </div>
 <?php
     }
