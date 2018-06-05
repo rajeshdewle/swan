@@ -12,7 +12,7 @@ class About_Us_Widget extends WP_Widget {
         parent::__construct(
             'about-us-widget', // Widget ID
             'Camel About Us Widget', // Widget Name
-            array( 'description' => __('About Us widget for displaying user profile in sidebar.', 'camel-framework') ) // Widget description
+            array( 'description' => __('About Us widget for displaying user profile in the sidebar.', 'camel-framework') ) // Widget description
         );
     }
 
