@@ -11,7 +11,7 @@ class About_Us_Widget extends WP_Widget {
 
         parent::__construct(
             'about-us-widget', // Widget ID
-            'Camel About Us Widget', // Widget Name
+            __( 'Camel About Us Widget', 'camel-framework' ), // Widget Name
             array( 'description' => __('About Us widget for displaying user profile in the sidebar.', 'camel-framework') ) // Widget description
         );
     }
@@ -78,9 +78,9 @@ class About_Us_Widget extends WP_Widget {
         $image = ! empty( $instance['image'] ) ? $instance['image'] : '';
 
         $defaults = array(
-			'title' => 'About Us',
+			'title' => __( 'About Us', 'camel-framework' ),
 			'image' => site_url().'/wp-content/themes/camel-framework/assets/images/camel-logo.svg',
-			'about_textarea' => 'Camel framework is a beautiful open source WordPress Framework by Camel Team.',
+			'about_textarea' => __('Camel framework is a beautiful open source WordPress Framework by Camel Team.', 'camel-framework'),
 			'about_url' => '#',
          );
 

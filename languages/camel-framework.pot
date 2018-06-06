@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Camel Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 09:52+0000\n"
+"POT-Creation-Date: 2018-06-06 10:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -26,11 +26,6 @@ msgstr ""
 msgid "%s <small class=\"says\">says on</small>"
 msgstr ""
 
-#. used between list items, there is a space after the comma
-#: core/inc/template-tags.php:87
-msgid ", "
-msgstr ""
-
 #. 1: title.
 #: comments.php:36
 #, php-format
@@ -45,15 +40,34 @@ msgstr ""
 msgid "A widget to display popular posts by the number of comments."
 msgstr ""
 
+#: template-parts/widget/widget-about-us.php:81
+msgid "About Us"
+msgstr ""
+
 #: template-parts/widget/widget-about-us.php:15
 msgid "About Us widget for displaying user profile in the sidebar."
+msgstr ""
+
+#. Widget ID
+#: template-parts/widget/widget-about-us.php:14
+msgid "Camel About Us Widget"
 msgstr ""
 
 #. Name of the theme
 msgid "Camel Framework"
 msgstr ""
 
-#: core/inc/template-tags.php:183
+#: template-parts/widget/widget-about-us.php:83
+msgid ""
+"Camel framework is a beautiful open source WordPress Framework by Camel Team."
+msgstr ""
+
+#. Widget ID
+#: template-parts/widget/widget-popular-post.php:15
+msgid "Camel Popular Posts"
+msgstr ""
+
+#: core/inc/template-tags.php:182
 msgid "Comment"
 msgstr ""
 
@@ -71,7 +85,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. %s: Name of current post. Only visible to screen readers
-#: template-parts/post/content-aside.php:63 template-parts/post/content.php:65
+#: template-parts/post/content-aside.php:63 template-parts/post/content.php:67
 #, php-format
 msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
 msgstr ""
@@ -90,7 +104,7 @@ msgid "Edit"
 msgstr ""
 
 #. %s: Name of current post. Only visible to screen readers
-#: core/inc/template-tags.php:124
+#: core/inc/template-tags.php:123
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
@@ -101,7 +115,7 @@ msgstr ""
 msgid "Edit <span class=\"sr-only\">%s</span>"
 msgstr ""
 
-#: core/inc/template-tags.php:187
+#: core/inc/template-tags.php:186
 msgid "Email"
 msgstr ""
 
@@ -151,7 +165,7 @@ msgid "Learn more URL:"
 msgstr ""
 
 #. %s: post title
-#: core/inc/template-tags.php:107
+#: core/inc/template-tags.php:106
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
@@ -164,8 +178,12 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: core/inc/template-tags.php:185
+#: core/inc/template-tags.php:184
 msgid "Name"
+msgstr ""
+
+#: core/inc/template-tags.php:300
+msgid "Next"
 msgstr ""
 
 #: template-parts/post/content-none.php:16
@@ -180,8 +198,8 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: core/inc/template-tags.php:380 template-parts/page/content-page.php:26
-#: template-parts/post/content-aside.php:74 template-parts/post/content.php:76
+#: core/inc/template-tags.php:383 template-parts/page/content-page.php:26
+#: template-parts/post/content-aside.php:74 template-parts/post/content.php:78
 msgid "Pages:"
 msgstr ""
 
@@ -217,18 +235,26 @@ msgid "Posted on %s"
 msgstr ""
 
 #. 1: list of categories.
-#: core/inc/template-tags.php:90
+#: core/inc/template-tags.php:89
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: core/inc/template-tags.php:317 core/inc/template-tags.php:346
+#: core/inc/template-tags.php:320 core/inc/template-tags.php:349
 msgid "Posts navigation"
+msgstr ""
+
+#: core/inc/template-tags.php:239
+msgid "Previous"
 msgstr ""
 
 #: footer.php:29
 #, php-format
 msgid "Proudly powered by %s"
+msgstr ""
+
+#: template-parts/post/content.php:35
+msgid "Read More"
 msgstr ""
 
 #. 1: link to WP admin new post page.
@@ -276,7 +302,7 @@ msgid "Search"
 msgstr ""
 
 #. 1: list of tags.
-#: core/inc/template-tags.php:97
+#: core/inc/template-tags.php:96
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
@@ -305,7 +331,7 @@ msgctxt "update date"
 msgid "Updated on %s"
 msgstr ""
 
-#: core/inc/template-tags.php:189
+#: core/inc/template-tags.php:188
 msgid "Website"
 msgstr ""
 

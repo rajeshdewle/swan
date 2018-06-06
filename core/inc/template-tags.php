@@ -83,8 +83,7 @@ if ( ! function_exists( 'camel_entry_footer' ) ) :
     function camel_entry_footer() {
         // Hide category and tag text for pages.
         if ( 'post' === get_post_type() ) {
-            /* translators: used between list items, there is a space after the comma */
-            $categories_list = get_the_category_list( esc_html__( ', ', 'camel-framework' ) );
+            $categories_list = get_the_category_list( ', ');
             if ( $categories_list ) {
                 /* translators: 1: list of categories. */
                 printf( '<div class="cat-links my-3">' . esc_html__( 'Posted in %1$s', 'camel-framework' ) . '</div>', $categories_list ); // WPCS: XSS OK.
@@ -236,7 +235,9 @@ if (! function_exists('camel_posts_pagination')) {
                     <?php if (get_previous_posts_link()) : ?>
                         <?php echo get_previous_posts_link('Previous') ?>
                     <?php else : ?>
-                        <a class="page-link rounded" href="#" tabindex="-1">Previous</a>
+                        <a class="page-link rounded" href="#" tabindex="-1">
+                            <?php esc_html_e( 'Previous', 'camel-framework' ); ?>
+                        </a>
                     <?php endif; ?>
                 </li>
 
@@ -295,7 +296,9 @@ if (! function_exists('camel_posts_pagination')) {
                     <?php if (get_next_posts_link()) : ?>
                         <?php echo get_next_posts_link('Next'); ?>
                     <?php else : ?>
-                        <a class="page-link rounded" href="#" tabindex="-1">Next</a>
+                        <a class="page-link rounded" href="#" tabindex="-1">
+                            <?php esc_html_e( 'Next', 'camel-framework' ); ?>
+                        </a>
                     <?php endif; ?>
                 </li>
 
