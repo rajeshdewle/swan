@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Camel Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-05 09:52+0000\n"
+"POT-Creation-Date: 2018-06-06 10:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -45,12 +45,31 @@ msgstr ""
 msgid "A widget to display popular posts by the number of comments."
 msgstr ""
 
+#: template-parts/widget/widget-about-us.php:81
+msgid "About Us"
+msgstr ""
+
 #: template-parts/widget/widget-about-us.php:15
 msgid "About Us widget for displaying user profile in the sidebar."
 msgstr ""
 
+#. Widget ID
+#: template-parts/widget/widget-about-us.php:14
+msgid "Camel About Us Widget"
+msgstr ""
+
 #. Name of the theme
 msgid "Camel Framework"
+msgstr ""
+
+#: template-parts/widget/widget-about-us.php:83
+msgid ""
+"Camel framework is a beautiful open source WordPress Framework by Camel Team."
+msgstr ""
+
+#. Widget ID
+#: template-parts/widget/widget-popular-post.php:15
+msgid "Camel Popular Posts"
 msgstr ""
 
 #: core/inc/template-tags.php:183
@@ -71,7 +90,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. %s: Name of current post. Only visible to screen readers
-#: template-parts/post/content-aside.php:63 template-parts/post/content.php:65
+#: template-parts/post/content-aside.php:63 template-parts/post/content.php:67
 #, php-format
 msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
 msgstr ""
@@ -168,6 +187,10 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
+#: core/inc/template-tags.php:301
+msgid "Next"
+msgstr ""
+
 #: template-parts/post/content-none.php:16
 msgid "Nothing Found"
 msgstr ""
@@ -180,8 +203,8 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: core/inc/template-tags.php:380 template-parts/page/content-page.php:26
-#: template-parts/post/content-aside.php:74 template-parts/post/content.php:76
+#: core/inc/template-tags.php:384 template-parts/page/content-page.php:26
+#: template-parts/post/content-aside.php:74 template-parts/post/content.php:78
 msgid "Pages:"
 msgstr ""
 
@@ -222,13 +245,21 @@ msgstr ""
 msgid "Posted in %1$s"
 msgstr ""
 
-#: core/inc/template-tags.php:317 core/inc/template-tags.php:346
+#: core/inc/template-tags.php:321 core/inc/template-tags.php:350
 msgid "Posts navigation"
+msgstr ""
+
+#: core/inc/template-tags.php:240
+msgid "Previous"
 msgstr ""
 
 #: footer.php:29
 #, php-format
 msgid "Proudly powered by %s"
+msgstr ""
+
+#: template-parts/post/content.php:35
+msgid "Read More"
 msgstr ""
 
 #. 1: link to WP admin new post page.

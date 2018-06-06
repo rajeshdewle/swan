@@ -31,7 +31,9 @@
                         <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark"><?php echo the_title(); ?></a>
                     </h5>
                     <p class="card-text"><?php the_excerpt() ?></p>
-                    <a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn-primary">Read More</a>
+                    <a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn-primary">
+                        <?php esc_html_e( 'Read More', 'camel-framework' ); ?>
+                    </a>
                 </div>
             </div><!-- .card -->
 

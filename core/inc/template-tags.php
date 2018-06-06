@@ -236,7 +236,9 @@ if (! function_exists('camel_posts_pagination')) {
                     <?php if (get_previous_posts_link()) : ?>
                         <?php echo get_previous_posts_link('Previous') ?>
                     <?php else : ?>
-                        <a class="page-link rounded" href="#" tabindex="-1">Previous</a>
+                        <a class="page-link rounded" href="#" tabindex="-1">
+                            <?php esc_html_e( 'Previous', 'camel-framework' ); ?>
+                        </a>
                     <?php endif; ?>
                 </li>
 
@@ -295,7 +297,9 @@ if (! function_exists('camel_posts_pagination')) {
                     <?php if (get_next_posts_link()) : ?>
                         <?php echo get_next_posts_link('Next'); ?>
                     <?php else : ?>
-                        <a class="page-link rounded" href="#" tabindex="-1">Next</a>
+                        <a class="page-link rounded" href="#" tabindex="-1">
+                            <?php esc_html_e( 'Next', 'camel-framework' ); ?>
+                        </a>
                     <?php endif; ?>
                 </li>
 
