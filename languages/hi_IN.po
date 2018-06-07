@@ -1,0 +1,345 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Camel Framework\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-06 10:41+0000\n"
+"PO-Revision-Date: 2018-06-07 07:18+0530\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"Last-Translator: \n"
+"Language: hi_IN\n"
+
+#. 1: comment date, 2: comment time
+#: core/inc/class-camel-comment-walker.php:51
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s पर %2$s"
+
+#. %s: comment author link
+#: core/inc/class-camel-comment-walker.php:42
+#, php-format
+msgid "%s <small class=\"says\">says on</small>"
+msgstr "%s <small class=\"says\">पर कहते हैं</small>"
+
+#. 1: title.
+#: comments.php:36
+#, php-format
+msgid "1 thought on &ldquo;%1$s&rdquo;"
+msgstr "1 विचार &ldquo;%1$s&rdquo; पर"
+
+#: template-parts/widget/widget-popular-post.php:51
+msgid "5"
+msgstr "5"
+
+#: template-parts/widget/widget-popular-post.php:16
+msgid "A widget to display popular posts by the number of comments."
+msgstr "टिप्पणियों की संख्या से लोकप्रिय पोस्ट प्रदर्शित करने के लिए एक विजेट।"
+
+#: template-parts/widget/widget-about-us.php:81
+msgid "About Us"
+msgstr "हमारे बारे में"
+
+#: template-parts/widget/widget-about-us.php:15
+msgid "About Us widget for displaying user profile in the sidebar."
+msgstr "साइडबार में उपयोगकर्ता प्रोफ़ाइल के बारे में प्रदर्शित करने के लिए विजेट।"
+
+#. Widget ID
+#: template-parts/widget/widget-about-us.php:14
+msgid "Camel About Us Widget"
+msgstr "कैमल हमारे बारे में विजेट"
+
+#. Name of the theme
+msgid "Camel Framework"
+msgstr "कैमल फ्रेमवर्क"
+
+#: template-parts/widget/widget-about-us.php:83
+msgid ""
+"Camel framework is a beautiful open source WordPress Framework by Camel Team."
+msgstr "कैमल फ्रेमवर्क एक सुंदर खुला स्रोत वर्डप्रेस फ्रेमवर्क कैमल टीम द्वारा है।"
+
+#. Widget ID
+#: template-parts/widget/widget-popular-post.php:15
+msgid "Camel Popular Posts"
+msgstr "कैमल लोकप्रिय पोस्ट"
+
+#: core/inc/template-tags.php:182
+msgid "Comment"
+msgstr "टिप्पणी"
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr "टिप्पणियाँ बंद हैं।"
+
+#. 1: comment count number, 2: title.
+#: comments.php:44
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; पर %1$s विचार"
+msgstr[1] "&ldquo;%2$s&rdquo; पर %1$s विचार"
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/post/content-aside.php:63 template-parts/post/content.php:67
+#, php-format
+msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
+msgstr "पढ़ना जारी रखें<span class=\"sr-only\"> \"%s\"</span>"
+
+#: core/inc/customizer.php:32
+msgid "Copyright Text"
+msgstr "कॉपीराइट टेक्स्ट"
+
+#: template-parts/widget/widget-about-us.php:115
+msgid "Description:"
+msgstr "विवरण:"
+
+#: core/inc/class-camel-comment-walker.php:61
+#: core/inc/class-camel-comment-walker.php:126
+msgid "Edit"
+msgstr "संपादित करें"
+
+#. %s: Name of current post. Only visible to screen readers
+#: core/inc/template-tags.php:123
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "संपादित करें <span class=\"screen-reader-text\">%s</span>"
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/page/content-page.php:39
+#, php-format
+msgid "Edit <span class=\"sr-only\">%s</span>"
+msgstr "संपादित करें <span class=\"sr-only\">%s</span>"
+
+#: core/inc/template-tags.php:186
+msgid "Email"
+msgstr "ईमेल"
+
+#: core/inc/customizer.php:22
+msgid "Footer"
+msgstr "फुटर"
+
+#: functions.php:48
+msgid "Footer Menu"
+msgstr "फुटर मेनू"
+
+#. Author URI of the theme
+msgid "https://camelthemes.com"
+msgstr "https://camelthemes.com"
+
+#. URI of the theme
+msgid "https://github.com/CamelThemes/camel-framework"
+msgstr "https://github.com/CamelThemes/camel-framework"
+
+#: footer.php:28
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: template-parts/widget/widget-about-us.php:103
+msgid "Image:"
+msgstr "फोटो:"
+
+#: 404.php:24
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"ऐसा लगता है कि इस स्थान पर कुछ भी नहीं मिला था। शायद नीचे दिए गए लिंक में से एक आज़माएं "
+"या खोजे?"
+
+#: template-parts/post/content-none.php:46
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "ऐसा लगता है कि हम जो खोज रहे हैं उसे ढूंढ नहीं सकते हैं; शायद खोज मदद कर सकते हैं।"
+
+#: searchform.php:15 searchform.php:16
+msgctxt "label"
+msgid "Search for:"
+msgstr "सर्च के लिए:"
+
+#: template-parts/widget/widget-about-us.php:124
+msgid "Learn more URL:"
+msgstr "और सिखने के लिए यूआरएल:"
+
+#. %s: post title
+#: core/inc/template-tags.php:106
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "एक टिप्पणी छोड़ें<span class=\"screen-reader-text\">%s पर</span>"
+
+#: functions.php:173
+msgid "Left Sidebar"
+msgstr "बायां साइडबार"
+
+#: functions.php:46
+msgid "Main Menu"
+msgstr "मुख्य मेनू"
+
+#: core/inc/template-tags.php:184
+msgid "Name"
+msgstr "नाम"
+
+#: core/inc/template-tags.php:300
+msgid "Next"
+msgstr "अगला"
+
+#: template-parts/post/content-none.php:16
+msgid "Nothing Found"
+msgstr "कुछ नहीं मिला"
+
+#: template-parts/widget/widget-popular-post.php:59
+msgid "Number of Post:"
+msgstr "पोस्ट की संख्या:"
+
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "ऊप्स! वह पृष्ठ नहीं मिल सकता।"
+
+#: core/inc/template-tags.php:383 template-parts/page/content-page.php:26
+#: template-parts/post/content-aside.php:74 template-parts/post/content.php:78
+msgid "Pages:"
+msgstr "पृष्ठ:"
+
+#: functions.php:444
+msgid "Password:"
+msgstr "पासवर्ड:"
+
+#: core/inc/class-camel-comment-walker.php:126
+msgid "Pingback:"
+msgstr "पिंगबैक:"
+
+#: searchform.php:16
+msgctxt "placeholder"
+msgid "Search"
+msgstr "सर्च"
+
+#: template-parts/widget/widget-popular-post.php:51
+msgid "Popular Posts"
+msgstr "लोकप्रिय पोस्ट"
+
+#. %s: post author.
+#: core/inc/template-tags.php:71
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "%s द्वारा"
+
+#. %s: post date.
+#: core/inc/template-tags.php:36
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "%s पर पोस्ट किया गया"
+
+#. 1: list of categories.
+#: core/inc/template-tags.php:89
+#, php-format
+msgid "Posted in %1$s"
+msgstr "%1$s में पोस्ट किया गया"
+
+#: core/inc/template-tags.php:320 core/inc/template-tags.php:349
+msgid "Posts navigation"
+msgstr "पोस्ट नेविगेशन"
+
+#: core/inc/template-tags.php:239
+msgid "Previous"
+msgstr "पिछला"
+
+#: footer.php:29
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "%s द्वारा संचालित"
+
+#: template-parts/post/content.php:35
+msgid "Read More"
+msgstr "और पढ़े"
+
+#. 1: link to WP admin new post page.
+#: template-parts/post/content-none.php:26
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"अपनी पहली पोस्ट को प्रकाशित करने के लिए तैयार हैं?  <a href=\"%1$s\">यहां प्रारंभ करें </"
+"a>।"
+
+#: functions.php:182
+msgid "Right Sidebar"
+msgstr "दायाँ साइडबार"
+
+#. %s: search query.
+#: search.php:26
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s के लिए सर्च रिजल्ट्स"
+
+#: template-parts/widget/widget-about-us.php:109
+msgid "Select an Image"
+msgstr "फोटो सिलेक्ट करे"
+
+#: header.php:27
+msgid "Skip to content"
+msgstr "कंटेंट पर जाने के लिए स्किप करे"
+
+#: functions.php:47
+msgid "Social Menu"
+msgstr "सोशल मेनू"
+
+#: template-parts/post/content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"क्षमा करें, लेकिन कुछ भी आपके खोज शब्द से मेल नहीं खाता है। कृपया कुछ अलग कीवर्ड के साथ फ़िर "
+"से कोशिश करें।"
+
+#: functions.php:446
+msgid "Submit"
+msgstr "सबमिट"
+
+#: searchform.php:19
+msgctxt "submit button"
+msgid "Search"
+msgstr "सर्च"
+
+#. 1: list of tags.
+#: core/inc/template-tags.php:96
+#, php-format
+msgid "Tagged %1$s"
+msgstr "टैग की गईं %1$s"
+
+#. Description of the theme
+msgid "The CamelThemes Core Framework"
+msgstr "CamelThemes कोर फ्रेमवर्क"
+
+#. Author of the theme
+msgid "The CamelThemes Team"
+msgstr "CamelThemes टीम"
+
+#: template-parts/widget/widget-popular-post.php:54
+#: template-parts/widget/widget-about-us.php:95
+msgid "Title:"
+msgstr "शीर्षक:"
+
+#: functions.php:45
+msgid "Top Menu"
+msgstr "टॉप मेनू"
+
+#. %s: updated date.
+#: core/inc/template-tags.php:50
+#, php-format
+msgctxt "update date"
+msgid "Updated on %s"
+msgstr "%s पर अपडेट किया गया"
+
+#: core/inc/template-tags.php:188
+msgid "Website"
+msgstr "Website"
+
+#: core/inc/class-camel-comment-walker.php:64
+msgid "Your comment is awaiting moderation."
+msgstr "आपकी टिप्पणी जांचे जाने की प्रतीक्षा कर रही है।"
