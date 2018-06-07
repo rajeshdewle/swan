@@ -233,7 +233,7 @@ if (! function_exists('camel_posts_pagination')) {
 
                 <li class="page-item mr-auto <?php echo $previous_link_class ?>">
                     <?php if (get_previous_posts_link()) : ?>
-                        <?php echo get_previous_posts_link('Previous') ?>
+                        <?php echo get_previous_posts_link( __('Previous', 'camel-framework') ) ?>
                     <?php else : ?>
                         <a class="page-link rounded" href="#" tabindex="-1">
                             <?php esc_html_e( 'Previous', 'camel-framework' ); ?>
@@ -294,7 +294,7 @@ if (! function_exists('camel_posts_pagination')) {
 
                 <li class="page-item ml-auto <?php echo $next_link_class; ?>">
                     <?php if (get_next_posts_link()) : ?>
-                        <?php echo get_next_posts_link('Next'); ?>
+                        <?php echo get_next_posts_link( __('Next', 'camel-framework') ); ?>
                     <?php else : ?>
                         <a class="page-link rounded" href="#" tabindex="-1">
                             <?php esc_html_e( 'Next', 'camel-framework' ); ?>
