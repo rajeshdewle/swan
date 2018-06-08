@@ -79,7 +79,7 @@ class About_Us_Widget extends WP_Widget {
 
         $defaults = array(
 			'title' => __( 'About Us', 'camel-framework' ),
-			'image' => site_url().'/wp-content/themes/camel-framework/assets/images/camel-logo.svg',
+			'image' => site_url().'/wp-content/themes/camel-framework/assets/images/camel-logo.png',
 			'about_textarea' => __('Camel framework is a beautiful open source WordPress Framework by Camel Team.', 'camel-framework'),
 			'about_url' => '#',
          );
