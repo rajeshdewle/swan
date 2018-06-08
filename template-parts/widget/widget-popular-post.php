@@ -24,7 +24,7 @@ class Camel_Popular_Posts_Widget extends WP_Widget {
      */
     public function widget( $args, $instance ) {
         extract( $args );
-    	$title = apply_filters( 'widget_title', $instance['title'] );
+        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Popular Posts', 'camel-framework' );
 		$number = $instance['number'];
         $query = new WP_Query( array( 'showposts' => $number, 'orderby' => 'comment_count', 'order' => 'DESC', 'ignore_sticky_posts' => 1 ) );
 
@@ -48,7 +48,7 @@ class Camel_Popular_Posts_Widget extends WP_Widget {
      * @param array $instance Previously saved values from database.
      */
     function form( $instance ) {
-		$defaults = array( 'title' => __('Popular Posts', 'camel-framework'), 'number' => __('5', 'camel-framework') );
+		$defaults = array( 'number' => __('5', 'camel-framework') );
 		$instance = wp_parse_args( $instance, $defaults ); ?>
         <p>
 		    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'camel-framework'); ?></label>

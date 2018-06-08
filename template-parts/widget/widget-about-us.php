@@ -27,10 +27,9 @@ class About_Us_Widget extends WP_Widget {
 
         extract($args);
 
-        $image = ! empty( $instance['image'] ) ? $instance['image'] : '';
-		$title = apply_filters('widget_title', $instance['title']);
+        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'About Us', 'camel-framework' );
 		$image =  $instance['image'];
-		$about_textarea =  $instance['about_textarea'];
+        $about_textarea = ( ! empty( $instance['about_textarea'] ) ) ? $instance['about_textarea'] : __( 'Camel framework is a beautiful open source WordPress Framework by Camel Team.', 'camel-framework' );
 		$about_url =  $instance['about_url'];
 
 
@@ -64,7 +63,9 @@ class About_Us_Widget extends WP_Widget {
 		}
 
 		if ($about_url) {
-			echo '<a href="'. $about_url .'" class="footer-about-lmore">Learn more</a>';
+			echo '<a href="'. $about_url .'" class="footer-about-lmore">';
+            _e( 'Learn more', 'camel-framework');
+            echo '</a>';
 		}
 
 		echo "</div>";
@@ -78,9 +79,7 @@ class About_Us_Widget extends WP_Widget {
         $image = ! empty( $instance['image'] ) ? $instance['image'] : '';
 
         $defaults = array(
-			'title' => __( 'About Us', 'camel-framework' ),
 			'image' => site_url().'/wp-content/themes/camel-framework/assets/images/camel-logo.svg',
-			'about_textarea' => __('Camel framework is a beautiful open source WordPress Framework by Camel Team.', 'camel-framework'),
 			'about_url' => '#',
          );
 
