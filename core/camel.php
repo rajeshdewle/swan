@@ -16,5 +16,7 @@ require_once get_template_directory() . '/core/inc/customizer.php';
 require_once get_template_directory() . '/template-parts/widget/widget-about-us.php';
 require_once get_template_directory() . '/template-parts/widget/widget-popular-post.php';
 
-
-
+// Load WooCommerce compatibility file.
+if ( class_exists( 'WooCommerce' ) ) {
+    require get_template_directory() . '/core/inc/woocommerce.php';
+}
