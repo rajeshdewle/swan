@@ -436,6 +436,11 @@ remove_shortcode('gallery', 'gallery_shortcode');
 add_shortcode('gallery', 'camel_gallery_shortcode');
 
 
+/**
+ * Password form for password protected post
+ *
+ * @return void
+ */
 function camel_password_form() {
     global $post;
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
