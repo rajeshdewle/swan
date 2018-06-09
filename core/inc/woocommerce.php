@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package underscore
+ * @package Camel_Framework
  */
 
 /**
@@ -15,37 +15,13 @@
  *
  * @return void
  */
-function underscore_woocommerce_setup() {
+function camel_woocommerce_setup() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
-add_action( 'after_setup_theme', 'underscore_woocommerce_setup' );
-
-/**
- * WooCommerce specific scripts & stylesheets.
- *
- * @return void
- */
-function underscore_woocommerce_scripts() {
-	wp_enqueue_style( 'underscore-woocommerce-style', get_template_directory_uri() . '/woocommerce.css' );
-
-	$font_path   = WC()->plugin_url() . '/assets/fonts/';
-	$inline_font = '@font-face {
-			font-family: "star";
-			src: url("' . $font_path . 'star.eot");
-			src: url("' . $font_path . 'star.eot?#iefix") format("embedded-opentype"),
-				url("' . $font_path . 'star.woff") format("woff"),
-				url("' . $font_path . 'star.ttf") format("truetype"),
-				url("' . $font_path . 'star.svg#star") format("svg");
-			font-weight: normal;
-			font-style: normal;
-		}';
-
-	wp_add_inline_style( 'underscore-woocommerce-style', $inline_font );
-}
-add_action( 'wp_enqueue_scripts', 'underscore_woocommerce_scripts' );
+add_action( 'after_setup_theme', 'camel_woocommerce_setup' );
 
 /**
  * Disable the default WooCommerce stylesheet.
@@ -63,42 +39,42 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * @param  array $classes CSS classes applied to the body tag.
  * @return array $classes modified to include 'woocommerce-active' class.
  */
-function underscore_woocommerce_active_body_class( $classes ) {
+function camel_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
 
 	return $classes;
 }
-add_filter( 'body_class', 'underscore_woocommerce_active_body_class' );
+add_filter( 'body_class', 'camel_woocommerce_active_body_class' );
 
 /**
  * Products per page.
  *
  * @return integer number of products.
  */
-function underscore_woocommerce_products_per_page() {
+function camel_woocommerce_products_per_page() {
 	return 12;
 }
-add_filter( 'loop_shop_per_page', 'underscore_woocommerce_products_per_page' );
+add_filter( 'loop_shop_per_page', 'camel_woocommerce_products_per_page' );
 
 /**
  * Product gallery thumnbail columns.
  *
  * @return integer number of columns.
  */
-function underscore_woocommerce_thumbnail_columns() {
+function camel_woocommerce_thumbnail_columns() {
 	return 4;
 }
-add_filter( 'woocommerce_product_thumbnails_columns', 'underscore_woocommerce_thumbnail_columns' );
+add_filter( 'woocommerce_product_thumbnails_columns', 'camel_woocommerce_thumbnail_columns' );
 
 /**
  * Default loop columns on product archives.
  *
  * @return integer products per row.
  */
-function underscore_woocommerce_loop_columns() {
+function camel_woocommerce_loop_columns() {
 	return 3;
 }
-add_filter( 'loop_shop_columns', 'underscore_woocommerce_loop_columns' );
+add_filter( 'loop_shop_columns', 'camel_woocommerce_loop_columns' );
 
 /**
  * Related Products Args.
@@ -106,7 +82,7 @@ add_filter( 'loop_shop_columns', 'underscore_woocommerce_loop_columns' );
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function underscore_woocommerce_related_products_args( $args ) {
+function camel_woocommerce_related_products_args( $args ) {
 	$defaults = array(
 		'posts_per_page' => 3,
 		'columns'        => 3,
@@ -116,32 +92,32 @@ function underscore_woocommerce_related_products_args( $args ) {
 
 	return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'underscore_woocommerce_related_products_args' );
+add_filter( 'woocommerce_output_related_products_args', 'camel_woocommerce_related_products_args' );
 
-if ( ! function_exists( 'underscore_woocommerce_product_columns_wrapper' ) ) {
+if ( ! function_exists( 'camel_woocommerce_product_columns_wrapper' ) ) {
 	/**
 	 * Product columns wrapper.
 	 *
 	 * @return  void
 	 */
-	function underscore_woocommerce_product_columns_wrapper() {
-		$columns = underscore_woocommerce_loop_columns();
+	function camel_woocommerce_product_columns_wrapper() {
+		$columns = camel_woocommerce_loop_columns();
 		echo '<div class="columns-' . absint( $columns ) . '">';
 	}
 }
-add_action( 'woocommerce_before_shop_loop', 'underscore_woocommerce_product_columns_wrapper', 40 );
+add_action( 'woocommerce_before_shop_loop', 'camel_woocommerce_product_columns_wrapper', 40 );
 
-if ( ! function_exists( 'underscore_woocommerce_product_columns_wrapper_close' ) ) {
+if ( ! function_exists( 'camel_woocommerce_product_columns_wrapper_close' ) ) {
 	/**
 	 * Product columns wrapper close.
 	 *
 	 * @return  void
 	 */
-	function underscore_woocommerce_product_columns_wrapper_close() {
+	function camel_woocommerce_product_columns_wrapper_close() {
 		echo '</div>';
 	}
 }
-add_action( 'woocommerce_after_shop_loop', 'underscore_woocommerce_product_columns_wrapper_close', 40 );
+add_action( 'woocommerce_after_shop_loop', 'camel_woocommerce_product_columns_wrapper_close', 40 );
 
 /**
  * Remove default WooCommerce wrapper.
@@ -149,7 +125,7 @@ add_action( 'woocommerce_after_shop_loop', 'underscore_woocommerce_product_colum
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-if ( ! function_exists( 'underscore_woocommerce_wrapper_before' ) ) {
+if ( ! function_exists( 'camel_woocommerce_wrapper_before' ) ) {
 	/**
 	 * Before Content.
 	 *
@@ -157,16 +133,16 @@ if ( ! function_exists( 'underscore_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function underscore_woocommerce_wrapper_before() {
+	function camel_woocommerce_wrapper_before() {
 		?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 			<?php
 	}
 }
-add_action( 'woocommerce_before_main_content', 'underscore_woocommerce_wrapper_before' );
+add_action( 'woocommerce_before_main_content', 'camel_woocommerce_wrapper_before' );
 
-if ( ! function_exists( 'underscore_woocommerce_wrapper_after' ) ) {
+if ( ! function_exists( 'camel_woocommerce_wrapper_after' ) ) {
 	/**
 	 * After Content.
 	 *
@@ -174,14 +150,14 @@ if ( ! function_exists( 'underscore_woocommerce_wrapper_after' ) ) {
 	 *
 	 * @return void
 	 */
-	function underscore_woocommerce_wrapper_after() {
+	function camel_woocommerce_wrapper_after() {
 			?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 		<?php
 	}
 }
-add_action( 'woocommerce_after_main_content', 'underscore_woocommerce_wrapper_after' );
+add_action( 'woocommerce_after_main_content', 'camel_woocommerce_wrapper_after' );
 
 /**
  * Sample implementation of the WooCommerce Mini Cart.
@@ -189,13 +165,13 @@ add_action( 'woocommerce_after_main_content', 'underscore_woocommerce_wrapper_af
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
 	<?php
-		if ( function_exists( 'underscore_woocommerce_header_cart' ) ) {
-			underscore_woocommerce_header_cart();
+		if ( function_exists( 'camel_woocommerce_header_cart' ) ) {
+			camel_woocommerce_header_cart();
 		}
 	?>
  */
 
-if ( ! function_exists( 'underscore_woocommerce_cart_link_fragment' ) ) {
+if ( ! function_exists( 'camel_woocommerce_cart_link_fragment' ) ) {
 	/**
 	 * Cart Fragments.
 	 *
@@ -204,17 +180,17 @@ if ( ! function_exists( 'underscore_woocommerce_cart_link_fragment' ) ) {
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 * @return array Fragments to refresh via AJAX.
 	 */
-	function underscore_woocommerce_cart_link_fragment( $fragments ) {
+	function camel_woocommerce_cart_link_fragment( $fragments ) {
 		ob_start();
-		underscore_woocommerce_cart_link();
+		camel_woocommerce_cart_link();
 		$fragments['a.cart-contents'] = ob_get_clean();
 
 		return $fragments;
 	}
 }
-add_filter( 'woocommerce_add_to_cart_fragments', 'underscore_woocommerce_cart_link_fragment' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'camel_woocommerce_cart_link_fragment' );
 
-if ( ! function_exists( 'underscore_woocommerce_cart_link' ) ) {
+if ( ! function_exists( 'camel_woocommerce_cart_link' ) ) {
 	/**
 	 * Cart Link.
 	 *
@@ -222,13 +198,13 @@ if ( ! function_exists( 'underscore_woocommerce_cart_link' ) ) {
 	 *
 	 * @return void
 	 */
-	function underscore_woocommerce_cart_link() {
+	function camel_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'underscore' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'camel' ); ?>">
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'underscore' ),
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'camel' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
@@ -238,13 +214,13 @@ if ( ! function_exists( 'underscore_woocommerce_cart_link' ) ) {
 	}
 }
 
-if ( ! function_exists( 'underscore_woocommerce_header_cart' ) ) {
+if ( ! function_exists( 'camel_woocommerce_header_cart' ) ) {
 	/**
 	 * Display Header Cart.
 	 *
 	 * @return void
 	 */
-	function underscore_woocommerce_header_cart() {
+	function camel_woocommerce_header_cart() {
 		if ( is_cart() ) {
 			$class = 'current-menu-item';
 		} else {
@@ -253,7 +229,7 @@ if ( ! function_exists( 'underscore_woocommerce_header_cart' ) ) {
 		?>
 		<ul id="site-header-cart" class="site-header-cart">
 			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php underscore_woocommerce_cart_link(); ?>
+				<?php camel_woocommerce_cart_link(); ?>
 			</li>
 			<li>
 				<?php
@@ -268,3 +244,20 @@ if ( ! function_exists( 'underscore_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+
+function camel_product_loop_start() {
+	?>
+	<div class="row">
+	<?php
+}
+
+add_filter('woocommerce_product_loop_start', 'camel_product_loop_start');
+
+function camel_product_loop_end() {
+	?>
+	</div>
+	<?php
+}
+
+add_filter('woocommerce_product_loop_end', 'camel_product_loop_end');
