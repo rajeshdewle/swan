@@ -22,7 +22,7 @@
         <?php
         the_content();
 
-        camel_link_pages(array(
+        wp_link_pages(array(
             'before' => '<nav class="pagination align-items-center">' . esc_html__('Pages:', 'camel-framework'),
             'after'  => '</nav>',
         ));
