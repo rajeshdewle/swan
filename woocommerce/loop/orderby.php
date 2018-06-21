@@ -21,16 +21,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<form class="woocommerce-ordering" method="get">
-    <div class="form-row align-items-center">
-        <div class="col-auto my-1">
-            <select name="orderby" class="orderby custom-select mr-sm-2" id="inlineFormCustomSelect">
-                <?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
-                    <option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
-                <?php endforeach; ?>
-            </select>
-            <input type="hidden" name="paged" value="1" />
-            <?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
-        </div><!-- .col-auto -->
-    </div><!-- .form-row -->
-</form>
+    <form class="woocommerce-ordering" method="get">
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                <select name="orderby" class="orderby custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
+                        <option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <input type="hidden" name="paged" value="1" />
+                <?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
+            </div><!-- .col-auto -->
+        </div><!-- .form-row -->
+    </form>
+</div><!-- .d-flex -->
