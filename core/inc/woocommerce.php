@@ -121,7 +121,7 @@ add_action( 'woocommerce_after_shop_loop', 'camel_woocommerce_product_columns_wr
 
 /**
  * Remove default WooCommerce wrapper.
- */
+ *
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
@@ -132,7 +132,7 @@ if ( ! function_exists( 'camel_woocommerce_wrapper_before' ) ) {
 	 * Wraps all WooCommerce content in wrappers which match the theme markup.
 	 *
 	 * @return void
-	 */
+	 *
 	function camel_woocommerce_wrapper_before() {
 		?>
 		<div id="primary" class="content-area">
@@ -149,7 +149,7 @@ if ( ! function_exists( 'camel_woocommerce_wrapper_after' ) ) {
 	 * Closes the wrapping divs.
 	 *
 	 * @return void
-	 */
+	 *
 	function camel_woocommerce_wrapper_after() {
 			?>
 			</main><!-- #main -->
@@ -158,7 +158,7 @@ if ( ! function_exists( 'camel_woocommerce_wrapper_after' ) ) {
 	}
 }
 add_action( 'woocommerce_after_main_content', 'camel_woocommerce_wrapper_after' );
-
+*/
 /**
  * Sample implementation of the WooCommerce Mini Cart.
  *
@@ -245,7 +245,7 @@ if ( ! function_exists( 'camel_woocommerce_header_cart' ) ) {
 	}
 }
 
-
+/*
 function camel_product_loop_start() {
 	?>
 	<div class="row">
@@ -256,12 +256,12 @@ add_filter('woocommerce_product_loop_start', 'camel_product_loop_start');
 
 function camel_product_loop_end() {
 	?>
-	</div>
+	</div><!-- .row -->
 	<?php
 }
 
 add_filter('woocommerce_product_loop_end', 'camel_product_loop_end');
-
+*/
 function camel_template_loop_product_title() {
 	?>
 	<h4 class="woocommerce-loop-product__title"><?php echo get_the_title(); ?></h4>
