@@ -24,7 +24,17 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+
+<?php if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) : ?>
+        <div class="col-md-6 col-lg-4">
+    <?php elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ): ?>
+        <div class="col-md-6 col-lg-4">
+    <?php elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) : ?>
+        <div class="col-lg-6 col-12">
+    <?php else : ?>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+    <?php endif ?>
+
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
