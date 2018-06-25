@@ -269,3 +269,64 @@ function camel_template_loop_product_title() {
 }
 remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title');
 add_action( 'woocommerce_shop_loop_item_title', 'camel_template_loop_product_title' );
+
+add_filter('woocommerce_billing_fields', 'camel_billing_fields');
+
+function camel_billing_fields( $fields ) {
+	$fields['billing_first_name']['class'] = array( 'form-group d-block pt-3'  );
+	$fields['billing_first_name']['input_class'] = array( 'form-control' );
+	$fields['billing_last_name']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_last_name']['input_class'] = array( 'form-control' );
+	$fields['billing_company']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_company']['input_class'] = array( 'form-control' );
+	$fields['billing_country']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_country']['input_class'] = array( 'form-control' );
+	$fields['billing_address_1']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_address_1']['input_class'] = array( 'form-control' );
+	$fields['billing_address_2']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_address_2']['input_class'] = array( 'form-control' );
+	$fields['billing_city']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_city']['input_class'] = array( 'form-control' );
+	$fields['billing_postcode']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_postcode']['input_class'] = array( 'form-control' );
+	$fields['billing_state']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_state']['input_class'] = array( 'form-control' );
+	$fields['billing_email']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_email']['input_class'] = array( 'form-control' );
+	$fields['billing_phone']['class'] = array( 'form-group d-block pt-3' );
+	$fields['billing_phone']['input_class'] = array( 'form-control' );
+  return $fields;
+}
+
+add_filter('woocommerce_shipping_fields', 'camel_shipping_fields');
+
+function camel_shipping_fields( $fields ) {
+	$fields['shipping_first_name']['class'] = array( 'form-group d-block pt-3'  );
+	$fields['shipping_first_name']['input_class'] = array( 'form-control' );
+	$fields['shipping_last_name']['class'] = array( 'form-group d-block pt-3' );
+	$fields['shipping_last_name']['input_class'] = array( 'form-control' );
+	$fields['shipping_company']['class'] = array( 'form-group d-block pt-3' );
+	$fields['shipping_company']['input_class'] = array( 'form-control' );
+	$fields['shipping_country']['class'] = array( 'form-group d-block pt-3' );
+	$fields['shipping_country']['input_class'] = array( 'form-control' );
+	$fields['shipping_address_1']['class'] = array( 'form-group d-block pt-3' );
+	$fields['shipping_address_1']['input_class'] = array( 'form-control' );
+	$fields['shipping_address_2']['class'] = array( 'form-group d-block pt-3' );
+	$fields['shipping_address_2']['input_class'] = array( 'form-control' );
+	$fields['shipping_city']['class'] = array( 'form-group d-block pt-3' );
+	$fields['shipping_city']['input_class'] = array( 'form-control' );
+	$fields['shipping_postcode']['class'] = array( 'form-group d-block pt-3' );
+	$fields['shipping_postcode']['input_class'] = array( 'form-control' );
+	$fields['shipping_state']['class'] = array( 'form-group d-block pt-3' );
+	$fields['shipping_state']['input_class'] = array( 'form-control' );
+  return $fields;
+}
+
+
+add_filter('woocommerce_checkout_fields', 'camel_order_fields');
+
+function camel_order_fields( $fields ) {
+	$fields['order']['order_comments']['class'] = array( 'form-group d-block pt-3' );
+	$fields['order']['order_comments']['input_class'] = array( 'form-control' );
+	return $fields;
+}

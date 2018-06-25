@@ -68,4 +68,7 @@ embed, iframe, object {
 }
 .gallery-caption {}
 
+.form-row {
+    margin: 0;
+}
 
