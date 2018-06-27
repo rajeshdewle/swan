@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
-	<div class="woocommerce-billing-fields__field-wrapper">
+	<div class="woocommerce-billing-fields__field-wrapper mb-3">
 		
 		<?php
 			$fields = $checkout->get_checkout_fields( 'billing' );

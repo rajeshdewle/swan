@@ -21,7 +21,7 @@ if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
-<div id="payment" class="woocommerce-checkout-payment bg-light p-3">
+<div id="payment" class="woocommerce-checkout-payment bg-light p-4">
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<div class="wc_payment_methods payment_methods methods">
 			<?php
