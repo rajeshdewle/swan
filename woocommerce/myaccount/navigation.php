@@ -24,7 +24,7 @@ do_action( 'woocommerce_before_account_navigation' );
 ?>
 
 <div class="row">
-	<div class="col-3">
+	<div class="col-12 col-sm-3">
 		<nav class="woocommerce-MyAccount-navigation">
 			<ul>
 				<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
