@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
     <form class="woocommerce-ordering" method="get">
         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
+            <div class="my-1">
                 <select name="orderby" class="orderby custom-select mr-sm-2" id="inlineFormCustomSelect">
                     <?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
                         <option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
