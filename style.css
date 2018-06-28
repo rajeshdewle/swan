@@ -31,9 +31,9 @@ a {
     color: #fff;
 }
 
-img,
-figure {
+img {
     max-width: 100%;
+    height: auto;
 }
 
 embed, iframe, object {
@@ -67,8 +67,3 @@ embed, iframe, object {
     margin-right: auto;
 }
 .gallery-caption {}
-
-.form-row {
-    margin: 0;
-}
-

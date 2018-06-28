@@ -34,6 +34,16 @@ add_action( 'after_setup_theme', 'camel_woocommerce_setup' );
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 /**
+ * Enqueue WooCommerce custom styles.
+ *
+ * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+ */
+function camel_woocommerce_style() {
+    wp_enqueue_style('woocommerce-css', get_template_directory_uri() . '/assets/css/woocommerce.css');
+}
+add_action('wp_enqueue_scripts', 'camel_woocommerce_style');
+
+/**
  * Add 'woocommerce-active' class to the body tag.
  *
  * @param  array $classes CSS classes applied to the body tag.
@@ -330,3 +340,4 @@ function camel_order_fields( $fields ) {
 	$fields['order']['order_comments']['input_class'] = array( 'form-control' );
 	return $fields;
 }
+
