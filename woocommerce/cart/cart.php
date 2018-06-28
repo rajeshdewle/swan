@@ -143,7 +143,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                             </div>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 							<div class="col-sm-6 d-flex justify-content-end">
-								<div class="col-md-6 col-lg-4">
+								<div class="col-md-6 col-lg-6">
 									<button type="submit" class="button btn btn-primary btn-block" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 								</div>
 							</div>
@@ -164,7 +164,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 
-<div class="cart-collaterals">
+<div class="cart-collaterals mb-2">
 	<?php
 		/**
 		 * Cart collaterals hook.

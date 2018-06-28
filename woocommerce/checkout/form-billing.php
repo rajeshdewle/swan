@@ -1,7 +1,9 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Checkout billing information form
- *
+ * -----------------------------------------------------------------------------
+ * 
  * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-billing.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -11,9 +13,8 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.0.9
+ * 
+ * @package Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

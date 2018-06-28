@@ -1,6 +1,8 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Login Form
+ * -----------------------------------------------------------------------------
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-login.php.
  *
@@ -11,8 +13,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.4.0
+ * @package Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -70,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
-	</div>
+	</div> <!-- .col-12 col-sm-6 -->
 
 	<div class="u-column2 col-2 col-12 col-sm-6">
 
@@ -114,9 +115,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</form>
 
-	</div>
+	</div> <!-- .col-12 col-sm-6 -->
 
-</div>
+</div> <!-- .row -->
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_customer_login_form' ); ?>

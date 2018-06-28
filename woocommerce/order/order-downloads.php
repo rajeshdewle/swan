@@ -1,6 +1,8 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Order Downloads.
+ * -----------------------------------------------------------------------------
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/order/order-downloads.php.
  *
@@ -11,9 +13,8 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  Automattic
- * @package WooCommerce/Templates
- * @version 3.3.0
+ * 
+ * @package Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -72,5 +73,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</tr>
 		<?php endforeach; ?>
 	</table>
-</div>	
+</div>	<!-- .table-responsive -->
 </section>
