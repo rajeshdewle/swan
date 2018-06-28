@@ -1,7 +1,9 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Orders
- *
+ * -----------------------------------------------------------------------------
+ * 
  * Shows orders on the account page.
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/orders.php.
@@ -13,9 +15,8 @@
  * the readme will list any important changes.
  *
  * @see 	https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.2.0
+ * 
+ * @package Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -81,7 +82,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 			<?php endforeach; ?>
 		</tbody>
 	</table>
-</div>
+</div> <!-- .table-responsive -->
 
 	<?php do_action( 'woocommerce_before_account_orders_pagination' ); ?>
 

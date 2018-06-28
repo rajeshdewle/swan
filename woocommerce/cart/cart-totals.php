@@ -1,7 +1,9 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Cart totals
- *
+ * -----------------------------------------------------------------------------
+ * 
  * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-totals.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -11,9 +13,8 @@
  * the readme will list any important changes.
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     2.3.6
+ * 
+ * @package 	Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <div class="cart_totals row pt-3 <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
-   <div class="col-sm-6"></div>
-	 <div class="col-sm-6">
+	 <div class="col-sm-6 offset-sm-6">
+
 		<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
 		<h2 class="py-2"><?php _e( 'Cart totals', 'woocommerce' ); ?></h2>
@@ -104,5 +105,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
 
-	</div> <!--col-sm-6 -->
+	</div> <!-- .col-sm-6 offset-sm-6 -->
 </div>

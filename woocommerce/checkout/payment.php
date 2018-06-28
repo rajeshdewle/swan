@@ -1,6 +1,8 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Checkout Payment Section
+ * -----------------------------------------------------------------------------
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/checkout/payment.php.
  *
@@ -11,8 +13,7 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.4.0
+ * @package Camel_Framework
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -21,7 +22,7 @@ if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
-<div id="payment" class="woocommerce-checkout-payment bg-light p-4">
+<div id="payment" class="woocommerce-checkout-payment bg-light p-4 mb-2">
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<div class="wc_payment_methods payment_methods methods">
 			<?php

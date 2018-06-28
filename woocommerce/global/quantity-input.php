@@ -1,6 +1,8 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Product quantity inputs
+ * -----------------------------------------------------------------------------
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/global/quantity-input.php.
  *
@@ -11,8 +13,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.4.0
+ * @package Camel_Framework
  */
 
 defined( 'ABSPATH' ) || exit;

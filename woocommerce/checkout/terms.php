@@ -1,9 +1,10 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Checkout terms and conditions area.
+ * -----------------------------------------------------------------------------
  *
- * @package WooCommerce/Templates
- * @version 3.4.0
+ * @package Camel_Framework
  */
 
 defined( 'ABSPATH' ) || exit;

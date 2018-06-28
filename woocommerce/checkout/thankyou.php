@@ -1,6 +1,8 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Thankyou page
+ * -----------------------------------------------------------------------------
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/checkout/thankyou.php.
  *
@@ -11,9 +13,8 @@
  * the readme will list any important changes.
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     3.2.0
+ * 
+ * @package 	Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

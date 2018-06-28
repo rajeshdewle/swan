@@ -1,6 +1,8 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * My Account navigation
+ * -----------------------------------------------------------------------------
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/navigation.php.
  *
@@ -11,9 +13,8 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 2.6.0
+ *
+ * @package Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -34,5 +35,5 @@ do_action( 'woocommerce_before_account_navigation' );
 				<?php endforeach; ?>
 			</ul>
 		</nav>
-	</div>
+	</div> <!-- .col-12 col-sm-3 -->
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>
