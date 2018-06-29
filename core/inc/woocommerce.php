@@ -354,5 +354,28 @@ add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_c
 function camel_widget_shopping_cart_proceed_to_checkout() {
     echo '<div><a href="' . esc_url( wc_get_checkout_url() ) . '" class="button wc-forward btn btn-warning btn-sm" target="_blank">'. esc_html__( 'Checkout', 'woocommerce' ) .'</a></div><div>';
 }
-
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_proceed_to_checkout', 20 );
+
+ 
+function camel_woocommerce_before_widget_product_list() { 
+    return '<div class="product_list_widget">'; 
+};        
+add_filter( 'woocommerce_before_widget_product_list', 'camel_woocommerce_before_widget_product_list', 10, 1 );
+
+
+function camel_woocommerce_after_widget_product_list() { 
+	return "</div> <!-- .product_list_widget -->"; 
+};         
+add_filter( 'woocommerce_after_widget_product_list', 'camel_woocommerce_after_widget_product_list', 10, 1 );
+
+
+function camel_before_widget_product_review_list() { 
+    return '<div class="product_list_widget">'; 
+};        
+add_filter( 'woocommerce_before_widget_product_review_list', 'camel_before_widget_product_review_list', 10, 1 );
+
+
+function camel_after_widget_product_review_list() { 
+	return "</div> <!-- .product_list_widget --> "; 
+};         
+add_filter( 'woocommerce_after_widget_product_review_list', 'camel_after_widget_product_review_list', 10, 1 );
