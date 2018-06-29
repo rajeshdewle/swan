@@ -341,3 +341,18 @@ function camel_order_fields( $fields ) {
 	return $fields;
 }
 
+
+remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
+remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
+
+function camel_widget_shopping_cart_view_cart() {
+    echo '<div class="d-flex"><div class="mr-2"><a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward btn btn-success btn-sm" target="_blank">'. esc_html__( 'View Order', 'woocommerce' ) .'</a></div>';
+}
+
+add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_view_cart', 10 );
+
+function camel_widget_shopping_cart_proceed_to_checkout() {
+    echo '<div><a href="' . esc_url( wc_get_checkout_url() ) . '" class="button wc-forward btn btn-warning btn-sm" target="_blank">'. esc_html__( 'Checkout', 'woocommerce' ) .'</a></div><div>';
+}
+
+add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_proceed_to_checkout', 20 );
