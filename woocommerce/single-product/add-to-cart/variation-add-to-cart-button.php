@@ -11,8 +11,8 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 ?>
-<div class="woocommerce-variation-add-to-cart variations_button row">
-<div class="col-sm-2">
+<div class="woocommerce-variation-add-to-cart variations_button form-row">
+<div class="col-sm-2 col-md-4 mb-2">
 	<?php
 		woocommerce_quantity_input( array(
 			'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
@@ -21,7 +21,7 @@ global $product;
 		) );
 	?>
 	</div>
-	<div class="col-sm-10">
+	<div class="col-sm-10 col-md-8">
 		<button type="submit" class="btn btn-primary single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 	</div>
 

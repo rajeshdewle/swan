@@ -1,8 +1,10 @@
 .woocommerce-product-gallery__trigger {
     position: absolute;
+    top: 0.5em;
+    right: 1.5em;
     z-index: 99;
-    padding: 4px 8px;
 }
+.onsale {z-index: 99;}
 ol.flex-control-thumbs {
     display: flex;
     list-style: none;
