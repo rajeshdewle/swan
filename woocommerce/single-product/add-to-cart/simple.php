@@ -28,7 +28,7 @@ echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 if ( $product->is_in_stock() ) : ?>
 
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
-		<div class="form-row">
+		<div class="row">
 
 			<div class="col-sm-2 col-md-4 mb-2">
 				<?php

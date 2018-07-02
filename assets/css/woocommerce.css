@@ -24,6 +24,10 @@ ol.flex-control-thumbs li{
 .payment_box p {
     margin-bottom: 0;
 }
+.shop_attributes p {
+    margin: 0;
+    padding: .5em;
+}
 /* widget filter by price */
 .price_slider_wrapper .ui-widget-content {
     border-radius: 1em;
