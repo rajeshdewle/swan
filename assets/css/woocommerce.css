@@ -66,7 +66,7 @@ ol.flex-control-thumbs li{
     margin-left: -.5em;
 }
 .price_slider_amount .button {
-    text-align: left;
+    float: left;
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
