@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 ?>
-<div class="woocommerce-variation-add-to-cart variations_button form-row">
+<div class="woocommerce-variation-add-to-cart variations_button row">
 <div class="col-sm-2 col-md-4 mb-2">
 	<?php
 		woocommerce_quantity_input( array(
