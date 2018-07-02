@@ -24,3 +24,53 @@ ol.flex-control-thumbs li{
 .payment_box p {
     margin-bottom: 0;
 }
+/* widget filter by price */
+.price_slider_wrapper .ui-widget-content {
+    border-radius: 1em;
+    background-color: #C0C0C0;
+    border: 0;
+}
+.widget_price_filter .ui-slider {
+    height: .4em;
+    position: relative;
+    text-align: left;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+.widget_price_filter .price_slider {
+    margin-bottom: 1em;
+}
+.widget_price_filter .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+}
+.widget_price_filter .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    background-color: #4C0AFF;
+}
+.widget_price_filter .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 1em;
+    height: 1em;
+    background-color: #4C0AFF;
+    border-radius: 1em;
+    cursor: ew-resize;
+    outline: 0;
+    top: -.3em;
+    margin-left: -.5em;
+}
+.price_slider_amount .button {
+    text-align: left;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: .25rem;
+}
+.price_label {
+    float: left;
+    margin-left: 1em;
+    line-height: 1.8em;
+}
+
