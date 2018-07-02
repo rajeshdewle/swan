@@ -13,7 +13,7 @@ if ( apply_filters( 'woocommerce_checkout_show_terms', true ) && function_exists
 	do_action( 'woocommerce_checkout_before_terms_and_conditions' );
 
 	?>
-	<div class="woocommerce-terms-and-conditions-wrapper p-2">
+	<div class="woocommerce-terms-and-conditions-wrapper border-top p-2">
 		<?php
 		/**
 		 * Terms and conditions hook used to inject content.

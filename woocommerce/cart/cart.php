@@ -137,14 +137,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon row">
-                            <div class="d-flex align-items-center input-group-prepend col-sm-6">
+                            <div class="d-flex align-items-center input-group-prepend col-sm-6 mt-2">
 								<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> 
 								<input type="text" name="coupon_code" class="input-text form-control mx-2" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> 
 								<button type="submit" class="button btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
                             </div>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
-							<div class="col-sm-6 d-flex justify-content-center justify-content-sm-end">
-								<button type="submit" class="button btn btn-primary" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>			
+							<div class="col-sm-6 col-lg-3 d-flex justify-content-center justify-content-sm-end mt-2">
+								<button type="submit" class="button btn btn-primary btn-block" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>			
 							</div>
 						</div>
 					<?php } ?>
