@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
-<div class="u-columns col2-set row" id="customer_login">
+<div class="u-columns col2-set row mb-3" id="customer_login">
 
 	<div class="u-column1 col-1 col-12 col-sm-6">
 
