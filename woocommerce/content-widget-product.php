@@ -31,7 +31,7 @@ global $product;
 	<div class="media-body">
 
 		<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
-			<h5 class="product-title mt-0"><?php echo $product->get_name(); ?></h5>
+			<h6 class="product-title mt-0"><?php echo $product->get_name(); ?></h6>
 		</a>
 
 		<?php if ( ! empty( $show_rating ) ) : ?>
