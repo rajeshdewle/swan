@@ -19,21 +19,21 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<div class="card mb-3">
+<div class="media mb-2">
 	<?php do_action( 'woocommerce_widget_product_review_item_start', $args ); ?>
 
-	<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-		<?php echo $product->get_image(); ?>
+	<a class="mr-3" href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+		<?php echo $product->get_image( array( 84, 84 ) ); ?>
 	</a>
 
-	<div class="card-body">
+	<div class="media-body">
 		<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-			<span class="product-title"><?php echo $product->get_name(); ?></span>
+			<h5 class="product-title mt-0"><?php echo $product->get_name(); ?></h5>
 		</a>
 
 		<?php echo wc_get_rating_html( intval( get_comment_meta( $comment->comment_ID, 'rating', true ) ) );?>
 
 		<span class="reviewer"><?php echo sprintf( esc_html__( 'by %s', 'woocommerce' ), get_comment_author( $comment->comment_ID ) ); ?></span>
-	</div> <!-- .card-body -->
+	</div> <!-- .media-body -->
 	<?php do_action( 'woocommerce_widget_product_review_item_end', $args ); ?>
-</div>
+</div> <!-- .media -->
