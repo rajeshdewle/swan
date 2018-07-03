@@ -28,7 +28,7 @@ wc_print_notices();
  */
 do_action( 'woocommerce_account_navigation' ); ?>
 
-	<div class="col-12 col-sm-9">
+	<div class="col-12 col-sm-8 mt-3">
 		<div class="woocommerce-MyAccount-content">
 			<?php
 				/**
@@ -38,5 +38,5 @@ do_action( 'woocommerce_account_navigation' ); ?>
 				do_action( 'woocommerce_account_content' );
 			?>
 		</div>
-	</div> <!-- .col-12 col-sm-9 -->
+	</div> <!-- .col-12 col-sm-8 -->
 </div> <!-- .row -->
