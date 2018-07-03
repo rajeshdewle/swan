@@ -65,15 +65,14 @@ ol.flex-control-thumbs li{
     top: -.3em;
     margin-left: -.5em;
 }
+.price_slider_amount {display: flex;}
 .price_slider_amount .button {
-    float: left;
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
     border-radius: .25rem;
 }
 .price_label {
-    float: left;
     margin-left: 1em;
     line-height: 1.8em;
 }
