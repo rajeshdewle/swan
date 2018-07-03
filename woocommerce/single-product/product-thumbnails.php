@@ -1,6 +1,8 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Single Product Thumbnails
+ * -----------------------------------------------------------------------------
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/product-thumbnails.php.
  *
@@ -11,9 +13,7 @@
  * the readme will list any important changes.
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     3.3.2
+ * @package 	Camel_Framework
  */
 
 defined( 'ABSPATH' ) || exit;

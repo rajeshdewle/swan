@@ -1,6 +1,8 @@
 <?php
 /**
+ * -----------------------------------------------------------------------------
  * Single Product tabs
+ * -----------------------------------------------------------------------------
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/tabs/tabs.php.
  *
@@ -11,9 +13,7 @@
  * the readme will list any important changes.
  *
  * @see 	https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 2.4.0
+ * @package Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

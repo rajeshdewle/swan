@@ -25,7 +25,7 @@ do_action( 'woocommerce_before_account_navigation' );
 ?>
 
 <div class="row">
-	<div class="col-12 col-sm-3">
+	<div class="col-12 col-sm-4 mt-3">
 		<nav class="woocommerce-MyAccount-navigation">
 			<div class="list-group">
 				<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>				
@@ -33,5 +33,5 @@ do_action( 'woocommerce_before_account_navigation' );
 				<?php endforeach; ?>
 			</div>
 		</nav>
-	</div> <!-- .col-12 col-sm-3 -->	
+	</div> <!-- .col-12 col-sm-4 -->	
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>
