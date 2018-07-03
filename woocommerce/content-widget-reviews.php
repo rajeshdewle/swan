@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="media-body">
 		<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-			<h5 class="product-title mt-0"><?php echo $product->get_name(); ?></h5>
+			<h6 class="product-title mt-0"><?php echo $product->get_name(); ?></h6>
 		</a>
 
 		<?php echo wc_get_rating_html( intval( get_comment_meta( $comment->comment_ID, 'rating', true ) ) );?>
