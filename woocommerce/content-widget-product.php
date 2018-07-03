@@ -21,21 +21,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 ?>
-<div class="card mb-3">
+<div class="media mb-2">
 	<?php do_action( 'woocommerce_widget_product_item_start', $args ); ?>
+
+	<a class="mr-3" href="<?php echo esc_url( $product->get_permalink() ); ?>">
+		<?php echo $product->get_image( array( 84, 84 ) ); ?>
+	</a>
+
+	<div class="media-body">
+
 		<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
-			<?php echo $product->get_image(); ?>
+			<h5 class="product-title mt-0"><?php echo $product->get_name(); ?></h5>
 		</a>
-		<div class="card-body">
-			<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
-				<span class="product-title"><?php echo $product->get_name(); ?></span>
-			</a>
 
-			<?php if ( ! empty( $show_rating ) ) : ?>
-				<?php echo wc_get_rating_html( $product->get_average_rating() ); ?>
-			<?php endif; ?>
+		<?php if ( ! empty( $show_rating ) ) : ?>
+			<?php echo wc_get_rating_html( $product->get_average_rating() ); ?>
+		<?php endif; ?>
 
-			<?php echo $product->get_price_html(); ?>
-		</div> <!-- .card-body -->
-	<?php do_action( 'woocommerce_widget_product_item_end', $args ); ?>	
-</div>
+		<?php echo $product->get_price_html(); ?>
+
+	</div> <!-- .media-body -->
+
+	<?php do_action( 'woocommerce_widget_product_item_end', $args ); ?>
+</div> <!-- .media -->
