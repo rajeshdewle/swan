@@ -285,7 +285,7 @@ add_filter('woocommerce_checkout_fields', 'camel_Checkout_Form_Fields' );
 function camel_Checkout_Form_Fields($fields) {
     foreach ($fields as &$fieldset) {
         foreach ($fieldset as &$field) {
-            $field['class'][] = 'form-group d-block pt-3'; 
+            $field['class'][] = 'form-group d-block pb-3'; 
             $field['input_class'][] = 'form-control';
         }
     }
