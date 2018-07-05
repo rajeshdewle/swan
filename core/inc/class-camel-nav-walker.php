@@ -1,4 +1,11 @@
 <?php
+/**
+ * -----------------------------------------------------------------------------
+ * Camel Framework Theme Nav Walker
+ * -----------------------------------------------------------------------------
+ *
+ * @package Camel_Framework
+ */
 
 if ( ! class_exists( 'Camel_Navwalker' ) ) {
     class Camel_Navwalker extends Walker_Nav_Menu {

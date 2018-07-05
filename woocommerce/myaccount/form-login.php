@@ -28,9 +28,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
-<div class="u-columns col2-set row mb-3" id="customer_login">
+<div class="u-columns col2-set row my-3" id="customer_login">
 
 	<div class="u-column1 col-1 col-12 col-sm-6">
+		<div class="border rounded p-4 mb-3">
 
 <?php endif; ?>
 
@@ -70,11 +71,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</form>
 	
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
-
+		</div> <!-- .border rounded p-3 mb-3 -->
 	</div> <!-- .col-12 col-sm-6 -->
 
 	<div class="u-column2 col-2 col-12 col-sm-6">
-
+		<div class="border rounded p-4 mb-3">
 		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 
 		<form method="post" class="woocommerce-form woocommerce-form-register register">
@@ -114,7 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 
 		</form>
-
+		</div> <!-- .border rounded p-3 mb-3 -->
 	</div> <!-- .col-12 col-sm-6 -->
 
 </div> <!-- .row -->
