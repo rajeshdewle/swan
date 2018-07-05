@@ -1,4 +1,11 @@
 <?php
+/**
+ * -----------------------------------------------------------------------------
+ * Camel Framework Theme Comment Walker
+ * -----------------------------------------------------------------------------
+ *
+ * @package Camel_Framework
+ */
 
 if ( ! class_exists( 'Camel_CommentWalker' ) ) {
     class Camel_CommentWalker extends Walker_Comment {
