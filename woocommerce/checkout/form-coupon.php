@@ -33,11 +33,11 @@ if ( ! wc_coupons_enabled() || ! empty( WC()->cart->applied_coupons ) ) { // @co
 	<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'woocommerce' ); ?></p>
 
 	<div class="form-inline pb-3">
-		<p class="form-row form-row-first">
+		<p class="form-row form-row-first mb-2 mr-2">
 			<input type="text" name="coupon_code" class="input-text form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
 		</p>
 
-		<p class="form-row form-row-last ml-2">
+		<p class="form-row form-row-last mb-2">
 			<button type="submit" class="button btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
 		</p>
 	</div>
