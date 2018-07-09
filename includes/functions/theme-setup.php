@@ -176,8 +176,10 @@ function camel_scripts() {
     // Add Bootstrap css in the header
     wp_enqueue_style(
         'bootstrap-css',
-        get_template_directory_uri() . '/assets/vendor/bootstrap/css/bootstrap.min.css',
-        null, 4.1, false
+        get_template_directory_uri() . '/assets/css/theme.css',
+        null,
+        filemtime( get_template_directory() . '/assets/css/theme.css' ), // automatic versioning
+        false
     );
 
     // Enqueue style.css in header
@@ -186,8 +188,10 @@ function camel_scripts() {
     // Add Bootstrap js in the footer
     wp_enqueue_script(
         'bootstrap-js',
-        get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
-        array( 'jquery' ), 4.1, true
+        get_template_directory_uri() . '/assets/js/theme.js',
+        array( 'jquery' ),
+        filemtime( get_template_directory() . '/assets/js/theme.js' ), // automatic versioning
+        true
     );
 }
 add_action('wp_enqueue_scripts', 'camel_scripts');

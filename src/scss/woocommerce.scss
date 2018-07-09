@@ -1,0 +1,102 @@
+.woocommerce-active {
+    .woocommerce-product-gallery__trigger {
+        position: absolute;
+        top: 0.5em;
+        right: 1.5em;
+        z-index: 99;
+    }
+    .onsale { z-index: 99; }
+
+    ol.flex-control-thumbs {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin-top: 8px;
+    }
+
+    ol.flex-control-thumbs li{
+        margin-right: 8px;
+    }
+
+    .form-row {
+        margin: 0;
+    }
+
+    .added_to_cart {
+        margin-left: 8px;
+    }
+
+    .payment_box p {
+        margin-bottom: 0;
+    }
+
+    .shop_attributes p {
+        margin: 0;
+        padding: .5em;
+    }
+
+    .price_slider_wrapper .ui-widget-content {
+        border-radius: 1em;
+        background-color: #C0C0C0;
+        border: 0;
+    }
+
+    .widget_price_filter {
+        .ui-slider {
+            height: .4em;
+            position: relative;
+            text-align: left;
+            margin-left: .5em;
+            margin-right: .5em;
+        }
+        .price_slider {
+            margin-bottom: 1em;
+        }
+
+        .ui-slider-horizontal {
+            .ui-slider-range {
+                top: 0;
+                height: 100%;
+            }
+        }
+
+        .ui-slider {
+            .ui-slider-range {
+                position: absolute;
+                z-index: 1;
+                background-color: #4C0AFF;
+            }
+            .ui-slider-handle {
+                position: absolute;
+                z-index: 2;
+                width: 1em;
+                height: 1em;
+                background-color: #4C0AFF;
+                border-radius: 1em;
+                cursor: ew-resize;
+                outline: 0;
+                top: -.3em;
+                margin-left: -.5em;
+            }
+        }
+    }
+
+    .price_slider_amount {
+        display: flex;
+
+        .button {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: .25rem;
+        }
+    }
+    .price_label {
+        margin-left: 1em;
+        line-height: 1.8em;
+    }
+    .variation p {
+        margin: 0;
+    }
+}
+
