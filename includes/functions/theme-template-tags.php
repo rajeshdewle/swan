@@ -57,7 +57,6 @@ if ( ! function_exists( 'camel_posted_on' ) ) :
         } else {
             echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
         }
-
     }
 endif;
 
@@ -171,6 +170,11 @@ if ( ! function_exists( 'camel_post_thumbnail' ) ) :
 endif;
 
 if (! function_exists('camel_comment_form')) {
+    /**
+     * Template tag for post comment form
+     *
+     * Added Bootstrap 4 compatible CSS classes
+     */
     function camel_comment_form() {
         $commenter = wp_get_current_commenter();
         $req      = get_option( 'require_name_email' );
@@ -195,6 +199,11 @@ if (! function_exists('camel_comment_form')) {
 
 
 if (! function_exists('camel_posts_pagination')) {
+    /**
+     * Template tag for posts paginations template
+     *
+     * Added Bootstrap 4 compatible CSS classes
+     */
     function camel_posts_pagination() {
         if ( is_singular() ) {
             return;
@@ -245,9 +254,8 @@ if (! function_exists('camel_posts_pagination')) {
                 <?php if ( ! in_array( 1, $links ) ) : ?>
                     <?php
                         $classes = array();
-                        $classes[] = 1 == $current_page ? 'active' : '';
-                        $classes[] = 'page-item mx-1';
-                    ?>
+        $classes[] = 1 == $current_page ? 'active' : '';
+        $classes[] = 'page-item mx-1'; ?>
 
                     <li class="<?php echo implode(' ', $classes); ?>">
                         <a href="<?php echo esc_url( get_pagenum_link( 1 ) ); ?>" class="page-link rounded">1</a>
@@ -263,9 +271,8 @@ if (! function_exists('camel_posts_pagination')) {
                 <?php foreach ( (array) $links as $page_number ) : ?>
                     <?php
                         $classes = array();
-                        $classes[] = ($current_page == $page_number) ? 'active' : '';
-                        $classes[] = 'page-item mx-1';
-                    ?>
+        $classes[] = ($current_page == $page_number) ? 'active' : '';
+        $classes[] = 'page-item mx-1'; ?>
 
                     <li class="<?php echo implode(' ', $classes); ?>">
                         <a href="<?php echo esc_url( get_pagenum_link( $page_number ) ); ?>" class="page-link rounded"><?php echo $page_number; ?></a>
@@ -280,9 +287,8 @@ if (! function_exists('camel_posts_pagination')) {
 
                     <?php
                         $classes = array();
-                        $classes[] = ($current_page == $last_page) ? 'active' : '';
-                        $classes[] = 'page-item mx-1';
-                    ?>
+        $classes[] = ($current_page == $last_page) ? 'active' : '';
+        $classes[] = 'page-item mx-1'; ?>
 
                     <li class="<?php echo implode(' ', $classes); ?>">
                         <a href="<?php echo esc_url( get_pagenum_link( $last_page ) ); ?>" class="page-link rounded"><?php echo $last_page; ?></a>
@@ -310,6 +316,11 @@ if (! function_exists('camel_posts_pagination')) {
 }
 
 if (! function_exists('camel_post_navigation')) {
+    /**
+     * Template tag for post navigation (Added next, previous posts links)
+     *
+     * Added Bootstrap 4 compatible CSS classes
+     */
     function camel_post_navigation($args = array()) {
         $args = wp_parse_args( $args, array(
             'prev_text'          => '%title',
@@ -340,7 +351,6 @@ if (! function_exists('camel_post_navigation')) {
 
         // Only add markup if there's somewhere to navigate to.
         if ( $previous || $next ) {
-
             $links = $previous . $next;
             $class = 'posts-navigation';
             $screen_reader_text = $args['screen_reader_text'];
@@ -364,15 +374,21 @@ if (! function_exists('camel_post_navigation')) {
     }
 }
 
-
-function camel_sidebar_classes() {
-    if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) {
-        echo 'order-md-2 col-md-8 col-lg-9';
-    } elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) {
-        echo 'order-2 col-md-8 col-lg-9';
-    } elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) {
-        echo 'order-sm-2 order-md-2 col-sm-4 col-lg-6';
-    } else {
-        echo 'order-2 col-sm-12';
+if (! function_exists('camel_sidebar_classes')) {
+    /**
+     * Template tag for sidebar container
+     *
+     * Added Bootstrap 4 compatible CSS classes
+     */
+    function camel_sidebar_classes() {
+        if ( is_active_sidebar( 'sidebar-left' ) && ! is_active_sidebar( 'sidebar-right' ) ) {
+            echo 'order-md-2 col-md-8 col-lg-9';
+        } elseif ( ! is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) {
+            echo 'order-2 col-md-8 col-lg-9';
+        } elseif ( is_active_sidebar( 'sidebar-left' ) && is_active_sidebar( 'sidebar-right' ) ) {
+            echo 'order-sm-2 order-md-2 col-sm-4 col-lg-6';
+        } else {
+            echo 'order-2 col-sm-12';
+        }
     }
 }

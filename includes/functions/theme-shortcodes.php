@@ -7,6 +7,10 @@
  * @package Camel_Framework
  */
 
+/**
+ * Customized shortcode to add Bootstrap CSS class in Gallery post format.
+ * @param  array $attr
+ */
 function camel_gallery_shortcode($attr) {
     $post = get_post();
 

@@ -9,7 +9,7 @@
  */
 
 /**
- * Register widget area.
+ * Register widget/sidebar areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
