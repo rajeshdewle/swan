@@ -9,9 +9,21 @@ Change the current working directory to the theme directory
 cd wp-content/themes/<theme-folder>
 ```
 
-Install the npm depedancies
+We are using [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) to compile SASS & JavaScript files. To install npm depedancies run following command in terminal.
 ```
 npm install
 ```
 
-You can find `sass` & `js` files `resources` directory.
+Run watcher to watch for modified files
+```
+npm run watch
+```
+
+Compilte assets for productions
+```
+npm run production
+```
+
+For more information visit [Laravel Mix documentation](https://github.com/JeffreyWay/laravel-mix/tree/master/docs#readme).
+
+
