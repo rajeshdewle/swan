@@ -1,6 +1,14 @@
 <?php
 
 /**
+ * -----------------------------------------------------------------------------
+ * Camel Framework theme sidebars/widget areas
+ * -----------------------------------------------------------------------------
+ *
+ * @package Camel_Framework
+ */
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar

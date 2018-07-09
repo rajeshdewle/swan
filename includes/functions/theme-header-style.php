@@ -1,4 +1,11 @@
 <?php
+/**
+ * -----------------------------------------------------------------------------
+ * Camel Framework custom header style
+ * -----------------------------------------------------------------------------
+ *
+ * @package Camel_Framework
+ */
 
 if (! function_exists('camel_header_style')) {
     function camel_header_style() {

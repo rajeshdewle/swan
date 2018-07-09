@@ -1,19 +1,24 @@
 <?php
+/**
+ * -----------------------------------------------------------------------------
+ * Camel Framework Theme Hooks
+ * -----------------------------------------------------------------------------
+ *
+ * @package Camel_Framework
+ */
 
-
-add_filter('next_posts_link_attributes', 'posts_link_attributes');
-add_filter('previous_posts_link_attributes', 'posts_link_attributes');
-
+/**
+ * Added boostrap class in pagination
+ */
 function posts_link_attributes() {
     return 'class="page-link rounded"';
 }
-
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
 
 /**
  * Password form for password protected post
- *
- * @return void
  */
 function camel_password_form() {
     global $post;

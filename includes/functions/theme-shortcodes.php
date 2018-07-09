@@ -1,4 +1,11 @@
 <?php
+/**
+ * -----------------------------------------------------------------------------
+ * Camel Framework theme shortcodes
+ * -----------------------------------------------------------------------------
+ *
+ * @package Camel_Framework
+ */
 
 function camel_gallery_shortcode($attr) {
     $post = get_post();

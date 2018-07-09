@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * -----------------------------------------------------------------------------
+ * Camel Framework theme setup
+ * -----------------------------------------------------------------------------
+ *
+ * @package Camel_Framework
+ */
 
 if (! function_exists('camel_setup')) :
     /**
@@ -108,6 +114,7 @@ endif; // camel_setup
 
 add_action('after_setup_theme', 'camel_setup');
 
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -120,3 +127,29 @@ function camel_content_width() {
     $GLOBALS['content_width'] = apply_filters('camel_content_width', 640);
 }
 add_action('after_setup_theme', 'camel_content_width', 0);
+
+
+/**
+ * Enqueue scripts and styles.
+ *
+ * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+ */
+function camel_scripts() {
+    // Add Bootstrap css in the header
+    wp_enqueue_style(
+        'bootstrap-css',
+        get_template_directory_uri() . '/assets/vendor/bootstrap/css/bootstrap.min.css',
+        null, 4.1, false
+    );
+
+    // Enqueue style.css in header
+    wp_enqueue_style('camel-style', get_stylesheet_uri());
+
+    // Add Bootstrap js in the footer
+    wp_enqueue_script(
+        'bootstrap-js',
+        get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
+        array( 'jquery' ), 4.1, true
+    );
+}
+add_action('wp_enqueue_scripts', 'camel_scripts');
