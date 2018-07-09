@@ -136,13 +136,13 @@ function camel_checkout_form_fields($fields) {
 add_filter('woocommerce_checkout_fields', 'camel_checkout_form_fields' );
 
 function camel_widget_shopping_cart_button_view_cart() {
-    echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward btn btn-success btn-sm" target="_blank">'. esc_html__( 'View Cart', 'woocommerce' ) .'</a>';
+    echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward btn btn-success btn-sm btn-block" target="_blank">'. esc_html__( 'View Cart', 'woocommerce' ) .'</a>';
 }
 remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10);
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_button_view_cart');
 
 function camel_widget_shopping_cart_proceed_to_checkout() {
-    echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="button wc-forward btn btn-warning btn-sm" target="_blank">'. esc_html__( 'Checkout', 'woocommerce' ) .'</a>';
+    echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="button wc-forward btn btn-warning btn-sm btn-block" target="_blank">'. esc_html__( 'Checkout', 'woocommerce' ) .'</a>';
 }
 remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20);
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_proceed_to_checkout');
