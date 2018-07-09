@@ -14,4 +14,4 @@ Install the npm depedancies
 npm install
 ```
 
-You can find `sass` & `js` files `src` directory.
+You can find `sass` & `js` files `resources` directory.
