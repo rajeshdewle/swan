@@ -13,14 +13,14 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * 
+ *
  * @package Camel_Framework
  */
 
 defined( 'ABSPATH' ) || exit;
 
 if ( ! wc_coupons_enabled() || ! empty( WC()->cart->applied_coupons ) ) { // @codingStandardsIgnoreLine.
-	return;
+    return;
 }
 
 ?>
@@ -41,6 +41,6 @@ if ( ! wc_coupons_enabled() || ! empty( WC()->cart->applied_coupons ) ) { // @co
 			<button type="submit" class="button btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
 		</p>
 	</div>
-	
+
 	<div class="clear"></div>
 </form>
