@@ -21,11 +21,11 @@ require get_template_directory() . '/core/inc/theme-sidebars.php';
 // Theme scripts
 require get_template_directory() . '/core/inc/theme-scripts.php';
 
-// Initialize camel core
-require get_template_directory() . '/core/camel.php';
-
 // Shortcodes
 require get_template_directory() . '/core/inc/theme-shortcodes.php';
 
 // Hooks
 require get_template_directory() . '/core/inc/theme-hooks.php';
+
+// Initialize camel core
+require get_template_directory() . '/core/camel.php';
