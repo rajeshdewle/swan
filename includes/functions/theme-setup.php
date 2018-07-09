@@ -191,3 +191,12 @@ function camel_scripts() {
     );
 }
 add_action('wp_enqueue_scripts', 'camel_scripts');
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function camel_theme_add_editor_styles() {
+    add_editor_style(); // You can define your custom stylesheet here
+}
+add_action( 'admin_init', 'camel_theme_add_editor_styles' );
+
