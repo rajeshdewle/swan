@@ -91,11 +91,11 @@ add_filter( 'woocommerce_output_related_products_args', 'camel_woocommerce_relat
  */
 function camel_woocommerce_cart_link_fragment( $fragments ) {
     ob_start(); ?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'camel' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'camel-framework' ); ?>">
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'camel' ),
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'camel-framework' ),
 				WC()->cart->get_cart_contents_count()
 			); ?>
 			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
@@ -137,7 +137,7 @@ add_filter('woocommerce_checkout_fields', 'camel_checkout_form_fields' );
  * Added bootstrap classes to view cart button in cart widget
  */
 function camel_widget_shopping_cart_button_view_cart() {
-    echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward btn btn-success btn-sm btn-block" target="_blank">'. esc_html__( 'View Cart', 'woocommerce' ) .'</a>';
+    echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward btn btn-success btn-sm btn-block" target="_blank">'. esc_html__( 'View Cart', 'camel-framework' ) .'</a>';
 }
 remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10);
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_button_view_cart');
@@ -146,7 +146,7 @@ add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_c
  * Added bootstrap classes to view checkout button in cart widget
  */
 function camel_widget_shopping_cart_proceed_to_checkout() {
-    echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="button wc-forward btn btn-warning btn-sm btn-block" target="_blank">'. esc_html__( 'Checkout', 'woocommerce' ) .'</a>';
+    echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="button wc-forward btn btn-warning btn-sm btn-block" target="_blank">'. esc_html__( 'Checkout', 'camel-framework' ) .'</a>';
 }
 remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20);
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_proceed_to_checkout');
