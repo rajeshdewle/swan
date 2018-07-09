@@ -91,3 +91,6 @@
     line-height: 1.8em;
 }
 
+.woocommerce-active .variation p {
+    margin: 0;
+}
