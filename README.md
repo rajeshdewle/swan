@@ -19,7 +19,7 @@ Run watcher to watch for modified files
 npm run watch
 ```
 
-Compilte assets for productions
+Compile (Minify) assets for production
 ```
 npm run production
 ```
