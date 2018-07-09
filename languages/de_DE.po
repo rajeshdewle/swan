@@ -2,80 +2,198 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Camel Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-06 10:41+0000\n"
-"PO-Revision-Date: 2018-06-06 11:51+0530\n"
+"POT-Creation-Date: 2018-07-09 13:03+0000\n"
+"PO-Revision-Date: 2018-07-09 22:30+0530\n"
 "Language-Team: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.8\n"
 "Last-Translator: \n"
 "Language: de\n"
 
 #. 1: comment date, 2: comment time
-#: core/inc/class-camel-comment-walker.php:51
+#: includes/core/class-camel-comment-walker.php:58
 #, php-format
 msgid "%1$s at %2$s"
-msgstr "%1$s bei %2$s"
+msgstr "%1$s at %2$s"
+
+#. 1: formatted order total 2: total order items
+#: woocommerce/myaccount/orders.php:65
+#, php-format
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] "%1$s zum %2$s artikel"
+msgstr[1] "%1$s zum %2$s artikel"
+
+#. 1: reviews count 2: product name
+#: woocommerce/single-product-reviews.php:34
+#, php-format
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] "%1$s uberprüfung für %2$s"
+msgstr[1] "%1$s bewertungen für %2$s"
+
+#. number of items in the mini cart.
+#: includes/woocommerce.php:98
+#, php-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d artikel"
+msgstr[1] "%d artikel"
 
 #. %s: comment author link
-#: core/inc/class-camel-comment-walker.php:42
+#: includes/core/class-camel-comment-walker.php:49
 #, php-format
 msgid "%s <small class=\"says\">says on</small>"
-msgstr "%s <small class=\"says\">sagt auf</small>"
+msgstr "%s <small class=“says”>sagt weiter</small>"
+
+#. %s: Quantity.
+#: woocommerce/global/quantity-input.php:29
+#, php-format
+msgid "%s quantity"
+msgstr "%s menge"
+
+#: woocommerce/order/order-downloads.php:59
+msgid "&infin;"
+msgstr "&infin;"
+
+#: woocommerce/cart/cart-totals.php:73
+#, php-format
+msgid "(estimated for %s)"
+msgstr "(geschätzt für %s)"
 
 #. 1: title.
 #: comments.php:36
 #, php-format
 msgid "1 thought on &ldquo;%1$s&rdquo;"
-msgstr "1 Gedanke an \"%1$s\""
+msgstr "Ich dachte nach &ldquo;%1$s&rdquo;"
 
-#: template-parts/widget/widget-popular-post.php:51
+#: includes/widgets/widget-popular-post.php:51
 msgid "5"
 msgstr "5"
 
-#: template-parts/widget/widget-popular-post.php:16
+#: includes/widgets/widget-popular-post.php:16
 msgid "A widget to display popular posts by the number of comments."
-msgstr ""
-"Ein Widget, um beliebte Beiträge von der Anzahl der Kommentare anzuzeigen."
+msgstr "Ein Widget zum Anzeigen beliebter Beiträge nach Anzahl der Kommentare."
 
-#: template-parts/widget/widget-about-us.php:81
+#: includes/widgets/widget-about-us.php:81
 msgid "About Us"
 msgstr "Über uns"
 
-#: template-parts/widget/widget-about-us.php:15
+#: includes/widgets/widget-about-us.php:15
 msgid "About Us widget for displaying user profile in the sidebar."
-msgstr "Über uns Widget zum Anzeigen von Benutzerprofil in der Sidebar."
+msgstr "Über uns Widget zum Anzeigen von Benutzerprofil in der Seitenleiste."
+
+#: woocommerce/single-product-reviews.php:71
+msgid "Add a review"
+msgstr "Bewertung hinzufügen"
+
+#: woocommerce/checkout/form-shipping.php:64
+#: woocommerce/single-product/tabs/additional-information.php:25
+msgid "Additional information"
+msgstr "Zusätzliche Information"
+
+#: woocommerce/cart/cart.php:143 woocommerce/checkout/form-coupon.php:41
+msgid "Apply coupon"
+msgstr "Gutschein einlösen"
+
+#: woocommerce/cart/cart.php:93
+msgid "Available on backorder"
+msgstr "Im Rückstandsfall verfügbar"
+
+#: woocommerce/single-product-reviews.php:97
+msgid "Average"
+msgstr "Durchschnittlich"
+
+#: woocommerce/single-product-reviews.php:71
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr "Schreiben Sie die erste Bewertung &ldquo;%s&rdquo;"
+
+#: woocommerce/checkout/form-billing.php:30
+msgid "Billing &amp; Shipping"
+msgstr "Abrechnung &amp; Versand"
+
+#: woocommerce/myaccount/form-edit-address.php:21
+#: woocommerce/myaccount/my-address.php:28
+#: woocommerce/myaccount/my-address.php:33
+#: woocommerce/order/order-details-customer.php:35
+msgid "Billing address"
+msgstr "Rechnungsadresse"
+
+#: woocommerce/checkout/form-billing.php:34
+msgid "Billing details"
+msgstr "Rechnungsdetails"
+
+#: woocommerce/content-widget-reviews.php:36
+#, php-format
+msgid "by %s"
+msgstr "durch %s"
+
+#: woocommerce/cart/shipping-calculator.php:31
+msgid "Calculate shipping"
+msgstr "Versandkosten berechnen"
 
 #. Widget ID
-#: template-parts/widget/widget-about-us.php:14
+#: includes/widgets/widget-about-us.php:14
 msgid "Camel About Us Widget"
-msgstr "Camel über uns widget"
+msgstr "Camel Über uns Widget"
 
 #. Name of the theme
 msgid "Camel Framework"
-msgstr "Camel-Framework"
+msgstr "Camel Framework"
 
-#: template-parts/widget/widget-about-us.php:83
+#: includes/widgets/widget-about-us.php:83
 msgid ""
 "Camel framework is a beautiful open source WordPress Framework by Camel Team."
 msgstr ""
-"Camel Framework ist eine schöne Open-Source-WordPress-Framework von Camel "
+"Camel Framework ist ein schönes Open Source WordPress Framework von Camel "
 "Team."
 
 #. Widget ID
-#: template-parts/widget/widget-popular-post.php:15
+#: includes/widgets/widget-popular-post.php:15
 msgid "Camel Popular Posts"
-msgstr "Camel Beliebte Posts"
+msgstr "Kamel Beliebte Posts"
 
-#: core/inc/template-tags.php:182
+#: footer.php:33
+msgid "CamelThemes"
+msgstr "CamelThemes"
+
+#: woocommerce/cart/cart-totals.php:30
+msgid "Cart totals"
+msgstr "Einkaufswagensummen"
+
+#: woocommerce/single-product/meta.php:35
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] "Kategorie:"
+msgstr[1] "Kategorien:"
+
+#: includes/woocommerce.php:149
+msgid "Checkout"
+msgstr "Auschecken"
+
+#: woocommerce/cart/shipping-calculator.php:84
+msgid "City"
+msgstr "Stadt"
+
+#: woocommerce/single-product/add-to-cart/variable.php:46
+msgid "Clear"
+msgstr "Klar"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Click here to enter your code"
+msgstr "Klicke hier, um den Gutschein-Code einzugeben"
+
+#: includes/functions/theme-template-tags.php:186
 msgid "Comment"
 msgstr "Kommentar"
 
 #: comments.php:72
 msgid "Comments are closed."
-msgstr "Kommentarfunktion ist geschlossen."
+msgstr "Kommentare sind geschlossen."
 
 #. 1: comment count number, 2: title.
 #: comments.php:44
@@ -83,51 +201,115 @@ msgstr "Kommentarfunktion ist geschlossen."
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%1$s dachte an &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s dachte weiter &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s gedanken an &ldquo;%2$s&rdquo;"
+
+#: woocommerce/myaccount/form-edit-account.php:65
+msgid "Confirm new password"
+msgstr "Bestätige neues Passwort"
 
 #. %s: Name of current post. Only visible to screen readers
 #: template-parts/post/content-aside.php:63 template-parts/post/content.php:67
 #, php-format
 msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
-msgstr "Weiterlesen<span class=\"sr-only\"> \"%s\"</span>"
+msgstr "Weiterlesen<span class=“sr-only”> “%s”</span>"
 
-#: core/inc/customizer.php:32
+#: includes/functions/theme-customizer.php:33
 msgid "Copyright Text"
 msgstr "Copyright-Text"
 
-#: template-parts/widget/widget-about-us.php:115
+#: woocommerce/cart/cart.php:142 woocommerce/checkout/form-coupon.php:37
+msgid "Coupon code"
+msgstr "Gutscheincode"
+
+#: woocommerce/cart/cart.php:141
+msgid "Coupon:"
+msgstr "Coupon:"
+
+#: woocommerce/checkout/form-billing.php:64
+msgid "Create an account?"
+msgstr "Ein Konto erstellen?"
+
+#: woocommerce/myaccount/form-edit-account.php:55
+msgid "Current password (leave blank to leave unchanged)"
+msgstr "Altes Passwort (nicht ausfüllen oder unverändert lassen)"
+
+#: woocommerce/checkout/thankyou.php:52
+msgid "Date:"
+msgstr "Datum:"
+
+#: includes/widgets/widget-about-us.php:115
 msgid "Description:"
 msgstr "Beschreibung:"
 
-#: core/inc/class-camel-comment-walker.php:61
-#: core/inc/class-camel-comment-walker.php:126
+#: woocommerce/myaccount/form-edit-account.php:40
+msgid "Display name"
+msgstr "Anzeigename"
+
+#: woocommerce/order/order-downloads.php:26
+msgid "Downloads"
+msgstr "Downloads"
+
+#: includes/core/class-camel-comment-walker.php:68
+#: includes/core/class-camel-comment-walker.php:133
+#: woocommerce/myaccount/my-address.php:54
 msgid "Edit"
 msgstr "Bearbeiten"
 
 #. %s: Name of current post. Only visible to screen readers
-#: core/inc/template-tags.php:123
+#: includes/functions/theme-template-tags.php:122
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "Bearbeiten <span class=\"screen-reader-text\">%s</span>"
+msgstr "Bearbeiten <span class=“screen-reader-text”>%s</span>"
 
 #. %s: Name of current post. Only visible to screen readers
 #: template-parts/page/content-page.php:39
 #, php-format
 msgid "Edit <span class=\"sr-only\">%s</span>"
-msgstr "Bearbeiten <span class=\"sr-only\">%s</span>"
+msgstr "Bearbeiten <span class=“sr-only”>%s</span>"
 
-#: core/inc/template-tags.php:186
+#: woocommerce/single-product-reviews.php:79
+#: includes/functions/theme-template-tags.php:190
 msgid "Email"
 msgstr "Email"
 
-#: core/inc/customizer.php:22
+#: woocommerce/myaccount/form-edit-account.php:47
+#: woocommerce/myaccount/form-login.php:95
+msgid "Email address"
+msgstr "E-Mail-Addresse"
+
+#: woocommerce/checkout/thankyou.php:58
+msgid "Email:"
+msgstr "Email:"
+
+#: woocommerce/myaccount/form-edit-account.php:28
+msgid "First name"
+msgstr "Vorname"
+
+#: includes/functions/theme-customizer.php:22
 msgid "Footer"
 msgstr "Fußzeile"
 
-#: functions.php:48
+#: includes/functions/theme-setup.php:46
 msgid "Footer Menu"
 msgstr "Fußzeilenmenü"
+
+#: woocommerce/myaccount/downloads.php:41 woocommerce/myaccount/orders.php:104
+msgid "Go shop"
+msgstr "Gehe einkaufen"
+
+#: woocommerce/single-product-reviews.php:96
+msgid "Good"
+msgstr "Gut"
+
+#: woocommerce/myaccount/orders.php:53
+msgctxt "hash before order number"
+msgid "#"
+msgstr "#"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Have a coupon?"
+msgstr "Haben Sie einen Gutschein?"
 
 #. Author URI of the theme
 msgid "https://camelthemes.com"
@@ -141,7 +323,11 @@ msgstr "https://github.com/CamelThemes/camel-framework"
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
-#: template-parts/widget/widget-about-us.php:103
+#: woocommerce/checkout/form-coupon.php:33
+msgid "If you have a coupon code, please apply it below."
+msgstr "Wenn Sie einen Gutscheincode haben, wenden Sie ihn bitte unten an."
+
+#: includes/widgets/widget-about-us.php:103
 msgid "Image:"
 msgstr "Bild:"
 
@@ -166,55 +352,165 @@ msgctxt "label"
 msgid "Search for:"
 msgstr "Suchen nach:"
 
-#: template-parts/widget/widget-about-us.php:124
+#: woocommerce/myaccount/form-edit-account.php:33
+msgid "Last name"
+msgstr "Familienname, Nachname"
+
+#: includes/widgets/widget-about-us.php:124
 msgid "Learn more URL:"
 msgstr "Erfahren Sie mehr URL:"
 
 #. %s: post title
-#: core/inc/template-tags.php:106
+#: includes/functions/theme-template-tags.php:105
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
-"Hinterlasse einen Kommentar <span class=\"screen-reader-text\"> auf %s</span>"
+"Hinterlasse einen Kommentar<span class=“screen-reader-text”> auf %s</span>"
 
-#: functions.php:173
+#: woocommerce/single-product-reviews.php:72
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Eine Nachricht hinterlassen für %s"
+
+#: includes/functions/theme-sidebars.php:18
 msgid "Left Sidebar"
 msgstr "Linke Seitenleiste"
 
-#: functions.php:46
+#: woocommerce/myaccount/form-login.php:57
+msgid "Log in"
+msgstr "Anmeldung"
+
+#: woocommerce/global/form-login.php:50 woocommerce/myaccount/form-login.php:38
+msgid "Login"
+msgstr "Anmeldung"
+
+#: woocommerce/global/form-login.php:60 woocommerce/myaccount/form-login.php:66
+msgid "Lost your password?"
+msgstr "Passwort vergessen?"
+
+#: woocommerce/myaccount/form-lost-password.php:27
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+"Passwort vergessen? Bitte geben Sie Ihren Benutzernamen oder Ihre E-Mail-"
+"Adresse ein. Sie erhalten einen Link, um ein neues Passwort per E-Mail zu "
+"erstellen."
+
+#: includes/functions/theme-setup.php:44
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
-#: core/inc/template-tags.php:184
+#: woocommerce/checkout/thankyou.php:36
+msgid "My account"
+msgstr "Mein Konto"
+
+#: woocommerce/order/order-details-customer.php:38
+#: woocommerce/order/order-details-customer.php:56
+#: woocommerce/single-product/meta.php:31
+msgid "N/A"
+msgstr "N/A"
+
+#: includes/functions/theme-template-tags.php:188
 msgid "Name"
 msgstr "Name"
 
-#: core/inc/template-tags.php:300
+#: woocommerce/single-product-reviews.php:77
+msgid "Names"
+msgstr "Namen"
+
+#: woocommerce/order/order-downloads.php:65
+msgid "Never"
+msgstr "Noch nie"
+
+#: woocommerce/myaccount/form-edit-account.php:60
+msgid "New password (leave blank to leave unchanged)"
+msgstr "Neues Passwort (leer lassen, um unverändert zu bleiben)"
+
+#: includes/functions/theme-template-tags.php:303
+#: includes/functions/theme-template-tags.php:306
+#: woocommerce/myaccount/orders.php:96
 msgid "Next"
 msgstr "Nächster"
+
+#: woocommerce/myaccount/downloads.php:43
+msgid "No downloads available yet."
+msgstr "Noch keine Downloads verfügbar."
+
+#: woocommerce/myaccount/orders.php:106
+msgid "No order has been made yet."
+msgstr "Es wurde noch keine Bestellung getätigt."
+
+#: woocommerce/cart/mini-cart.php:85
+msgid "No products in the cart."
+msgstr "Keine Produkte im Einkaufswagen."
+
+#: woocommerce/single-product-reviews.php:98
+msgid "Not that bad"
+msgstr "Nicht so schlecht"
+
+#: woocommerce/order/order-details.php:85
+msgid "Note:"
+msgstr "Hinweis:"
 
 #: template-parts/post/content-none.php:16
 msgid "Nothing Found"
 msgstr "Nichts gefunden"
 
-#: template-parts/widget/widget-popular-post.php:59
+#: includes/widgets/widget-popular-post.php:59
 msgid "Number of Post:"
 msgstr "Anzahl der Post:"
+
+#: woocommerce/single-product-reviews.php:112
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+"Nur angemeldete Kunden, die dieses Produkt gekauft haben, können eine "
+"Bewertung abgeben."
 
 #: 404.php:20
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Hoppla! Diese Seite kann nicht gefunden werden."
 
-#: core/inc/template-tags.php:383 template-parts/page/content-page.php:26
+#: woocommerce/order/order-details.php:40
+msgid "Order details"
+msgstr "Bestelldetails"
+
+#: woocommerce/checkout/thankyou.php:47
+msgid "Order number:"
+msgstr "Bestellnummer:"
+
+#: template-parts/page/content-page.php:26
 #: template-parts/post/content-aside.php:74 template-parts/post/content.php:78
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: functions.php:444
-msgid "Password:"
-msgstr "Seiten:"
+#: woocommerce/global/form-login.php:41 woocommerce/myaccount/form-login.php:49
+#: woocommerce/myaccount/form-login.php:102
+msgid "Password"
+msgstr "Passwort"
 
-#: core/inc/class-camel-comment-walker.php:126
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "Password change"
+msgstr "Passwortänderung"
+
+#: includes/functions/theme-hooks.php:28
+msgid "Password:"
+msgstr "Passwort:"
+
+#: woocommerce/checkout/thankyou.php:34
+msgid "Pay"
+msgstr "Zahlen"
+
+#: woocommerce/checkout/thankyou.php:70
+msgid "Payment method:"
+msgstr "Bezahlverfahren:"
+
+#: woocommerce/single-product-reviews.php:95
+msgid "Perfect"
+msgstr "Perfekt"
+
+#: includes/core/class-camel-comment-walker.php:133
 msgid "Pingback:"
 msgstr "Pingback:"
 
@@ -223,42 +519,88 @@ msgctxt "placeholder"
 msgid "Search"
 msgstr "Suche"
 
-#: template-parts/widget/widget-popular-post.php:51
+#: woocommerce/checkout/payment.php:34
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+"Bitte geben Sie oben Ihre Daten ein, um die verfügbaren Zahlungsmethoden zu "
+"sehen."
+
+#: includes/widgets/widget-popular-post.php:51
 msgid "Popular Posts"
 msgstr "Beliebte Beiträge"
 
 #. %s: post author.
-#: core/inc/template-tags.php:71
+#: includes/functions/theme-template-tags.php:70
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr "von %s"
+msgstr "durch %s"
 
 #. %s: post date.
-#: core/inc/template-tags.php:36
+#: includes/functions/theme-template-tags.php:36
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "Veröffentlicht am %s"
 
+#: woocommerce/cart/shipping-calculator.php:92
+msgid "Postcode / ZIP"
+msgstr "Postleitzahl"
+
 #. 1: list of categories.
-#: core/inc/template-tags.php:89
+#: includes/functions/theme-template-tags.php:88
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Veröffentlicht in %1$s"
 
-#: core/inc/template-tags.php:320 core/inc/template-tags.php:349
+#: includes/functions/theme-template-tags.php:331
+#: includes/functions/theme-template-tags.php:359
 msgid "Posts navigation"
 msgstr "Navigation der Beiträge"
 
-#: core/inc/template-tags.php:239
+#: includes/functions/theme-template-tags.php:245
+#: includes/functions/theme-template-tags.php:248
+#: woocommerce/myaccount/orders.php:92
 msgid "Previous"
 msgstr "Bisherige"
+
+#: woocommerce/cart/cart.php:35 woocommerce/cart/cart.php:98
+msgid "Price"
+msgstr "Preis"
+
+#: woocommerce/cart/proceed-to-checkout-button.php:28
+msgid "Proceed to checkout"
+msgstr "Zur Kasse"
+
+#: woocommerce/cart/cart.php:34 woocommerce/cart/cart.php:78
+#: woocommerce/checkout/form-pay.php:28
+#: woocommerce/checkout/review-order.php:27
+#: woocommerce/order/order-details.php:46
+msgid "Product"
+msgstr "Produkt"
+
+#: woocommerce/global/quantity-input.php:42
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "Menge"
 
 #: footer.php:29
 #, php-format
 msgid "Proudly powered by %s"
-msgstr "Stolz präsentiert von %s"
+msgstr "Stolz angetrieben von %s"
+
+#: woocommerce/checkout/form-pay.php:29
+msgid "Qty"
+msgstr "Menge"
+
+#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:104
+#: woocommerce/global/quantity-input.php:32
+msgid "Quantity"
+msgstr "Menge"
+
+#: woocommerce/single-product-reviews.php:94
+msgid "Rate&hellip;"
+msgstr "Bewertung&hellip;"
 
 #: template-parts/post/content.php:35
 msgid "Read More"
@@ -270,12 +612,62 @@ msgstr "Weiterlesen"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Bereit Deinen ersten Post zu veröffentlichen? <a href=\"%1$s\"> Hier "
-"beginnen </a>."
+"Bereit Deinen ersten Post zu veröffentlichen? <a href=“%1$s”>Fang hier an</"
+"a>."
 
-#: functions.php:182
+#: woocommerce/myaccount/form-login.php:79
+#: woocommerce/myaccount/form-login.php:112
+msgid "Register"
+msgstr "Registrieren"
+
+#: woocommerce/single-product/related.php:27
+msgid "Related products"
+msgstr "Verwandte Produkte"
+
+#: woocommerce/global/form-login.php:54 woocommerce/myaccount/form-login.php:61
+msgid "Remember me"
+msgstr "Erinnere dich an mich"
+
+#: woocommerce/cart/cart.php:59 woocommerce/cart/mini-cart.php:63
+msgid "Remove this item"
+msgstr "Entferne diesen Gegenstand"
+
+#: woocommerce/myaccount/form-lost-password.php:40
+msgid "Reset password"
+msgstr "Passwort zurücksetzen"
+
+#: woocommerce/cart/cart-empty.php:34
+msgid "Return to shop"
+msgstr "Zurück zum Laden"
+
+#: woocommerce/single-product-reviews.php:36
+msgid "Reviews"
+msgstr "Bewertungen"
+
+#: includes/functions/theme-sidebars.php:27
 msgid "Right Sidebar"
-msgstr "rechte Sidebar"
+msgstr "Rchte Sidebar"
+
+#: woocommerce/loop/sale-flash.php:29
+#: woocommerce/single-product/sale-flash.php:28
+msgid "Sale!"
+msgstr "Verkauf!"
+
+#: woocommerce/myaccount/form-edit-address.php:50
+msgid "Save address"
+msgstr "Adresse speichern"
+
+#: woocommerce/myaccount/form-edit-account.php:76
+msgid "Save changes"
+msgstr "Änderungen speichern"
+
+#: woocommerce/product-searchform.php:26
+msgid "Search for:"
+msgstr "Suchen nach:"
+
+#: woocommerce/product-searchform.php:27
+msgid "Search products&hellip;"
+msgstr "Produktsuche&hellip;"
 
 #. %s: search query.
 #: search.php:26
@@ -283,15 +675,61 @@ msgstr "rechte Sidebar"
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: template-parts/widget/widget-about-us.php:109
+#: woocommerce/cart/shipping-calculator.php:37
+msgid "Select a country&hellip;"
+msgstr "Wähle ein Land&hellip;"
+
+#: woocommerce/cart/shipping-calculator.php:62
+msgid "Select a state&hellip;"
+msgstr "Wähle einen Staat&hellip;"
+
+#: includes/widgets/widget-about-us.php:109
 msgid "Select an Image"
 msgstr "Wähle ein Bild aus"
+
+#: woocommerce/checkout/form-shipping.php:30
+msgid "Ship to a different address?"
+msgstr "Zu einer anderen Adresse verschicken?"
+
+#: woocommerce/cart/cart-totals.php:57 woocommerce/cart/cart-totals.php:58
+msgid "Shipping"
+msgstr "Versand"
+
+#: woocommerce/myaccount/form-edit-address.php:21
+#: woocommerce/myaccount/my-address.php:29
+#: woocommerce/order/order-details-customer.php:54
+msgid "Shipping address"
+msgstr "Lieferanschrift"
+
+#. %d: total results
+#: woocommerce/loop/result-count.php:30
+#, php-format
+msgid "Showing the single result"
+msgid_plural "Showing all %d results"
+msgstr[0] "Einzelnes Produkt anzeigen"
+msgstr[1] "Zeige alle %d ergebnisse"
+
+#: woocommerce/checkout/payment.php:41
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+"Da Ihr Browser kein JavaScript unterstützt oder deaktiviert ist, stellen Sie "
+"bitte sicher, dass Sie vor der Bestellung auf die Schaltfläche <em> Update "
+"Gesamtwerte </ em> klicken. Wenn Sie dies nicht tun, wird Ihnen "
+"möglicherweise mehr als der oben genannte Betrag in Rechnung gestellt."
 
 #: header.php:27
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: functions.php:47
+#: woocommerce/single-product/meta.php:31
+msgid "SKU:"
+msgstr "Artikelnummer:"
+
+#: includes/functions/theme-setup.php:45
 msgid "Social Menu"
 msgstr "Soziales Menü"
 
@@ -303,20 +741,62 @@ msgstr ""
 "Entschuldigung, aber nichts entspricht Ihren Suchbegriffen. Bitte versuchen "
 "Sie es erneut mit verschiedenen Keywords."
 
-#: functions.php:446
-msgid "Submit"
-msgstr "einreichen"
+#: woocommerce/checkout/form-pay.php:80
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Es scheint, dass für Ihren Standort keine Zahlungsmethoden verfügbar sind. "
+"Bitte kontaktieren Sie uns, wenn Sie Hilfe benötigen oder alternative "
+"Arrangements treffen möchten."
 
-#: searchform.php:19
+#: woocommerce/checkout/payment.php:34
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"Entschuldigung, es scheint, dass es für Ihren Bundesstaat keine verfügbaren "
+"Zahlungsmethoden gibt. Bitte kontaktieren Sie uns, wenn Sie Hilfe benötigen "
+"oder alternative Arrangements treffen möchten."
+
+#: woocommerce/cart/shipping-calculator.php:56
+#: woocommerce/cart/shipping-calculator.php:61
+#: woocommerce/cart/shipping-calculator.php:73
+msgid "State / County"
+msgstr "Staat / Landkreis"
+
+#: woocommerce/single-product-reviews.php:82
+#: includes/functions/theme-hooks.php:30
+msgid "Submit"
+msgstr "Einreichen"
+
+#: searchform.php:19 woocommerce/product-searchform.php:29
 msgctxt "submit button"
 msgid "Search"
 msgstr "Suche"
 
+#: woocommerce/cart/cart-totals.php:35 woocommerce/cart/cart-totals.php:36
+#: woocommerce/cart/mini-cart.php:77 woocommerce/checkout/review-order.php:60
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#: woocommerce/single-product/meta.php:37
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] "Etikett:"
+msgstr[1] "Stichworte:"
+
 #. 1: list of tags.
-#: core/inc/template-tags.php:96
+#: includes/functions/theme-template-tags.php:95
 #, php-format
 msgid "Tagged %1$s"
 msgstr "Markiert %1$s"
+
+#: woocommerce/checkout/thankyou.php:42 woocommerce/checkout/thankyou.php:84
+msgid "Thank you. Your order has been received."
+msgstr "Vielen Dank. Ihre Bestellung ist eingegangen."
 
 #. Description of the theme
 msgid "The CamelThemes Core Framework"
@@ -326,26 +806,147 @@ msgstr "The CamelThemes Core Framework"
 msgid "The CamelThemes Team"
 msgstr "The CamelThemes Team"
 
-#: template-parts/widget/widget-popular-post.php:54
-#: template-parts/widget/widget-about-us.php:95
+#: woocommerce/myaccount/my-address.php:42
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+"Die folgenden Adressen werden standardmäßig auf der Checkout-Seite verwendet."
+
+#: woocommerce/single-product-reviews.php:58
+msgid "There are no reviews yet."
+msgstr "Es gibt noch keine Bewertungen."
+
+#: woocommerce/single-product/add-to-cart/variable.php:31
+msgid "This product is currently out of stock and unavailable."
+msgstr "Dieses Produkt ist derzeit nicht auf Lager und nicht verfügbar."
+
+#: woocommerce/myaccount/form-edit-account.php:41
+msgid ""
+"This will be how your name will be displayed in the account section and in "
+"reviews"
+msgstr "So wird Ihr Name im Kontoabschnitt und in Bewertungen angezeigt"
+
+#: includes/widgets/widget-about-us.php:95
+#: includes/widgets/widget-popular-post.php:54
 msgid "Title:"
 msgstr "Titel:"
 
-#: functions.php:45
+#: includes/functions/theme-setup.php:43
 msgid "Top Menu"
 msgstr "Hauptmenü"
 
+#: woocommerce/cart/cart-totals.php:94 woocommerce/cart/cart-totals.php:95
+#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:122
+#: woocommerce/checkout/review-order.php:28
+#: woocommerce/checkout/review-order.php:107
+#: woocommerce/order/order-details.php:47
+msgid "Total"
+msgstr "Gesamt"
+
+#: woocommerce/checkout/thankyou.php:64
+msgid "Total:"
+msgstr "Gesamt:"
+
+#: woocommerce/checkout/form-pay.php:30
+msgid "Totals"
+msgstr "Summen"
+
+#: woocommerce/checkout/thankyou.php:31
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+"Leider kann Ihre Bestellung nicht bearbeitet werden, da die ursprüngliche "
+"Bank / Ihr Händler Ihre Transaktion abgelehnt hat. Bitte versuchen Sie es "
+"erneut."
+
+#: woocommerce/cart/cart.php:147
+msgid "Update cart"
+msgstr "Warenkorb aktualisieren"
+
 #. %s: updated date.
-#: core/inc/template-tags.php:50
+#: includes/functions/theme-template-tags.php:50
 #, php-format
 msgctxt "update date"
 msgid "Updated on %s"
 msgstr "Aktualisiert am %s"
 
-#: core/inc/template-tags.php:188
+#: woocommerce/cart/shipping-calculator.php:97
+#: woocommerce/checkout/payment.php:42
+msgid "Update totals"
+msgstr "Summen aktualisieren"
+
+#: woocommerce/myaccount/form-login.php:88
+msgid "Username"
+msgstr "Nutzername"
+
+#: woocommerce/global/form-login.php:37
+#: woocommerce/myaccount/form-lost-password.php:30
+msgid "Username or email"
+msgstr "Benutzername oder E-Mail-Adresse"
+
+#: woocommerce/myaccount/form-login.php:45
+msgid "Username or email address"
+msgstr "Benutzername oder E-mail Adresse"
+
+#: woocommerce/single-product/review-meta.php:38
+msgid "verified owner"
+msgstr "nachgewiesener Eigentümer"
+
+#: woocommerce/single-product-reviews.php:99
+msgid "Very poor"
+msgstr "Sehr arm"
+
+#: includes/woocommerce.php:140
+msgid "View Cart"
+msgstr "Warenkorb ansehen"
+
+#: includes/woocommerce.php:94
+msgid "View your shopping cart"
+msgstr "Einkaufswagen ansehen"
+
+#: includes/functions/theme-template-tags.php:192
 msgid "Website"
 msgstr "Webseite"
 
-#: core/inc/class-camel-comment-walker.php:64
+#. 1: first result 2: last result 3: total results
+#: woocommerce/loop/result-count.php:35
+#, php-format
+msgctxt "with first and last result"
+msgid "Showing the single result"
+msgid_plural "Showing %1$d&ndash;%2$d of %3$d results"
+msgstr[0] "Zeige das einzelne Ergebnis"
+msgstr[1] "Zeigen %1$d&ndash;%2$d von %3$d ergebnisse"
+
+#: woocommerce/myaccount/my-address.php:58
+msgid "You have not set up this type of address yet."
+msgstr "Sie haben diese Art von Adresse noch nicht eingerichtet."
+
+#: woocommerce/single-product-reviews.php:89
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+"Du musst sein <a href=“%s”>eingeloggt</a> um eine Rezension zu schreiben."
+
+#: woocommerce/checkout/form-checkout.php:30
+msgid "You must be logged in to checkout."
+msgstr "Sie müssen zur Kasse angemeldet sein."
+
+#: includes/core/class-camel-comment-walker.php:71
 msgid "Your comment is awaiting moderation."
 msgstr "Ihr Beitrag wartet auf die Moderation."
+
+#: woocommerce/checkout/form-checkout.php:56
+msgid "Your order"
+msgstr "Deine Bestellung"
+
+#: woocommerce/single-product-reviews.php:93
+msgid "Your rating"
+msgstr "Deine Bewertung"
+
+#: woocommerce/single-product-reviews.php:103
+msgid "Your review"
+msgstr "Deine Bewertung"
+
+#: woocommerce/single-product/review-meta.php:28
+msgid "Your review is awaiting approval"
+msgstr "Ihre Bewertung wartet auf ihre Genehmigung"
