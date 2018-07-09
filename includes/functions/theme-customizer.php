@@ -26,6 +26,7 @@ function camel_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'camel_copyright_text' , array(
         'default'   => 'CamelThemes',
         'transport' => 'refresh',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ) );
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'copyright_text', array(

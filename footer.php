@@ -30,7 +30,7 @@
                 </a>
                 <span class="sep d-sm-inline-block d-none"> | </span>
                 <div class="d-inline-block">
-                    &copy; <?php echo get_theme_mod('camel_copyright_text'); ?>
+                    &copy; <?php echo get_theme_mod('camel_copyright_text', __('CamelThemes', 'camel-framework')); ?>
                 </div>
             </div><!-- .copyright -->
 

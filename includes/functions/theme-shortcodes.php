@@ -8,7 +8,7 @@
  */
 
 /**
- * Customized shortcode to add Bootstrap CSS class in Gallery post format.
+ * Customized shortcode to add Bootstrap CSS class in Gallery shortcode.
  * @param  array $attr
  */
 function camel_gallery_shortcode($attr) {
