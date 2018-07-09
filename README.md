@@ -1,15 +1,15 @@
-# camel-framework
+# Camel framework
 A WordPress Theme Framework
 
-# Installation
-Simple put the theme into `/wp-content/themes` in your WordPress installation directory. Then follow these instructions to install npm dependencies.
+## Installation
+Simply put the theme files into `/wp-content/themes` in your WordPress installation directory. Then follow these instructions to install the npm dependencies.
 
-Change current working directory to theme directory
+Change the current working directory to the theme directory
 ```
 cd wp-content/themes/<theme-folder>
 ```
 
-Install npm depedancies
+Install the npm depedancies
 ```
 npm install
 ```
