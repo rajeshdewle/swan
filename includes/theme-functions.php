@@ -6,9 +6,6 @@ require get_template_directory() . '/includes/functions/theme-setup.php';
 // Sidebar setup
 require get_template_directory() . '/includes/functions/theme-sidebars.php';
 
-// Shortcodes
-require get_template_directory() . '/includes/functions/theme-shortcodes.php';
-
 // Hooks
 require get_template_directory() . '/includes/functions/theme-hooks.php';
 
