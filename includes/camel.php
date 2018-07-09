@@ -1,10 +1,10 @@
 <?php
 
 // Theme Core
-require_once get_template_directory() . '/includes/core/core.php';
+require_once get_template_directory() . '/includes/core.php';
 
 // Theme Widgets
-require_once get_template_directory() . '/includes/widgets/widgets.php';
+require_once get_template_directory() . '/includes/widgets.php';
 
 // Theme Functions
-require_once get_template_directory() . '/includes/functions/functions.php';
+require_once get_template_directory() . '/includes/functions.php';
