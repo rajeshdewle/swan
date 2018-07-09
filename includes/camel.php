@@ -1,15 +1,10 @@
 <?php
 
 // Theme Core
-require_once get_template_directory() . '/includes/core.php';
-
-// Theme Functions
-require_once get_template_directory() . '/includes/functions.php';
+require_once get_template_directory() . '/includes/core/core.php';
 
 // Theme Widgets
-require_once get_template_directory() . '/includes/widgets.php';
+require_once get_template_directory() . '/includes/widgets/widgets.php';
 
-// WooCommerce Setup
-if ( class_exists( 'WooCommerce' ) ) {
-    require get_template_directory() . '/includes/woocommerce.php';
-}
+// Theme Functions
+require_once get_template_directory() . '/includes/functions/functions.php';

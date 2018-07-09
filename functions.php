@@ -11,3 +11,8 @@
 
 // Initialize camel core
 require get_template_directory() . '/includes/camel.php';
+
+// WooCommerce Setup
+if ( class_exists( 'WooCommerce' ) ) {
+    require get_template_directory() . '/includes/woocommerce.php';
+}
