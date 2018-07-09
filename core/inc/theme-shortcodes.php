@@ -1,7 +1,6 @@
 <?php
 
-function camel_gallery_shortcode($attr)
-{
+function camel_gallery_shortcode($attr) {
     $post = get_post();
 
     static $instance = 0;
@@ -36,7 +35,7 @@ function camel_gallery_shortcode($attr)
     }
 
     $html5 = current_theme_supports('html5', 'gallery');
-    $atts = shortcode_atts([
+    $atts = shortcode_atts(array(
         'order'      => 'ASC',
         'orderby'    => 'menu_order ID',
         'id'         => $post ? $post->ID : 0,
@@ -48,21 +47,21 @@ function camel_gallery_shortcode($attr)
         'include'    => '',
         'exclude'    => '',
         'link'       => ''
-    ], $attr, 'gallery');
+    ), $attr, 'gallery');
 
     $id = intval($atts['id']);
 
     if (! empty($atts['include'])) {
-        $_attachments = get_posts([ 'include' => $atts['include'], 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $atts['order'], 'orderby' => $atts['orderby'] ]);
+        $_attachments = get_posts(array( 'include' => $atts['include'], 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $atts['order'], 'orderby' => $atts['orderby'] ));
 
-        $attachments = [];
+        $attachments = array();
         foreach ($_attachments as $key => $val) {
             $attachments[$val->ID] = $_attachments[$key];
         }
     } elseif (! empty($atts['exclude'])) {
-        $attachments = get_children([ 'post_parent' => $id, 'exclude' => $atts['exclude'], 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $atts['order'], 'orderby' => $atts['orderby'] ]);
+        $attachments = get_children(array( 'post_parent' => $id, 'exclude' => $atts['exclude'], 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $atts['order'], 'orderby' => $atts['orderby'] ));
     } else {
-        $attachments = get_children([ 'post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $atts['order'], 'orderby' => $atts['orderby'] ]);
+        $attachments = get_children(array( 'post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $atts['order'], 'orderby' => $atts['orderby'] ));
     }
 
     if (empty($attachments)) {
@@ -145,7 +144,7 @@ function camel_gallery_shortcode($attr)
 
     $i = 0;
     foreach ($attachments as $id => $attachment) {
-        $attr = (trim($attachment->post_excerpt)) ? [ 'aria-describedby' => "$selector-$id" ] : '';
+        $attr = (trim($attachment->post_excerpt)) ? array( 'aria-describedby' => "$selector-$id" ) : '';
         if (! empty($atts['link']) && 'file' === $atts['link']) {
             $image_output = wp_get_attachment_link($id, $atts['size'], false, false, false, $attr);
         } elseif (! empty($atts['link']) && 'none' === $atts['link']) {

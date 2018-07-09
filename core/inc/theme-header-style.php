@@ -1,8 +1,7 @@
 <?php
 
 if (! function_exists('camel_header_style')) {
-    function camel_header_style()
-    {
+    function camel_header_style() {
         $header_text_color = get_header_textcolor();
         if (get_theme_support('custom-header', 'default-text-color') === $header_text_color) {
             return;

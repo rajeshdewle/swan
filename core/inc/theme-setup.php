@@ -5,8 +5,7 @@ if (! function_exists('camel_setup')) :
     /**
     * Sets up theme defaults and registers support for various WordPress features.
     */
-    function camel_setup()
-    {
+    function camel_setup() {
         /**
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
@@ -34,31 +33,31 @@ if (! function_exists('camel_setup')) :
         add_theme_support('post-thumbnails');
 
         // Register Nav Menus for Top, Social, Main & Footer
-        register_nav_menus([
+        register_nav_menus(array(
             'menu-top'      => __('Top Menu', 'camel-framework'),
             'menu-main'     => __('Main Menu', 'camel-framework'),
             'menu-social'   => __('Social Menu', 'camel-framework'),
             'menu-footer'   => __('Footer Menu', 'camel-framework'),
-        ]);
+        ));
 
         /**
          * Switch default core markup for search form, comment form, and comments
          * to output valid HTML5.
          */
-        add_theme_support('html5', [
+        add_theme_support('html5', array(
             'search-form',
             'comment-form',
             'comment-list',
             'gallery',
             'caption',
-        ]);
+        ));
 
         /**
          * Enable support for Post Formats.
          *
          * @link https://developer.wordpress.org/themes/functionality/post-formats/
          */
-        add_theme_support('post-formats', [
+        add_theme_support('post-formats', array(
             'aside',
             'gallery',
             'link',
@@ -68,42 +67,42 @@ if (! function_exists('camel_setup')) :
             'video',
             'audio',
             'chat',
-        ]);
+        ));
 
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
 
         // Set up the WordPress core custom background feature.
-        add_theme_support('custom-background', apply_filters('camel_custom_background_args', [
+        add_theme_support('custom-background', apply_filters('camel_custom_background_args', array(
             'default-color' => 'ffffff',
             'default-image' => '',
-        ]));
+        )));
 
         /**
          * Add support to enable the use of a custom logo.
          *
          * @link https://developer.wordpress.org/themes/functionality/custom-logo/
          */
-        add_theme_support('custom-logo', [
+        add_theme_support('custom-logo', array(
             'height'      => 100,
             'width'       => 400,
             'flex-height' => true,
             'flex-width'  => true,
-        ]);
+        ));
 
         /**
          * Add custom header image support
          *
          * @link https://developer.wordpress.org/themes/functionality/custom-headers/
          */
-        add_theme_support('custom-header', [
+        add_theme_support('custom-header', array(
             'default-text-color' => '000',
             'width'              => 1000,
             'height'             => 250,
             'flex-width'         => true,
             'flex-height'        => true,
             'wp-head-callback'   => 'camel_header_style',
-        ]);
+        ));
     }
 endif; // camel_setup
 
@@ -116,8 +115,7 @@ add_action('after_setup_theme', 'camel_setup');
  *
  * @global int $content_width
  */
-function camel_content_width()
-{
+function camel_content_width() {
     // This variable is intended to be overruled from themes.
     $GLOBALS['content_width'] = apply_filters('camel_content_width', 640);
 }
