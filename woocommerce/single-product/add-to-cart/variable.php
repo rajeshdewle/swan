@@ -28,7 +28,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
-		<p class="stock out-of-stock"><?php esc_html_e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
+		<p class="stock out-of-stock"><?php esc_html_e( 'This product is currently out of stock and unavailable.', 'camel-framework' ); ?></p>
 	<?php else : ?>
 		<div class="variations">
 			<?php foreach ( $attributes as $attribute_name => $options ) : ?>
@@ -43,7 +43,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 								'product'   => $product,
 								'class'	=> 'form-control',
 							) );
-							echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
+							echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'camel-framework' ) . '</a>' ) ) : '';
 						?>
 					</div><!-- .col-sm-10 -->
 				</div><!-- .form-group -->

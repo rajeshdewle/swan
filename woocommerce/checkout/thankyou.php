@@ -28,46 +28,46 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php if ( $order->has_status( 'failed' ) ) : ?>
 
-			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed alert alert-error"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
+			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed alert alert-error"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'camel-framework' ); ?></p>
 
 			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed-actions alert alert-error">
-				<a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'woocommerce' ) ?></a>
+				<a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'camel-framework' ) ?></a>
 				<?php if ( is_user_logged_in() ) : ?>
-					<a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php _e( 'My account', 'woocommerce' ); ?></a>
+					<a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php _e( 'My account', 'camel-framework' ); ?></a>
 				<?php endif; ?>
 			</p>
 
 		<?php else : ?>
 
-			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received alert alert-success"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
+			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received alert alert-success"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'camel-framework' ), $order ); ?></p>
 
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
 				<li class="woocommerce-order-overview__order order">
-					<?php _e( 'Order number:', 'woocommerce' ); ?>
+					<?php _e( 'Order number:', 'camel-framework' ); ?>
 					<strong><?php echo $order->get_order_number(); ?></strong>
 				</li>
 
 				<li class="woocommerce-order-overview__date date">
-					<?php _e( 'Date:', 'woocommerce' ); ?>
+					<?php _e( 'Date:', 'camel-framework' ); ?>
 					<strong><?php echo wc_format_datetime( $order->get_date_created() ); ?></strong>
 				</li>
 
 				<?php if ( is_user_logged_in() && $order->get_user_id() === get_current_user_id() && $order->get_billing_email() ) : ?>
 					<li class="woocommerce-order-overview__email email">
-						<?php _e( 'Email:', 'woocommerce' ); ?>
+						<?php _e( 'Email:', 'camel-framework' ); ?>
 						<strong><?php echo $order->get_billing_email(); ?></strong>
 					</li>
 				<?php endif; ?>
 
 				<li class="woocommerce-order-overview__total total">
-					<?php _e( 'Total:', 'woocommerce' ); ?>
+					<?php _e( 'Total:', 'camel-framework' ); ?>
 					<strong><?php echo $order->get_formatted_order_total(); ?></strong>
 				</li>
 
 				<?php if ( $order->get_payment_method_title() ) : ?>
 					<li class="woocommerce-order-overview__payment-method method">
-						<?php _e( 'Payment method:', 'woocommerce' ); ?>
+						<?php _e( 'Payment method:', 'camel-framework' ); ?>
 						<strong><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></strong>
 					</li>
 				<?php endif; ?>
@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php else : ?>
 
-		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
+		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'camel-framework' ), null ); ?></p>
 
 	<?php endif; ?>
 

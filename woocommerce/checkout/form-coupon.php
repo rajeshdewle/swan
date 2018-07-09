@@ -25,20 +25,20 @@ if ( ! wc_coupons_enabled() || ! empty( WC()->cart->applied_coupons ) ) { // @co
 
 ?>
 <div class="woocommerce-form-coupon-toggle">
-	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'woocommerce' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'woocommerce' ) . '</a>' ), 'notice' ); ?>
+	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'camel-framework' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'camel-framework' ) . '</a>' ), 'notice' ); ?>
 </div>
 
 <form class="checkout_coupon woocommerce-form-coupon" method="post" style="display:none">
 
-	<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'woocommerce' ); ?></p>
+	<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'camel-framework' ); ?></p>
 
 	<div class="form-inline pb-3">
 		<p class="form-row form-row-first mb-2 mr-2">
-			<input type="text" name="coupon_code" class="input-text form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
+			<input type="text" name="coupon_code" class="input-text form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'camel-framework' ); ?>" id="coupon_code" value="" />
 		</p>
 
 		<p class="form-row form-row-last mb-2">
-			<button type="submit" class="button btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
+			<button type="submit" class="button btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'camel-framework' ); ?>"><?php esc_html_e( 'Apply coupon', 'camel-framework' ); ?></button>
 		</p>
 	</div>
 

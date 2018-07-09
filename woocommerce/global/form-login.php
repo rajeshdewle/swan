@@ -34,11 +34,11 @@ if ( is_user_logged_in() ) {
 	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // @codingStandardsIgnoreLine ?>
 
 	<p class="form-row form-row-first mb-3">
-		<label for="username"><?php esc_html_e( 'Username or email', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<label for="username"><?php esc_html_e( 'Username or email', 'camel-framework' ); ?>&nbsp;<span class="required">*</span></label>
 		<input type="text" class="input-text form-control" name="username" id="username" autocomplete="username" />
 	</p>
 	<p class="form-row form-row-last mb-3">
-		<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<label for="password"><?php esc_html_e( 'Password', 'camel-framework' ); ?>&nbsp;<span class="required">*</span></label>
 		<input class="input-text form-control" type="password" name="password" id="password" autocomplete="current-password" />
 	</p>
 	<div class="clear"></div>
@@ -47,17 +47,17 @@ if ( is_user_logged_in() ) {
 
 		<p class="form-row mb-3">
 			<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-			<button type="submit" class="button btn btn-primary" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?></button>
+			<button type="submit" class="button btn btn-primary" name="login" value="<?php esc_attr_e( 'Login', 'camel-framework' ); ?>"><?php esc_html_e( 'Login', 'camel-framework' ); ?></button>
 			<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ) ?>" />
 			<div class="form-check">
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline form-check-label">
-					<input class="woocommerce-form__input woocommerce-form__input-checkbox form-check-input" name="rememberme" type="checkbox" id="rememberme" value="forever" /><span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
+					<input class="woocommerce-form__input woocommerce-form__input-checkbox form-check-input" name="rememberme" type="checkbox" id="rememberme" value="forever" /><span><?php esc_html_e( 'Remember me', 'camel-framework' ); ?></span>
 				</label>
 			</div>
 		</p>
 
 	<p class="lost_password">
-		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
+		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'camel-framework' ); ?></a>
 	</p>
 
 	<div class="clear"></div>

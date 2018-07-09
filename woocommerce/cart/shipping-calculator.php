@@ -28,13 +28,13 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
 <form class="woocommerce-shipping-calculator" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 
-	<p><a href="#" class="shipping-calculator-button"><?php esc_html_e( 'Calculate shipping', 'woocommerce' ); ?></a></p>
+	<p><a href="#" class="shipping-calculator-button"><?php esc_html_e( 'Calculate shipping', 'camel-framework' ); ?></a></p>
 
 	<section class="shipping-calculator-form" style="display:none;">
 
 		<p class="form-row form-row-wide pb-3" id="calc_shipping_country_field">
 			<select name="calc_shipping_country" id="calc_shipping_country" class="country_to_state country_select" rel="calc_shipping_state">
-				<option value=""><?php esc_html_e( 'Select a country&hellip;', 'woocommerce' ); ?></option>
+				<option value=""><?php esc_html_e( 'Select a country&hellip;', 'camel-framework' ); ?></option>
 				<?php
 				foreach ( WC()->countries->get_shipping_countries() as $key => $value ) {
 					echo '<option value="' . esc_attr( $key ) . '"' . selected( WC()->customer->get_shipping_country(), esc_attr( $key ), false ) . '>' . esc_html( $value ) . '</option>';
@@ -53,13 +53,13 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
 				if ( is_array( $states ) && empty( $states ) ) {
 					?>
-					<input type="hidden" name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php esc_attr_e( 'State / County', 'woocommerce' ); ?>" />
+					<input type="hidden" name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php esc_attr_e( 'State / County', 'camel-framework' ); ?>" />
 					<?php
 				} elseif ( is_array( $states ) ) {
 					?>
 					<span>
-						<select name="calc_shipping_state" class="state_select" id="calc_shipping_state" placeholder="<?php esc_attr_e( 'State / County', 'woocommerce' ); ?>">
-							<option value=""><?php esc_html_e( 'Select a state&hellip;', 'woocommerce' ); ?></option>
+						<select name="calc_shipping_state" class="state_select" id="calc_shipping_state" placeholder="<?php esc_attr_e( 'State / County', 'camel-framework' ); ?>">
+							<option value=""><?php esc_html_e( 'Select a state&hellip;', 'camel-framework' ); ?></option>
 							<?php
 							foreach ( $states as $ckey => $cvalue ) {
 								echo '<option value="' . esc_attr( $ckey ) . '" ' . selected( $current_r, $ckey, false ) . '>' . esc_html( $cvalue ) . '</option>';
@@ -70,7 +70,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 					<?php
 				} else {
 					?>
-					<input type="text" class="input-text form-control" value="<?php echo esc_attr( $current_r ); ?>" placeholder="<?php esc_attr_e( 'State / County', 'woocommerce' ); ?>" name="calc_shipping_state" id="calc_shipping_state" />
+					<input type="text" class="input-text form-control" value="<?php echo esc_attr( $current_r ); ?>" placeholder="<?php esc_attr_e( 'State / County', 'camel-framework' ); ?>" name="calc_shipping_state" id="calc_shipping_state" />
 					<?php
 				}
 				?>
@@ -81,7 +81,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 		<?php if ( apply_filters( 'woocommerce_shipping_calculator_enable_city', true ) ) : ?>
 
 			<p class="form-row form-row-wide pb-2" id="calc_shipping_city_field">
-				<input type="text" class="input-text form-control" value="<?php echo esc_attr( WC()->customer->get_shipping_city() ); ?>" placeholder="<?php esc_attr_e( 'City', 'woocommerce' ); ?>" name="calc_shipping_city" id="calc_shipping_city" />
+				<input type="text" class="input-text form-control" value="<?php echo esc_attr( WC()->customer->get_shipping_city() ); ?>" placeholder="<?php esc_attr_e( 'City', 'camel-framework' ); ?>" name="calc_shipping_city" id="calc_shipping_city" />
 			</p>
 
 		<?php endif; ?>
@@ -89,12 +89,12 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 		<?php if ( apply_filters( 'woocommerce_shipping_calculator_enable_postcode', true ) ) : ?>
 
 			<p class="form-row form-row-wide pb-2" id="calc_shipping_postcode_field">
-				<input type="text" class="input-text form-control" value="<?php echo esc_attr( WC()->customer->get_shipping_postcode() ); ?>" placeholder="<?php esc_attr_e( 'Postcode / ZIP', 'woocommerce' ); ?>" name="calc_shipping_postcode" id="calc_shipping_postcode" />
+				<input type="text" class="input-text form-control" value="<?php echo esc_attr( WC()->customer->get_shipping_postcode() ); ?>" placeholder="<?php esc_attr_e( 'Postcode / ZIP', 'camel-framework' ); ?>" name="calc_shipping_postcode" id="calc_shipping_postcode" />
 			</p>
 
 		<?php endif; ?>
 
-		<p><button type="submit" name="calc_shipping" value="1" class="button btn btn-primary"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button></p>
+		<p><button type="submit" name="calc_shipping" value="1" class="button btn btn-primary"><?php esc_html_e( 'Update totals', 'camel-framework' ); ?></button></p>
 
 		<?php wp_nonce_field( 'woocommerce-shipping-calculator', 'woocommerce-shipping-calculator-nonce' ); ?>
 	</section>
