@@ -3,7 +3,7 @@
  * -----------------------------------------------------------------------------
  * Checkout billing information form
  * -----------------------------------------------------------------------------
- * 
+ *
  * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-billing.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -13,12 +13,12 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * 
+ *
  * @package Camel_Framework
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+    exit; // Exit if accessed directly
 }
 
 /** @global WC_Checkout $checkout */
@@ -38,15 +38,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
 	<div class="woocommerce-billing-fields__field-wrapper mb-3">
-		
+
 		<?php
 			$fields = $checkout->get_checkout_fields( 'billing' );
 
 			foreach ( $fields as $key => $field ) {
-				if ( isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
-					$field['country'] = $checkout->get_value( $field['country_field'] );
-				}
-				woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+			    if ( isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
+			        $field['country'] = $checkout->get_value( $field['country_field'] );
+			    }
+			    woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 			}
 		?>
 	</div>
@@ -59,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( ! $checkout->is_registration_required() ) : ?>
 
 			<div class="form-check mb-3">
-				<p class="form-row form-row-wide create-account">
+				<p class="form-row form-row-wide create-account mt-3">
 					<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox form-check-label">
 						<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox form-check-input" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true ) ?> type="checkbox" name="createaccount" value="1" /> <span><?php _e( 'Create an account?', 'woocommerce' ); ?></span>
 					</label>

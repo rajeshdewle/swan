@@ -38,7 +38,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 			        $thumbnail         = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 			        $product_price     = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 			        $product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key ); ?>
-					<div class="woocommerce-mini-cart-item media mb-2 <?php echo esc_attr( apply_filters( 'woocommerce_mini_cart_item_class', 'mini_cart_item', $cart_item, $cart_item_key ) ); ?>">
+					<div class="woocommerce-mini-cart-item media mb-3 <?php echo esc_attr( apply_filters( 'woocommerce_mini_cart_item_class', 'mini_cart_item', $cart_item, $cart_item_key ) ); ?>">
 							<?php if ( empty( $product_permalink ) ) : ?>
 								<?php echo $thumbnail . $product_name . '&nbsp;'; ?>
 							<?php else : ?>

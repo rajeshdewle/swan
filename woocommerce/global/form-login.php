@@ -17,18 +17,18 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+    exit; // Exit if accessed directly.
 }
 
 if ( is_user_logged_in() ) {
-	return;
+    return;
 }
 
 ?>
 
 
 <form class="woocommerce-form woocommerce-form-login login" method="post" <?php echo ( $hidden ) ? 'style="display:none;"' : ''; ?>>
-	<div class="p-4 border rounded mb-3 col-12 col-sm-6">
+	<div class="p-4 border rounded mb-3 col-12">
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // @codingStandardsIgnoreLine ?>
@@ -53,7 +53,7 @@ if ( is_user_logged_in() ) {
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline form-check-label">
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox form-check-input" name="rememberme" type="checkbox" id="rememberme" value="forever" /><span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
 				</label>
-			</div>	
+			</div>
 		</p>
 
 	<p class="lost_password">
