@@ -189,7 +189,7 @@ function camel_scripts() {
     wp_enqueue_script(
         'bootstrap-js',
         get_template_directory_uri() . '/assets/js/theme.js',
-        array( 'jquery' ),
+        array( 'jquery' ), // Add jQuery as dependancy
         filemtime( get_template_directory() . '/assets/js/theme.js' ), // automatic versioning
         true
     );

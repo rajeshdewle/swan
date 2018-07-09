@@ -1,9 +1,8 @@
 // Load popper.js (required for bootstrap 4)
 window.Popper = require('popper.js').default;
 
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin.
- */
+// Assign/Load jQuery
 window.$ = window.jQuery;
 
+// Load Boostrap 4 JavaScript
 require('bootstrap');
