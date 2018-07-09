@@ -73,9 +73,7 @@ add_filter( 'loop_shop_per_page', 'camel_woocommerce_products_per_page' );
  * @return array $args related products args.
  */
 function camel_woocommerce_related_products_args( $args ) {
-    $defaults = array(
-		'posts_per_page' => 3,
-	);
+    $defaults = array( 'posts_per_page' => 3 );
 
     $args = wp_parse_args( $defaults, $args );
 
@@ -135,42 +133,52 @@ function camel_checkout_form_fields($fields) {
 }
 add_filter('woocommerce_checkout_fields', 'camel_checkout_form_fields' );
 
+/**
+ * Added bootstrap classes to view cart button in cart widget
+ */
 function camel_widget_shopping_cart_button_view_cart() {
     echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward btn btn-success btn-sm btn-block" target="_blank">'. esc_html__( 'View Cart', 'woocommerce' ) .'</a>';
 }
 remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10);
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_button_view_cart');
 
+/**
+ * Added bootstrap classes to view checkout button in cart widget
+ */
 function camel_widget_shopping_cart_proceed_to_checkout() {
     echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="button wc-forward btn btn-warning btn-sm btn-block" target="_blank">'. esc_html__( 'Checkout', 'woocommerce' ) .'</a>';
 }
 remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20);
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'camel_widget_shopping_cart_proceed_to_checkout');
 
-
+/**
+ * Added bootstrap classes to product list widget in sidebar
+ */
 function camel_woocommerce_before_widget_product_list() {
     return '<div class="product_list_widget">';
 };
-
 add_filter( 'woocommerce_before_widget_product_list', 'camel_woocommerce_before_widget_product_list', 10, 1 );
 
-
+/**
+ * Added bootstrap classes to product list widget in sidebar
+ */
 function camel_woocommerce_after_widget_product_list() {
     return "</div> <!-- .product_list_widget -->";
 };
-
 add_filter( 'woocommerce_after_widget_product_list', 'camel_woocommerce_after_widget_product_list', 10, 1 );
 
-
+/**
+ * Added bootstrap classes to product review list widget in sidebar
+ */
 function camel_before_widget_product_review_list() {
     return '<div class="product_list_widget">';
 };
-
 add_filter( 'woocommerce_before_widget_product_review_list', 'camel_before_widget_product_review_list', 10, 1 );
 
-
+/**
+ * Added bootstrap classes to product review list widget in sidebar
+ */
 function camel_after_widget_product_review_list() {
     return "</div> <!-- .product_list_widget --> ";
 };
-
 add_filter( 'woocommerce_after_widget_product_review_list', 'camel_after_widget_product_review_list', 10, 1 );
