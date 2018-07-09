@@ -23,9 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="form-group mb-2 mr-2">
-		<label class="screen-reader-text" for="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>"><?php esc_html_e( 'Search for:', 'woocommerce' ); ?></label>
-		<input type="search" class="form-control" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+		<label class="screen-reader-text" for="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>"><?php esc_html_e( 'Search for:', 'camel-framework' ); ?></label>
+		<input type="search" class="form-control" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'camel-framework' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 	</div>	
-	<button type="submit" class="btn btn-outline-primary mb-2" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>"><?php echo esc_html_x( 'Search', 'submit button', 'woocommerce' ); ?></button>
+	<button type="submit" class="btn btn-outline-primary mb-2" value="<?php echo esc_attr_x( 'Search', 'submit button', 'camel-framework' ); ?>"><?php echo esc_html_x( 'Search', 'submit button', 'camel-framework' ); ?></button>
 	<input type="hidden" name="post_type" value="product" />
 </form>

@@ -24,7 +24,7 @@ if ( $related_products ) : ?>
 
 	<section class="related products col-md-12">
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+		<h2><?php esc_html_e( 'Related products', 'camel-framework' ); ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
 

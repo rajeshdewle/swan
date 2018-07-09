@@ -31,15 +31,15 @@ if ( ! is_ajax() ) {
 					wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
 				}
 			} else {
-				echo '<div class="woocommerce-notice woocommerce-notice--info woocommerce-info alert alert-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'woocommerce' ) ) . '</div>'; // @codingStandardsIgnoreLine
+				echo '<div class="woocommerce-notice woocommerce-notice--info woocommerce-info alert alert-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'camel-framework' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'camel-framework' ) ) . '</div>'; // @codingStandardsIgnoreLine
 			}
 			?>
 		</div>
 	<?php endif; ?>
 	<div class="form-row place-order">
 		<noscript>
-			<?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce' ); ?>
-			<br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
+			<?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'camel-framework' ); ?>
+			<br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'camel-framework' ); ?>"><?php esc_html_e( 'Update totals', 'camel-framework' ); ?></button>
 		</noscript>
 
 		<?php wc_get_template( 'checkout/terms.php' ); ?>
