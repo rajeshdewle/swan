@@ -34,16 +34,14 @@
     }
     .onsale { z-index: 99; }
 
-    ol {
-        .flex-control-thumbs {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin-top: 8px;
+    ol.flex-control-thumbs {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin-top: 8px;
 
-            li {
-                margin-right: 8px;
-            }
+        li {
+            margin-right: 8px;
         }
     }
 
