@@ -34,15 +34,17 @@
     }
     .onsale { z-index: 99; }
 
-    ol.flex-control-thumbs {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin-top: 8px;
-    }
+    ol {
+        .flex-control-thumbs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin-top: 8px;
 
-    ol.flex-control-thumbs li{
-        margin-right: 8px;
+            li {
+                margin-right: 8px;
+            }
+        }
     }
 
     .form-row {
@@ -62,10 +64,12 @@
         padding: .5em;
     }
 
-    .price_slider_wrapper .ui-widget-content {
-        border-radius: 1em;
-        background-color: #C0C0C0;
-        border: 0;
+    .price_slider_wrapper {
+        .ui-widget-content {
+            border-radius: 1em;
+            background-color: #C0C0C0;
+            border: 0;
+        }
     }
 
     .widget_price_filter {
