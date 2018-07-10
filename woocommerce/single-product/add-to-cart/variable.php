@@ -32,10 +32,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php else : ?>
 		<div class="variations">
 			<?php foreach ( $attributes as $attribute_name => $options ) : ?>
-				<div class="form-group row">
-					<label class="col-sm-2 col-form-label" for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?>
+				<div class="form-group">
+					<label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?>
 					</label>
-					<div class="col-sm-10">
 						<?php
 							wc_dropdown_variation_attribute_options( array(
 								'options'   => $options,
@@ -45,7 +44,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							) );
 							echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'camel-framework' ) . '</a>' ) ) : '';
 						?>
-					</div><!-- .col-sm-10 -->
 				</div><!-- .form-group -->
 			<?php endforeach; ?>
 		</div>
