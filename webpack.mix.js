@@ -13,4 +13,11 @@ let mix = require('laravel-mix');
 
 mix.js('resources/js/theme.js', 'assets/js/')
     .sass('resources/sass/theme.scss', 'assets/css/')
-    .sass('resources/sass/woocommerce.scss', 'assets/css/'); // Optional
+    .options({
+        processCssUrls: false
+    });
+
+mix.sass('resources/sass/woocommerce.scss', 'assets/css/') // Optional
+    .options({
+        processCssUrls: false
+    });

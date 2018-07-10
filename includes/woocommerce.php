@@ -91,15 +91,15 @@ add_filter( 'woocommerce_output_related_products_args', 'camel_woocommerce_relat
  */
 function camel_woocommerce_cart_link_fragment( $fragments ) {
     ob_start(); ?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'camel-framework' ); ?>">
-			<?php
-			$item_count_text = sprintf(
-				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'camel-framework' ),
-				WC()->cart->get_cart_contents_count()
-			); ?>
-			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
-		</a>
+        <a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'camel-framework' ); ?>">
+            <?php
+            $item_count_text = sprintf(
+                /* translators: number of items in the mini cart. */
+                _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'camel-framework' ),
+                WC()->cart->get_cart_contents_count()
+            ); ?>
+            <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
+        </a>
     <?php
     $fragments['a.cart-contents'] = ob_get_clean();
 
@@ -112,8 +112,8 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'camel_woocommerce_cart_link_fr
  */
 function camel_template_loop_product_title() {
     ?>
-	<h5 class="pt-2 woocommerce-loop-product__title"><?php echo get_the_title(); ?></h5>
-	<?php
+    <h5 class="pt-2 woocommerce-loop-product__title"><?php echo get_the_title(); ?></h5>
+    <?php
 }
 remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title');
 add_action( 'woocommerce_shop_loop_item_title', 'camel_template_loop_product_title' );
@@ -182,3 +182,4 @@ function camel_after_widget_product_review_list() {
     return "</div> <!-- .product_list_widget --> ";
 };
 add_filter( 'woocommerce_after_widget_product_review_list', 'camel_after_widget_product_review_list', 10, 1 );
+
