@@ -22,9 +22,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+    <a class="skip-link sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skip-link">
+                <?php esc_html_e('Skip to content', 'camel-framework'); ?>
+            </span>
+        </div>
+    </a>
 <div id="page">
-    <a class="skip-link sr-only" href="#content"><?php esc_html_e('Skip to content', 'camel-framework'); ?></a>
 
     <header class="header mb-4" style="background-image: url(<?php header_image(); ?>);"> 
         <?php if (has_nav_menu('menu-top') || has_nav_menu('menu-social')) : ?>
@@ -51,7 +56,7 @@
             </div><!-- .top-navigation -->
         <?php endif; ?>
 
-        <div class="site-branding my-4 d-flex justify-content-center justify-content-md-start">
+        <div class="site-branding py-4 d-flex justify-content-center justify-content-md-start">
             <div class="container">                    
                 <div class="text-center text-md-left">
                     <?php the_custom_logo(); ?>
