@@ -46,8 +46,6 @@ class About_Us_Widget extends WP_Widget {
 
         ob_start();
 
-        echo $args['before_widget'];
-
         ?>
 
         <?php if ($image) : ?>
@@ -55,7 +53,6 @@ class About_Us_Widget extends WP_Widget {
         <?php endif; ?>
 
         <?php
-        echo $args['after_widget'];
 
         ob_end_flush();
 
