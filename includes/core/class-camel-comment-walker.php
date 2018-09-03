@@ -22,14 +22,12 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
          */
         protected function html5_comment( $comment, $depth, $args ) {
             $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
-            $comment_class[] = $this->has_children ? 'd-md-flex align-items-md-start' : 'media';
-            ?>
+            $comment_class[] = $this->has_children ? 'd-md-flex align-items-md-start' : 'media'; ?>
 
             <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $comment_class, $comment ); ?>>
                 <?php if ( 0 != $args['avatar_size'] ) : ?>
                     <?php
-                        $avatarClass = ($this->has_children) ? 'mr-3 rounded d-none d-md-block' : 'mr-3 rounded';
-                    ?>
+                        $avatarClass = ($this->has_children) ? 'mr-3 rounded d-none d-md-block' : 'mr-3 rounded'; ?>
                     <?php echo get_avatar( $comment, $args['avatar_size'], null, null, array( 'class' => $avatarClass ) ); ?>
                 <?php endif; ?>
                 <div class="table-responsive">
@@ -125,16 +123,14 @@ if ( ! class_exists( 'Camel_CommentWalker' ) ) {
      * @param int        $depth   Depth of the current comment.
      * @param array      $args    An array of arguments.
      */
-    protected function ping( $comment, $depth, $args ) {
-        $tag = ( 'div' == $args['style'] ) ? 'div' : 'li'; ?>
+        protected function ping( $comment, $depth, $args ) {
+            $tag = ( 'div' == $args['style'] ) ? 'div' : 'li'; ?>
         <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( '', $comment ); ?>>
         <div class="media-body table-responsive mb-2">
             <div class="comment-body">
                 <?php _e( 'Pingback:', 'camel-framework' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( __( 'Edit', 'camel-framework' ), '<span class="edit-link">', '</span>' ); ?>
             </div>
 <?php
-    }
-
-
+        }
     }
 }
