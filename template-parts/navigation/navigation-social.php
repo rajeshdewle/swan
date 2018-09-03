@@ -11,13 +11,13 @@
 ?>
 <nav class="menu-social">
     <?php
-        camel_nav_menu( array(
+        camel_nav_menu(array(
             'theme_location' => 'menu-social',
             'menu_id'        => 'social-menu',
-	    'depth'	     => 1,
+            'depth'	         => 1,
             'menu_class'     => 'nav justify-content-center justify-content-md-end',
             'list_class'     => 'nav-item my-2 ml-3',
             'link_class'     => 'nav-link p-0',
-        ) );
+        ));
     ?>
 </nav><!-- #site-navigation -->
