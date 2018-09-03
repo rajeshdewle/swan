@@ -8,8 +8,7 @@
  */
 
 if (! class_exists('Camel_Navwalker')) {
-    class Camel_Navwalker extends Walker_Nav_Menu
-    {
+    class Camel_Navwalker extends Walker_Nav_Menu {
         /**
          * Display array of elements hierarchically.
          *
@@ -25,15 +24,14 @@ if (! class_exists('Camel_Navwalker')) {
          * @param int   $max_depth The maximum hierarchical depth.
          * @return string The hierarchical item output.
          */
-        public function walk($elements, $max_depth)
-        {
+        public function walk($elements, $max_depth) {
             $args = array_slice(func_get_args(), 2);
             $output = '';
 
             $argsArray = (array) $args[0];
 
             if ($argsArray['has_home_icon']) {
-                $link_classes = [];
+                $link_classes = array();
                 $link_classes[] = ! empty($argsArray['link_class']) ? $argsArray['link_class']  : '';
                 $link_classes[] = ($this->has_children) ? 'dropdown-toggle' : '';
                 $linkClasses = implode(' ', $link_classes);
@@ -59,7 +57,7 @@ if (! class_exists('Camel_Navwalker')) {
 
             // flat display
             if (-1 == $max_depth) {
-                $empty_array = [];
+                $empty_array = array();
                 foreach ($elements as $e) {
                     $this->display_element($e, $empty_array, 1, 0, $args, $output);
                 }
@@ -72,8 +70,8 @@ if (! class_exists('Camel_Navwalker')) {
             * Children_elements is two dimensional array, eg.
             * Children_elements[10][] contains all sub-elements whose parent is 10.
             */
-            $top_level_elements = [];
-            $children_elements  = [];
+            $top_level_elements = array();
+            $children_elements  = array();
             foreach ($elements as $e) {
                 if (empty($e->$parent_field)) {
                     $top_level_elements[] = $e;
@@ -90,8 +88,8 @@ if (! class_exists('Camel_Navwalker')) {
                 $first = array_slice($elements, 0, 1);
                 $root = $first[0];
 
-                $top_level_elements = [];
-                $children_elements  = [];
+                $top_level_elements = array();
+                $children_elements  = array();
                 foreach ($elements as $e) {
                     if ($root->$parent_field == $e->$parent_field) {
                         $top_level_elements[] = $e;
@@ -110,7 +108,7 @@ if (! class_exists('Camel_Navwalker')) {
             * then we got orphans, which should be displayed regardless.
             */
             if (($max_depth == 0) && count($children_elements) > 0) {
-                $empty_array = [];
+                $empty_array = array();
                 foreach ($children_elements as $orphans) {
                     foreach ($orphans as $op) {
                         $this->display_element($op, $empty_array, 1, 0, $args, $output);
@@ -132,8 +130,7 @@ if (! class_exists('Camel_Navwalker')) {
          * @param int      $depth  Depth of menu item. Used for padding.
          * @param stdClass $args   An object of wp_nav_menu() arguments.
          */
-        public function start_lvl(&$output, $depth = 0, $args = [])
-        {
+        public function start_lvl(&$output, $depth = 0, $args = array()) {
             if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
                 $t = '';
                 $n = '';
@@ -147,7 +144,7 @@ if (! class_exists('Camel_Navwalker')) {
             $argsArray = (array) $args;
 
             $subMenuClass = ! empty($argsArray['submenu_class']) ? $argsArray['submenu_class'] : '';
-            $classes = [ 'sub-menu' ];
+            $classes = array( 'sub-menu' );
             $classes[] = $subMenuClass;
 
             /**
@@ -179,8 +176,7 @@ if (! class_exists('Camel_Navwalker')) {
          * @param stdClass $args   An object of wp_nav_menu() arguments.
          * @param int      $id     Current item ID.
          */
-        public function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
-        {
+        public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
             if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
                 $t = '';
                 $n = '';
@@ -194,7 +190,7 @@ if (! class_exists('Camel_Navwalker')) {
             $argsArray = (array) $args;
             $item->classes[] = ! empty($argsArray['list_class']) ? $argsArray['list_class'] : '';
 
-            $classes = empty($item->classes) ? [] : (array) $item->classes;
+            $classes = empty($item->classes) ? array() : (array) $item->classes;
             $classes[] = 'menu-item-' . $item->ID;
 
 
@@ -249,11 +245,11 @@ if (! class_exists('Camel_Navwalker')) {
 
             $output .= $indent . '<li' . $id . $class_names .'>';
 
-            $link_classes = [];
+            $link_classes = array();
             $link_classes[] = ! empty($argsArray['link_class']) ? $argsArray['link_class']  : '';
             $link_classes[] = ($this->has_children) ? 'dropdown-toggle' : '';
 
-            $atts = [];
+            $atts = array();
             $atts['title']  = ! empty($item->attr_title)  ? $item->attr_title : '';
             $atts['target'] = ! empty($item->target)      ? $item->target     : '';
             $atts['rel']    = ! empty($item->xfn)         ? $item->xfn        : '';
